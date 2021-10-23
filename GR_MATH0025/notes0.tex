@@ -1,0 +1,242 @@
+% Created 2021-10-21 Thu 23:21
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Kelvin}
+\date{\today}
+\title{Overall Notes for General Relativity}
+\hypersetup{
+ pdfauthor={Kelvin},
+ pdftitle={Overall Notes for General Relativity},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+
+\section{Week 1}
+\label{sec:org433dd05}
+\subsection{Vector that lives on the sheet}
+\label{sec:orgcc7c86b}
+
+\(f: V \to R\)
+
+\begin{itemize}
+\item Parameterization that forces vector to live inside a curved surface
+\begin{itemize}
+\item Recall from Newtonian mechanics
+\end{itemize}
+\item a bunch of stuff I have to go through again 
+\begin{itemize}
+\item Covariant and contravariant vectors
+\begin{itemize}
+\item Derivation
+\end{itemize}
+\item Coordinate transformation
+\end{itemize}
+\end{itemize}
+
+\section{Week 2}
+\label{sec:org0f1d8da}
+\subsection{Tensors}
+\label{sec:org445a5b6}
+Tensor of type (p,q) is: \(T^{i_1,i_2,...,i_p}_{j_1,j_2,...,j_q}\)
+\subsubsection{Tensors have upper and lower indices:}
+\label{sec:org464ca64}
+\begin{itemize}
+\item Upper indices transform contravariantly
+\item Lower indices transform covariantly
+\end{itemize}
+\subsubsection{Ranks}
+\label{sec:orgba3cfe7}
+\begin{itemize}
+\item Scalar: 0
+\item Vectors: 1
+\item We will not go beyond rank 4 tensors in this course
+\end{itemize}
+\subsubsection{Contraction}
+\label{sec:orgea361d6}
+\begin{itemize}
+\item Summing over a pair of indices results in a tensor of rank = p+q-2
+\item Proof requires showing that the a set of Jacobian cancels out
+\item This forms a kronecker delta, which does not change transformation
+\item QED
+\end{itemize}
+\subsubsection{Partial Derivatives}
+\label{sec:orgdfb5430}
+\begin{itemize}
+\item Not a tensor
+\item Transformation properties of PD
+\item Rewriting it as a chain rule and product rule
+\item One term obeys tensor trans. but the other does not
+\end{itemize}
+\subsubsection{Manifolds}
+\label{sec:org88d1bd0}
+\begin{itemize}
+\item An n dimensional, smooth (inf. diff.) is a set
+\item with collection of open subsets \({\omega_\alpha}\)
+\item a collection of coordinates \({X^i_{(\alpha)}}\)
+\item Where \(\alpha \in N\) and \(i = 1,2,...,n\)
+\begin{itemize}
+\item every point on the manifold belongs to at least one \$\{\(\Omega_{\alpha}\)\}
+\end{itemize}
+\item EXAMPLE: Surface of Earth is a manifold
+\item Collection are pages of atlas
+\item Overlap
+\end{itemize}
+\subsubsection{Distance}
+\label{sec:org25aa65d}
+\begin{itemize}
+\item \(g_{ij}\) is a rank 2 tensor known as metric tensor
+\item Represents distance
+\item Inverse: \(g^{jk}\)
+\item The line element: \$ds\(^{\text{2}}\) = g\(_{\text{ij}}\)dX\(^{\text{idX}}\)\(^{\text{j}}\)
+\begin{itemize}
+\item Where \(g_{ij}\) are arbitrary function of coordinates
+\item If it is I, then it becomes \(ds^2 = dx^2+dy^2+dz^2\)
+\end{itemize}
+\end{itemize}
+Remark:
+\begin{center}
+\begin{tabular}{rr}
+Dimensions & Independent components\\
+\hline
+2D & 3\\
+3D & 6\\
+4D & 10\\
+N-D & \(\frac{N(N+1)}{2}\)\\
+\end{tabular}
+\end{center}
+\begin{itemize}
+\item Other motivation for the metric structure:
+\end{itemize}
+To introduce a mapping that links the covariant and the contravariant
+\subsubsection{Metric Signature}
+\label{sec:org56dc25d}
+\begin{itemize}
+\item Counts the number of positive and negative eigenvalues
+\item Kronecker delta: (/+,/+,+)
+\item GR: (-,/+,+,+)
+\item Line elements or metric in GR are called Lorentzian manifolds
+\end{itemize}
+\subsubsection{Geodesic Equation}
+\label{sec:org7b14002}
+\begin{itemize}
+\item Def: A curve \(C\) given by \(X^i(\lambda)\) is \textbf{geodesic}
+\item if it satisfies \(\ddot(X)^n+Gamma^{n}_{ms}\dot(X)^m\dot(X)^s = 0\)
+\end{itemize}
+Where \$\(\Gamma^{\text{n}}_{\text{ms}}\) = \textonehalf{} g\(^{\text{nk}}\)\eft(\(\partial_{\text{m}}\) g\(_{\text{sk}}\) + \(\partial_{\text{s}}\) g\(_{\text{km}}\) - \(\partial_{\text{k}}\) g\(_{\text{ms}}\)$\backslash$
+\begin{itemize}
+\item Geodesics are shortest distances between points
+\item Get metric tensors and you can computed
+\item \textbf{Christoffel Symbol}: \(\Gamma^n_{ms}\)
+\item Derive from E-L and learn the actual derivations, watch it a few times
+\end{itemize}
+\subsection{Summary:}
+\label{sec:orga388aff}
+\section{Week 3}
+\label{sec:orga162787}
+\subsubsection{Geodesic Equation in Polar Coordinates}
+\label{sec:org6299e36}
+\begin{itemize}
+\item Solutions are given by straight lines (Exercise is to show this)
+\end{itemize}
+\subsubsection{The Christoffel symbol can be found in two ways}
+\label{sec:orgadcde4e}
+\begin{itemize}
+\item Explicit formula
+\item via Lagrangian approach
+\end{itemize}
+\subsubsection{Simplified/reduced Lagragian gives the same EL equations}
+\label{sec:org6508df0}
+\begin{itemize}
+\item However one is used over the other
+\item Because sqrt is motivated from arc
+\end{itemize}
+\subsubsection{Metric tensor}
+\label{sec:orgf0d3028}
+\begin{itemize}
+\item \(g_{ij}T^iT^j = ||T||^2\)
+\item Can be used to raise or lower indices (see Zee)
+\item Upper is column, lower is row
+\begin{enumerate}
+\item \(T_i^j = g_{is}T^{sj}\)
+\item \(T_j^i = g_{js}T^{is}\)
+\item \(T_{ij} = g_{im}g_{jn}T^{mn}\)
+\end{enumerate}
+\end{itemize}
+\subsubsection{Covariant Derivative}
+\label{sec:orgcc46459}
+\begin{itemize}
+\item A covariant derivative \(\nabla_a\) on a mapping
+\item From tensors of type (p,q) to tensors type (p,q+1)
+\item Has the following properties:
+\begin{enumerate}
+\item If f is a smooth function, then \(\nabla_{a}f=\partial_{a}f\)
+\item \(\nabla_a\) is linear (like Operators)
+\item Leibniz (product) rule
+\item Commutes with contraction
+\begin{itemize}
+\item Contract first then differentiate or vice versa
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+\subsubsection{Metricity}
+\label{sec:org814dd78}
+\begin{itemize}
+\item Something is metric compatitable if:
+\item \(\nabla_a g_{bc} = 0\)
+\item Else, the non-metricity is \(Q_abc =  \nabla_a g_{bc} = 0\)
+\end{itemize}
+\subsubsection{Torsion}
+\label{sec:org9355679}
+\begin{itemize}
+\item Torsion is defined by:
+\item \((\nabla_a\nabla_b f - \nabla_b \nabla)a f) = T_{ab}^c\partial_{cf}\)
+\item GR assumes \(T_{ab}^c=0\)
+\end{itemize}
+\subsubsection{Fine \(\nabla_a A^i\)}
+\label{sec:org831b1eb}
+\begin{itemize}
+\item \(\partial_a A^i\) is not a rank 2 tensor
+\item \(\partial_a f = \nabla_a A^i\)
+\item Thus \(\partial_a A^i\) should be linear in \(A^i\)
+\item Something about showing a C from the equation of this function
+\end{itemize}
+\subsubsection{Christoffel symbol components}
+\label{sec:org4310a85}
+\begin{itemize}
+\item The C are actually the Christoffel symbol
+\begin{itemize}
+\item Show that it is symmetric
+\item Torsion free
+\item Examinable proof of writing out the three equations
+\begin{itemize}
+\item Adding up and subtracting
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\subsubsection{Parallel Transport}
+\label{sec:orga16b15f}
+\begin{itemize}
+\item In GR, the straightest curves are shortest
+\item However, in presence of torsion, this is no longer the case
+\end{itemize}
+\end{document}

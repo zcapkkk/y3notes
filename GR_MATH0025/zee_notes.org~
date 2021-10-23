@@ -1,0 +1,10 @@
+#+TITLE: A. Zee Gravity in a nutshell
+
+** Tensor
+Honestly the tensor chapter was pretty bad
+
+** Change in coordinates
+*** Metric
+
+- The distance can be expressed as: $ds^2 = g_{\mu\nu}dx^\mu dx^\nu$
+- Where g is the identity matrix, and indices are expressed with greek

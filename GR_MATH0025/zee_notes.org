@@ -1,0 +1,25 @@
+#+TITLE: A. Zee Gravity in a nutshell
+
+** Tensor
+Honestly the tensor chapter was pretty bad
+
+** Change in coordinates
+*** Metric
+
+**** Metric/distance formula
+- The distance can be expressed as: $ds^2 = g_{\mu\nu}dx^\mu dx^\nu$
+- Where g is the identity matrix, and indices are expressed with greek
+- Thus in D=3 this is equivalent to $ds^2 = dx_i^2 = dx^2+dy^2+dz^2$
+**** Metrics
+- In Euclidean space it is the identity matrix
+- However in other space it is not
+  - Polar coordinates
+  - Spherical Coordinates
+  - Luckily they are both diagonal, although they need not be...
+**** First note on indicies
+- In general summing over indicies one must go on top and the other bottom
+**** Coverting between metrics
+- You can find the metric in another coordinate system with:
+\begin{equation}
+g'_{\rho\sigma} = \g_{\mu\vu}frac{\partial x^\mu}{\partial x'^\rho}\frac{\partial x^\nu}{\partial x^\sigma}
+\end{equation}

@@ -1,0 +1,87 @@
+#+TITLE: Overview (per week) of Dynamical Systems
+** Week 1
+
+*** Euler Lagrange Equations
+
+If there are k constraints, there are $k$  equations which are functions
+of the coordinates of each of the $N$ particles.
+
+There are $3N-k$ degrees of freedom, each of which can have their own
+equation. These are \[ q_j = q_j(x_1,y_1,z_1, ..., x_N, y_N, z_N, t)\]
+They can also be called generalized coordinates.
+
+The inverse transformation is given as a function of all of the generalized
+coordinates.
+** Week 2
+*** Hamiltonian
+- This is given as the Legendre transformation of the Lagrangian:
+- $H = \Sum_i p_i \dot{q_i} - L_i$
+- It can be shown that this does not lead to a loss of information
+- By taking the derivative with respect to $q_i$ and $p_i$
+- And using some identities from Week 1
+- The Hamiltonian *must* only be a function of generalised momentum and coordinate
+  - Substitute away the velocity
+*** Hamilton's Equations 
+- $\frac{\partial H}{\partial p_i} = \dot{q_i}$
+- $\frac{\partial H}{\partial q_i} = \dot{-p_i}$
+- If H is independent of a certain coordinate $q_i$, then the momentum is conserved
+- If $\frac{\partial H}{\partial t} = 0$, then H is constant, givn by $H=T-V$
+*** Hamiltonian Systems
+- Dynamical systems are given by: $\\dot{q}=F_1(q,p), \quad \dot{p}=F_2(q,p)$
+- It is Hamiltonian if $\frac{\partial F_1}{\partial q} + \frac{\partial F_2}{\partial p}=0$
+*** Conserved Quantities
+- In general a Lagrangian with a general K.E. and a potential $V(q_i)$
+- Can be shown to be $H=T+V$
+- Also because $\frac{dH}{dt} = -\frac{\partial L}{\partial t}
+*** Poisson Brackets
+- A function of $f(q_i,p_i,t)$ has a time-dependence of:
+- $\frac{df}{dt} = \Sum_i\left(\frac{\partial f}{\partial q_i}\dot{q_i}+\frac{\partial f}{\partial p_i}\dot{p_i} \right) + \frac{\partial f}{\partial t}$
+- Make appropiate substitutions with Hamilton's Equations
+- ${f,g} = \Sum_i\left(\frac{\partial f}{\partial q_i}\frac{\partial g}{\partial \dot{p_i}}+\frac{\partial f}{\partial p_i}\frac{\partial g}{\partial \dot{q_i}} \right)$ 
+**** Properties of Poisson Brackets
+     - Linear
+     - Satisfies Jacobi Identity: ${{f,g},h}+{{h,f},g}+{{g,h},f} =0$
+     - Satisfies Leibniz Rule: $ {f,gh}=g{f,h}+{f,g}h$
+*** Phase Space
+- A space that is composed of $x(t) = (p_i(t),q_i(t))$
+*** Liouville's Theorem
+- The volume of a Hamiltonian system is unchanged (can change shape though)
+- With the Divergence Theorem:
+- $\frac{dV}{dt} = \int_V \Nabla \dot \dot{x} dC = 0$
+** Week 3
+*** Hamiltonian
+    - Is always given in terms of momentum and general coordinate:
+    - i.e. $H = H(p_\theta, \theta)$
+    - And not $\ddot{\theta}$ for example
+** Week 4
+*** Bead on Rotating Loop
+    - Basically an example in using Lagrangian and Hamilton's equation
+    - Maybe go through it again from time to time
+*** Small Oscillations
+    - Consider a small oscillation where the potential is minimum (derivative of V is zero)
+    - Masses can be related to the generalised coordinate
+      - Moment of inertia for rotational coordinates
+    - A general form of the Lagrangian can be written x
+      - With first term being a product of coordinates (see notes)
+      - Define a 'coordinate' that is the equilibrium position plus displacement
+    - Do a 2D taylor expansion
+      - For the potential, drop any term with power order than 2
+      - For the KE, only the first mass term survives
+	- The other combines with subsequent term to form higher order terms
+    - A matrix formulation arises, and an ansatz of $e^{i(kx_k+\phi}$ can be used
+    - The determinant gives the amplitudes of oscillations
+*** Carbon Dioxide example
+*** Classical Field Theory
+    - Treat matter as particles lying in a 'mattress'
+      - or line if 1D
+    - Then take the inter-distance to be 0 and infinite particles
+    - Calculate the 'action' across the coordinates
+    - This forms the Lagrangian for the field
+    - Substituting for string gives the wave equation
+    - Lagrangian invariance:
+      - The current is equal to the change in charge density
+*** Important formulas:
+    - Lagrangian density:
+      - $L= \frac12 \left(\frac{\partial \phi}{\partial t}\right)^2 - \frac{T}{2}\right(\frac{\partial \phi}{\partial x}\right)^2$
+    - EL equation for field:
+      - $\frac{\partial L}{\partial \phi}=\frac{\partial}{\partial t}\left(\frac{\partial L}{\partial (\partial \phi/\partial t)}\right) + \frac{\partial}{\partial x} \right(\frac{\partial L}{\partial (\partial \phi/\partial x)}\right)$
