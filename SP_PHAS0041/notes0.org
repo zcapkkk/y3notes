@@ -1,0 +1,116 @@
+#+TITLE: Solid State Physics PHAS0041
+#+AUTHOR: Kelvin Ho
+
+* Revision
+
+** Crystal
+   - Lattice + Basis
+   - *Convolution* of lattice and basis
+   - Bravais Lattice
+   - Wigner-Seitz cell
+
+** Planes of Symmetry
+
+Why are those planes equivalent by symmetry?
+
+** Reciprocal Space
+
+The reciprocal space is simply a fourier transform of the lattice space
+
+** Luue Condition
+
+\[ Q = G\] where \[ Q = k' - k\]
+
+* Week 2
+
+** Bragg Law
+   - $2d\sin{\theta} = n\lambda$
+
+** Reciprocal Space
+   - Crystal is periodic i.e. (electron) number density is given by:
+     \[ n(r+T) = n(r) \]
+   - Fourier coefficients define the X-ray amplitudes
+   - 
+* Week 3
+
+** Lecture 1: Low temperature correction to C - Heat Capacity
+ - C is defined to be the change in heat required for change in
+   temperature.
+    - Summary: 
+      - Classical Model: equipartition times $\frac12 k_b T$
+      - Einstein Model: Derivative of harmonic oscillator with
+        occupancy distribution with one frequency
+      - Debye Model: Integrate over many frequencies, revisit the
+        distribution of k vectors over annular/spherical region
+** Lecture 2: Anharmonicity
+   - Umklapp event vs Normal Event:
+     - Crosses over first bruillion zone introduces vector incoming
+       from left
+   - The thermal current can be written as energy at $x+l$ where $l$
+     is the mean path
+   - Then it can be taylor expanded so it can be expressed as
+     temperature gradient and heat capacity
+   - Produce $\kappa$ term
+   - Current equals the 'something' multiplied by the (negative) temperature gradient
+     
+* 4: Phonon Theory of Heat
+  - Heat current:
+\[ j_u = -\kappa \frac{dT}{dx}\] Where \[ \kappa = \frac13 v l C_v\]
+Where v is velocity of particles, l is mean free path (no collision)
+and C is heat capacity 
+  - Umklapp process (German for reverse or something)
+    - $k_1+k_2$ results in a $k_3$ that extends beyond the B zone
+    - Add $G$ so it comes back (or see it as $k_3 + G$ is the *real*
+      resultant vector
+
+* 5: Free Electron Theory
+** Sommerfield Model and Fermi Energies
+  - Use of QM by Sommerfield to explain electronic properties
+  - Particle in a box model / Solve TISE |-> Solution in the form of
+    exponentials
+  - This naturally extends to expressing energy (eigenvalues) in terms
+    of wavevector $k$
+  - Page 4 derivation equating density states in terms of energy and
+    wavevectors
+  - At T=0 states up to Fermi energy is filled, so integrate energy
+    state density would be equal to electrons in crystals, and the
+    Fermi energy can be solved:
+    \[ \epsilon_F = \frac{\hbar^2}{2m}\left(3\pi^2\frac{N}{V}\right)^{2/3}\]
+  - Using $\epsilon=\frac{\hbar^2k^2}{2m}$ the Fermi energy can be
+    rewritten to represent filled states in terms of $k$. This is
+    known as the *Fermi Surface* (important!)
+  - This can be substituted into the density function $g$ to get the
+    density of states at the surface:
+    \[g(\epsilon_F)=\frac32\frac{N}{\epsilon_F}\]
+  - Then consider the additional heat capacity of metals
+  - This can be explained by: In thermal equilibrium, the number of
+    electrons per unit energy range is given by the product of the
+    density of states and the Fermi-Dirac distribution function
+
+** Electric Field
+   - Particle momentum is given by $\hbar k$, equating time derivative
+     of that with Lorentz Force:
+     \begin{align*}
+     \hbar \frac{d\mathbf{k}}{dt} &= -e\mathbf{E}\\
+     \Delta k &= -\frac{e\mathbf{E}}{\hbar}t
+     \end{align*}
+   - The whole Fermi sphere shifts the same way as the E field but
+     opposite
+   - Normally accelerate indefinitely, but realistically there are
+     collisions
+   - Add a damping term $\frac{v}{\tau}$ where $\tau$ is relaxation
+     time i.e. where the electron maintains finite drift velocity (?)
+     and derive Ohm's Law $j = \sigma E$
+   - /Mattheisen's Rule/: The resistivity depends on both the ideal
+     resistivity and residual resistivity affected by purity...
+ 
+** Electron Heat transfer
+   - Use the kinetic theory again
+   - Values - mean velocity same, mean path length is velocity times
+     relaxation time and electronic heat capacity
+ 
+** Wiedemann-Franz Law
+   - Ratio of E to Thermal Conductivity proportional to temperature
+   - Something about different process for conductivity 
+** Hall Effect
+   - 

@@ -1,0 +1,27 @@
+#+TITLE: Thoughts on the go
+#+AUTHOR: Kelvin
+
+* Problem sheets
+
+** CW1:
+*** Resolution of identity is a bit shaky
+*** Change of basis (transformation matrix is just sandwiching the basis?)
+*** Linear algebra I guess
+** CW2: 
+*** Sandwiching new and old states = probability of ground state?
+*** Last part of q2 does not make sense
+*** Operators of different coordinates commute:
+**** Seems obvious but never occur to me
+**** But then remember \(L_x, L_y, L_z\) does not commute
+**** Raising and lowering which kind of but kind of not makes sense
+*** \(\hat{H}\psi = E\psi \) but even for non harmonic potentials as per question specification?
+** CW4:  
+*** If diagonal matrix, read off eigenvalues and eigenvectors i.e. (100),(010)
+*** In general for integration by parts of inner product with a Laplacian
+*** The first term (product/no integral) is zero because the wavefunction is zero at infinities (I think?)
+*** Integral of odd functions are zero
+*** A lot of fancy pants algebra:
+**** Symmetry of coordinates \(x_1,x_2\) means swapping or times 2
+**** Separation of double integrals results in *products* of Gaussian integrals
+**** Do not pull stupid stunts by assuming the sum of coordinates can just be a Gaussian integral
+

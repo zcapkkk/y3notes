@@ -1,0 +1,55 @@
+#+TITLE: Important formulas
+#+AUTHOR: Kelvin
+
+* Identities
+
+** Kinetic energy calculations (seen in Approximation Methods)
+\[ \int \psi^*(\nabla^2\psi)d\tau = -\int|(\nabla\psi)^2|d\tau\]
+
+** Gaussian Standard Integrals
+\begin{align*}
+\int_{-\infty}^{\infty}e^{-ax^2} &= \sqrt{\frac{\pi}{a}}\\
+\int_{-\infty}^{\infty}x^2e^{-ax^2} &= \frac{1}{2a}\sqrt{\frac{\pi}{a}}\\
+\end{align*}
+
+- The integral of odd functions are zero
+- Wavefunction at infinities are zero (useful in by parts)
+
+* Harmonic Oscillator
+
+** Raising and Lowering Operators
+
+\begin{align*}
+\hat{a}_\pm &= \frac{1}{\sqrt{2}}\left(\alpha \hat{x} \mp\frac{i}{\hbar \alpha}\hat{p}\right)\\	
+\alpha &= \sqrt{\frac{m\omega}{\hbar}}
+\end{align*}
+
+** Other operators in terms of the Raising and Loweing Operators
+
+\begin{align*}
+\hat{x} &= \frac{1}{\alpha \sqrt{2}}(\hat{a} + \hat{a}^\dagger)\\
+\hat{p} &= \frac{i\hbar\alpha}{\sqrt{2}}(\hat{a}-\hat{a}^\dagger)\\
+\hat{H} &= \left(\hat{a}\hat{a}^\dagger+\frac12\right)\hbar\omega\\
+\end{align*}
+
+* Spin
+
+** Pauli Matrices:
+   The Pauli Matrices all have eigenvalues of \(\lambda = \pm1\).
+\begin{align*}
+\sigma_x &= 
+\begin{pmatrix}
+0 & 1 \\
+1 & 0 \\
+\end{pmatrix}\\
+\sigma_y &= 
+\begin{pmatrix}
+0 & -i \\
+i & 0 \\
+\end{pmatrix}\\
+\sigma_z &= 
+\begin{pmatrix}
+1 & 0 \\
+0 & -1 \\
+\end{pmatrix}\\
+\end{align*}

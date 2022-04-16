@@ -1,0 +1,42 @@
+#+TITLE: Exam timetabling 
+#+AUTHOR: Kelvin
+
+* PHAS0042: Quantum Mechanics 
+  DEADLINE: <2022-04-29 Fri>
+** TODO Finish revising Problem Sheets
+** TODO Do past papers
+** TODO Do Griffiths
+** TODO Revision lecture:  SCHEDULED: <2022-04-28 Thu>
+
+* PHAS0041: Solid State Physics
+  DEADLINE: <2022-05-03 Tue>
+** TODO Check problem sheets
+** TODO Go through textbook
+** TODO Do past papers
+** TODO Revision lecture:  SCHEDULED: <2022-04-28 Thu>
+
+* PHAS0038: Electromagnetic Theory 
+  DEADLINE: <2022-05-04 Wed>
+** TODO Amend Problem sheets with solutions
+** TODO Do past papers
+** TODO Do Griffiths
+** TODO Revision lecture:  SCHEDULED: <2022-04-28 Thu>
+
+* PHAS0040: Nuclear and Particle Physics
+  DEADLINE: <2022-05-06 Fri>
+** TODO Problem sheet solutions
+** TODO Griffiths and Martin
+** TODO Past papers
+** TODO Revision lecture: SCHEDULED: <2022-05-05 Thu>
+
+* MATH0025: Mathematics for General Relativity
+  DEADLINE: <2022-05-09 Mon>
+** TODO Go through problem sheet and solutions
+** TODO Do the additional problems
+** TODO Boehmer and Problem book(s)
+** TODO Past paper
+
+* PHAS0049: Theory of Dynamical Systems
+  DEADLINE: <2022-05-23 Mon>
+** TODO Redo problem sheets
+** TODO Past paper

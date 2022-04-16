@@ -1,0 +1,325 @@
+#+TITLE: Quantum Mechanics Head notes
+#+AUTHOR: Kelvin Ho
+
+Notes to jog my memory.
+
+* Heisenberg Matrix Approach
+
+Add notes to talk about some rules on linear algebra generalisation of
+Quantum Mechanics.
+
+* Algebraic Approach to Harmonic Oscillator
+
+Add notes to talk about the raising and lowering operators
+
+* Generalised Angular Momentum
+
+** Preliminaries
+
+Begin with:
+
+\[ \left[ \hat{J}_x, \hat{J}_y \right] = i\hbar \hat{J}_z \]
+
+Other pairing can be achieved through cyclic permutations.
+
+The raising and lowering operators are:
+
+\[ \hat{J}_\pm = \hat{J}_x \pm i\hat{J}_y \]
+
+They are Hermitian conjugates of each other. 
+
+The product is defined by:
+
+\[ \hat{J}_\pm\hat{J}_\mp = \hat{J}^2 - \hat{J}^2_z \pm \hbar\hat{J}_z\]
+(The last sign follows the first.)
+
+Thus, the commutator is:
+\[ \left[ \hat{J}_\pm,\hat{J}_\mp\right] = \pm 2\hbar\hat{J}_z\]
+(Again, the sign follows the leader.)
+
+The raising/lowering operators commutes with $\hat{J}^2$, but with the
+components:
+
+\[ \left[ \hat{J}_z, \hat{J}_\pm \right] = \pm \hbar\hat{J}_\pm \]
+(Follows the sign.)
+
+** Eigenstates and Eigenvalues
+
+We begin again by stating that:
+\begin{align*}
+\hat{J}^2 |\phi\rangle &= \alpha |\phi\rangle\\
+\hat{J}_z |\phi\rangle &= \beta |\phi\rangle
+\end{align*}
+
+The raising/lowering operators raises or lowers $\hat{J}_z$ in $\hbar$
+increments.
+
+However, as it commutes with $\hat{J}^2$, it does nothing. 
+
+Since $\alpha$ is fixed and by definition bigger than $\hat{J}_z$ (as
+it is a component), it follows that there is a termination
+i.e. bounded upper and lower eigenvalues.
+
+*** Proof 
+
+To show, write a top eigenstate where applying the raising operator
+would yield 0, and vice versa for the lowest state. The difference in
+eigenvalues is $n\hbar$. Using the commutator of the raising and
+lowering operator, this can be easily shown.
+
+From:
+\[m_T - m_B = n\hbar\]
+Then:
+\[\alpha = mT(mT +\hbar)\]
+And since:
+\[ m_T = n\frac{\hbar}{2}\]
+Rewriting $j = \frac{n}{2}$:
+\begin{align*}
+\alpha &= j(j+1)\hbar^2\\
+\beta &= m\hbar
+\end{align*}
+
+** Actions of the Operators
+
+Rewrite $|\phi\rangle = |j, m\rangle$ The raising operator gives:
+$\hat{J}_z\left(\hat{J}_+|j,m\rangle\right) =
+(m+1)\hbar\left(\hat{J}_+|j,m\rangle\right)$, but applying $\hat{J}_z$
+to $|j,m+1\rangle$ yields the same eigenvalue(?), implying they are
+proportional to each other. With this, we write: \[
+\hat{J}_+ |j,m\rangle = C_+ |j, m+1\rangle \] Rewriting the above as a
+bra and noticing that the raising/lowering operators are Hermitian
+adjoint, using their product yields (usual convention takes positive root):
+\begin{align*}
+C_+ &= \hbar\sqrt{j(j+1)-m^2-m}\\
+C_- &= \hbar\sqrt{j(j+1)-m^2+m}\\
+\therefore C_\pm &= \hbar\sqrt{j(j+1)-m(m\pm 1)}
+\end{align*}
+(Again, m sign follows leading sign)
+
+* Spin (Spin \frac12 systems) 
+
+The spin states are a carbion copy of the algebraic theory of
+generalised angular momentum (Griffith). They do not have an
+equivalent position representation. 
+
+
+** Preliminaries
+
+Spin up and spin down states:
+
+\begin{align*}
+ | \frac12, \frac12 \rangle &\equiv |\alpha\rangle  = |+\rangle\\
+ | \frac12, -\frac12 \rangle &\equiv |\beta \rangle = |-\rangle
+\end{align*}
+
+Again:
+\begin{align*}
+\hat{S}^2 |+\rangle &= s(s+1)\hbar^2|+\rangle = \frac34\hbar^2|+\rangle\\
+\hat{S}_z |+\rangle &= s\hbar|+\rangle = \frac12|+\rangle\\
+\hat{S}^2 |-\rangle &= s(s+1)\hbar^2|-\rangle = \frac34\hbar^2|-\rangle\\
+\hat{S}_z |-\rangle &= s\hbar|-\rangle = -\frac12|-\rangle\\
+\end{align*}
+
+** Raising and Lowering Operators
+
+Same as before:
+\begin{align*}
+\hat{S}_\pm|s,m\rangle &= \hbar\sqrt{s(s+1)-m(m\pm1)}|s,m\pm1\rangle\\
+\therefore \hat{S}_\pm|\frac12,m\rangle &= \hbar\sqrt{\frac34-m(m\pm1)}|\frac12,m\pm1\rangle\\
+\end{align*}
+
+Thus: 
+- Raising spin down becomes $\hbar$ times spin up
+- Lowering spin up becomes $\hbar$ times spin down
+- Anything else is zero (cannot raise above the ceiling or go below
+  the floor)
+
+This might come in handy: \[ \hat{S}_x = \frac12 \left(\hat{S}_+ +
+\hat{S}_-\right); \qquad \hat{S}_y =
+\frac{1}{2i}\left(\hat{S}_+-\hat{S}_-\right)\]
+
+*** The arbitrary state
+
+An arbitrary state can be written as:
+\[ |\chi \rangle = a|+\rangle + b|-\rangle \]
+
+
+*** Additional Relations
+
+The $\hat{S}^2$ is a purely numerical operator for any state:
+\[ \hat{S}^2 \equiv \frac34 \hbar^2\]
+
+Additionally, for spin-\frac12 states:
+\[ \hat{S}^2_x = \hat{S}^2_y = \hat{S}^2_x = \frac{\hbar^2}{4} \]
+
+**** Anticommutators:
+
+\[ \left\{\hat{S}_x, \hat{S}_y\right\} = 0 \] 
+
+*** Matrix Representation
+
+This section introduces the Pauli matrices. These are formed by
+performing: $\langle s',m'| \hat{S} |s,m \rangle$ for each respective
+operators. Each operator, $\hat{S}^2, \hat{S}_x, \hat{S}_y, \hat{S}_z$
+can be formed by multiplying their respective matrices with $\hbar/2$:
+
+\begin{align*}
+
+I &= 
+
+\begin{pmatrix}
+1 & 0 \\
+0 & 1\\
+\end{pmatrix}\\
+
+\sigma_x = 
+\begin{pmatrix}
+0 & 1 \\
+1 & 0\\
+\end{pmatrix}\\
+
+\sigma_y =
+\begin{pmatrix}
+0 & -i \\
+i & 0\\
+\end{pmatrix}\\
+
+\sigma_z = 
+\begin{pmatrix}
+1 & 0 \\
+0 & -1 \\
+\end{pmatrix}
+
+\end{align*}
+
+The trace of the Pauli matrices are zero, and the determinant is -1. 
+
+** Determination of eigenstates and eigenvectors
+
+To solve for $\hat{S}_x |\chi\rangle = a |\chi \rangle$, we write $a =
+\frac\hbar2\lambda$ and $\hat{S}_x = \frac\hbar2\sigma_x$, and let
+$|\chi\rangle = (u,v)^T$. Thus the matrix approach gives an easy way
+to determine the eigenstates and eigenvalues of the operators.
+
+Equivalently, this can be performed via the basis states and
+raising/lowering operators approach.
+
+See page 54 of notes for a table showing the results. 
+
+
+** Spin along arbitrary direction
+
+The operator $\hat{S}_n$ is defined as $\hat{S}\cdot\hat{n}$, where:
+\[ \hat{n} = (\cos\phi\sin\theta, \sin\phi\sin\theta,\cos\theta) \]
+
+Thus: 
+\begin{equation*} \hat{S}_n = \frac{\hbar}{2}(\hat{\sigma}_x
+\cos{\phi}\sin{\theta}+\hat{\sigma}_y\sin{\phi}\sin{\theta}+\hat{\sigma}_z\cos{\theta})
+= \frac{\hbar}{2}
+\begin{pmatrix}
+\cos\theta & \sin\theta e^{-i\theta} \\
+\sin\theta e^{i\theta} & -\cos\theta
+\end{pmatrix} 
+\end{equation*}
+
+ Then, using trigonometric identities (half angle?):
+
+\begin{equation*}
+|+\rangle_\hat{n} = 
+\begin{pmatrix}
+\cos{\frac{\theta}{2}}\\
+\sin{\frac{\theta}{2}}e^{i\phi}
+\end{pmatrix} \qquad
+
+|-\rangle_\hat{n} = 
+\begin{pmatrix}
+\sin{\frac{\theta}{2}}\\
+-\cos{\frac{\theta}{2}}e^{i\phi}
+\end{pmatrix}
+
+
+\end{equation*}
+
+
+- Spin up along $+z$ is $P_+ = cos^2{\frac\theta2}$
+- Spin down is $P_- = sin^2{\frac\theta2}$
+
+
+
+** Addition of Angular Momentum
+
+In the special case of spin-\frac12 particles, the addition of angular
+momentum is simple:
+
+$\hat{\mathbb{S}} = \hat{\mathbb{S_1}} + \hat{\mathbb{S_2}}$
+
+There are four possible states for the 2 particles:
+\[ |++\rangle, |+-\rangle, |-+\rangle, |--\rangle\]
+
+Then, from above:
+\[ \hat{S}_z = \hat{S}_{1z} + \hat{S}_{2z}\]
+Eigenvalues are thus: 1,0,0,-1.
+
+
+| 1\2    | \alpha            | \beta            |
+| \alpha | \alpha_1 \alpha_2 | \alpha_1 \beta_1 |
+| \beta  | \beta_1 \alpha_2  | \beta_1 \beta_2  |
+
+Denote a general state by $|S, M\rangle$. 
+
+If $M = \frac12+\frac12 = 1$ must have $S=1$, as: \[
+\hat{S}_z|1,1\rangle =
+\left(\hat{S}_{1z}+\hat{S}_{2z}\right)\alpha_1\alpha_2 =
+\frac\hbar2\alpha_1\alpha_2+\frac\hbar2\alpha_1\alpha_2 =
+\hbar\alpha_1\alpha_2\]
+
+** Total Angular Momenta
+
+We define:
+\[ \hat{J} = \hat{L}+\hat{S}\]
+
+While Y_{lm}\alpha and Y_{lm}\beta are eigenstates of $\hat{J}_z$,
+they are not eigenstates of $\hat{J}^2$.
+
+*** Example
+
+Let $J = l+\frac12$ and $m_j = l+\frac12$ i.e. the state of maximum projection $Y_{ll\alpha}$ \equiv $|j,j\rangle$.
+Applying the lowering operator $\hat{J}_-|j,m\rangle = \sqrt{j(j+1)-m(m-1)}\hbar|j,m-1\rangle$:
+
+\begin{align*}
+\hat{J}_- |j,j\rangle &= \sqrt{2\hbar}|j,j-1\rangle \\
+\hat{J}_- |l+\frac12, l+\frac12\rangle &= \sqrt{2\left(l+\frac12\right)}\hbar|l+\frac12,l-\frac12\rangle\\
+\left(\hat{L}_- + \hat{S}_-\right)Y_{ll}\alpha = \left(\hat{L}_- +
+\hat{S}_-\right)|l,l\rangle|\alpha\rangle &=
+\sqrt{2l}\hbar|l,l-1\rangle|\alpha\rangle + |l,l\rangle\hbar|\beta\rangle\\
+\end{align*}
+Equating the two and using orthogonality conditions: 
+\begin{align*}
+\sqrt{2\left(l+\frac12\right)}\hbar|l+\frac12,l-\frac12\rangle &=
+\sqrt{2l}\hbar|l,l-1\rangle|\alpha\rangle + |l,l\rangle\hbar|\beta\rangle\\
+|l+\frac12, l-\frac12\rangle &=
+\sqrt{\frac{2l}{2l+1}}|l,l-1\rangle|\alpha\rangle+\sqrt{\frac{1}{2l+1}}|l,l\rangle|\beta\rangle\\
+\end{align*}
+
+Introduce a new state $|l-\frac12,l-\frac12\rangle =
+a|l,l-1\rangle|\alpha\rangle+b|l,l\rangle|\beta\rangle$ which is
+orthogonal, we find that:
+\begin{align*}
+a\sqrt{\frac{2l}{2l+1}}+&b\sqrt{\frac{1}{2l+1}} = 0\\
+b = -a\sqrt{2l}
+\end{align*}
+Given normalisation condition:
+$a = \sqrt{\frac{1}{2l+1}}$ and $b = -\sqrt{\frac{2l}{2l+1}}$.
+
+*** Summary
+
+ 1. $\hat{J} = \hat{L}+\hat{S}$
+ 2. They are dictated by:
+    1. $L^2Y_{lm} = l(l+1)\hbar^2Y_{lm}$
+    2. $\hat{S}^2\chi = s(s+1)\hbar^2\chi$
+    3. $\hat{J}^2\psi = J(J+1)\hbar^2\psi$
+ 3. The 4 good quantum numbers are:
+    1. $M_J = m_l+m_s$
+    2. $\hat{J}_z\psi = M_J\hbat\psi$
+    3. $\hat{J}^2|J,M_J,l,s\rangle = J(J+1)\hbar^2|J,M_J,l,s\rangle$
+ 4. For $|l-s| \leq J \leq l+s$: $\hat{J}_z|J,M_J,l,s\rangle = \left(m_l\pm\frac12\right)\hbar|J,M_J,l,s\rangle$

@@ -1,0 +1,54 @@
+#+TITLE: Solid State Physics PHAS0041
+#+AUTHOR: Kelvin Ho
+
+* Revision
+
+** Crystal
+   - Lattice + Basis
+   - *Convolution* of lattice and basis
+   - Bravais Lattice
+   - Wigner-Seitz cell
+
+** Planes of Symmetry
+
+Why are those planes equivalent by symmetry?
+
+** Reciprocal Space
+
+The reciprocal space is simply a fourier transform of the lattice space
+
+** Luue Condition
+
+\[ Q = G\] where \[ Q = k' - k\]
+
+* Week 2
+
+** Bragg Law
+   - $2d\sin{\theta} = n\lambda$
+
+** Reciprocal Space
+   - Crystal is periodic i.e. (electron) number density is given by:
+     \[ n(r+T) = n(r) \]
+   - Fourier coefficients define the X-ray amplitudes
+   - 
+* Week 3
+
+** Lecture 1: Low temperature correction to C - Heat Capacity
+ - C is defined to be the change in heat required for change in
+   temperature.
+    - Summary: 
+      - Classical Model: equipartition times $\frac12 k_b T$
+      - Einstein Model: Derivative of harmonic oscillator with
+        occupancy distribution with one frequency
+      - Debye Model: Integrate over many frequencies, revisit the
+        distribution of k vectors over annular/spherical region
+** Lecture 2: Anharmonicity
+   - Umklapp event vs Normal Event:
+     - Crosses over first bruillion zone introduces vector incoming
+       from left
+   - The thermal current can be written as energy at $x+l$ where $l$
+     is the mean path
+   - Then it can be taylor expanded so it can be expressed as
+     temperature gradient and heat capacity
+   - Produce $\kappa$ term
+   - Current equals the 'something' multiplied by the (negative) temperature gradient

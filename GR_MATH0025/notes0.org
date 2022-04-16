@@ -119,3 +119,39 @@ Where $\Gamma^n_{ms} = \frac12 g^{nk}\left(\partial_m g_{sk} + \partial_s g_{km}
 *** Parallel Transport
     - In GR, the straightest curves are shortest
     - However, in presence of torsion, this is no longer the case
+
+* Week 4
+
+*** Curvature
+    - Introducing it with parallel transport
+    - Walk from equator, northpole then back to equator
+      - The change of vector when parallelly transported
+      - Along a closed curve
+      - Defines the curvature
+    - Introducing it with Calculus
+    - Curvature of a curve matches closely with a circle
+    - curvature = 1/r ish
+*** Riemann Curvature Tensor
+    - Let M be a manifold
+    - With covariant der. $\nabla_a$ (metric and torsion free).
+    - $\nabla_a\nabla_d V^b - \nabla_d \nabla_a V^b = -R_{ads}^b V^s$
+    - Defines the Riemann curvature tensor
+    - (Short: Riemann tensor)
+*** Theorem:
+    - $F_{ij} = \nabla_i A_j - \nabla_j A_i$
+    - Satisfies the identity:
+    - $\nabla_iF_{jk} + \nabla_k F_{ij} + \nabla_j F_{ki} = 0$
+    - Proof:
+      - Write out the covariant derivative of the F tensors
+      - Add up the three terms/lines
+      - skew symmetric tensors (negative of flip)
+*** Theorem: Let $R_{abcd}$ be the Riemann curvature Tensor:
+    1. R_{abcd} = -R_{bacd}
+    2. R_{abcd} = -R_{abdc}
+    3. R_{abcd} + R_{cabd} + R_{bcad} = 0
+       * We are only permuting the first 3 indices
+    4. \nabla_aR_{bcde}+\nabla_cR_{abde}+\nabla_bR_{cade} = 0
+       * This is called the Bianchi identity
+
+
+*** Ricci tensor and Riemann Tensor

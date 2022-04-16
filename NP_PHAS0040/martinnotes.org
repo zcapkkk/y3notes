@@ -1,0 +1,15 @@
+#+TITLE: Notes from BR Martin
+#+AUTHOR: Kelvin
+
+* Chapter 3 Particle Phenomenology
+
+** Leptons
+
+*** Lepton numbers
+Always conserved
+
+*** Lepton Universality
+    - The interaction between a lepton and its neutrino is the same
+    - Despite the vastly different properties of the different leptons
+    - Provided that the mass differences are taken into account
+    - Muon is heavier, electron is light, tau survives short etc

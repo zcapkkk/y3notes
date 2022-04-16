@@ -53,7 +53,6 @@ coordinates.
     - Is always given in terms of momentum and general coordinate:
     - i.e. $H = H(p_\theta, \theta)$
     - And not $\ddot{\theta}$ for example
-** Week 4
 *** Bead on Rotating Loop
     - Basically an example in using Lagrangian and Hamilton's equation
     - Maybe go through it again from time to time
@@ -85,3 +84,299 @@ coordinates.
       - $L= \frac12 \left(\frac{\partial \phi}{\partial t}\right)^2 - \frac{T}{2}\right(\frac{\partial \phi}{\partial x}\right)^2$
     - EL equation for field:
       - $\frac{\partial L}{\partial \phi}=\frac{\partial}{\partial t}\left(\frac{\partial L}{\partial (\partial \phi/\partial t)}\right) + \frac{\partial}{\partial x} \right(\frac{\partial L}{\partial (\partial \phi/\partial x)}\right)$
+** Week 4
+*** ODEs
+**** Coupled DEs
+     - Basically if equations are mixed with diff. coordinates
+     - Like y depends on x and z and vice versa
+**** Equivalent system of 1st Order ODEs
+     - Linear differential equation can be written in the form:
+     - $f(\frac{d^n x}{dt^n},...,\frac{dx}{dt},t) = 0$
+     - i.e. The ODE LHS is a function of derivatives to the n order
+     - They are *autonomous* if there is no explicit time dependence
+***** Solving
+      - Any n order differential equation can be written as n first order ODE
+      - $y_{i-1} = y_i$ So y equals the second highest order derivative
+      - $\dot{y_{n-1}} = g(y_{n-1},...,y_1,y_0,t)$
+***** Examples
+      1. $0 = \ddot{x}+\gamma\dot{x}+\omega^2 x$
+	 - $\dot{x} = y$
+	 - $ \dot{y} = -\gamma y - \omega^2 x$
+      2. $\ddot{theta} = \frac{-g}{l}\sin{\theta}
+	 - Using the Hamiltonian framework
+	 - $\dot{theta}=\frac{p_\theta}{ml^2}$
+	 - $\dot{p_\theta} = -mgl\sin{\theta}$
+**** Existence and Uniqueness 
+     - In vector form: $\dot{x} = g(x,t)$
+     - Which is to have a column vector of $\dot{x_i}$ equal to
+     - Column vector of $g_i(x_1,x_2,...,x_n,t)$
+***** Theorem
+      - If $g(x,t)$ and all first order derivatives are continous and
+       contain a point $x_0$
+      - Solution to the matrix equation for initial condition
+       $x(t_0)=x_0$ must exist and is unique
+***** Breakdown
+      - Consider $\dot{x} = \sqrt{x}$
+      - There are infinitely many solutions for initial condition $x(0)=0$
+      - Reason being the breakdown of derivative at $x=0$
+**** Fixed Points
+     - Fixed points occur when $\dot{x}|_x-x_f = 0$
+     - Which is when the derivative equals zero
+***** Logistics Equation
+      - Population growth model or rabbits:
+      - $\dot{x} = x(a-bx)$
+***** Solving for higher order
+      1. Begin with writing out the derivative as something something
+         equation as matrix
+      2. The coefficients are $G$. Solve for the eigenvalue equation.
+      3. Vector $\epsilon_0 = \epsilon(0) = \Sum_{i=1}^n c_i e_i$
+         represents the eigenvector expansion of the vector in initial
+         conditions
+      4. Using above, build the ansatz for the solution as:
+         $\epsilon(t)=\Sum^n_{i=1}c_ie_ie^{\lambda_i t}$
+      5. Then, $\dot{\epsilon} =
+         \Sum^n_{i=1}c_i\lambda_ie_ie^{\lambda_i t}$. Check and see
+         that substitution with $G$ creates the linear set of ODEs
+      6. Approximate solution: $x(t) = x_f + \epsilon(t)
+** Week 5
+*** Jordan Form
+    - $J = M^{-1}AM$
+*** Rabbits growth
+    1. Identify fixed points (set x=0 and y=0)
+    2. First equation is $g_1$, second is $g_2$
+    3. Compute $G_{ij} = \frac{\partial g_i}{\partial x_j}$
+    4. Compute the G for each fixed point
+    5. Compute eigenvalues/eigenvectors (consider using $\lambda_{1,2}
+       = \frac12\left(tr(G)\pm\sqrt{tr(G)^2-4det(G)}$
+    6. 
+
+** Week 6
+*** Stability of a point in phase space
+    1. Asymptotic stability
+       When nearby points flow to the point x_f
+    2. Liapunov Stability
+       When trajectories starting near a point x_f merely stay near it.
+
+To be precise: Suppose x(t) is a trajectory with starting point
+x(t=0)=x_0 near a fixed point x_f:
+
+1. _Liapunov Stability_: the trajectory merely stays within the circle
+   $\sigma$
+2. _Asymptotic Stability_: the trajectory would travel back to the
+   fixed point after $t\to\infty$
+
+*** Liapunov Stability Theorem      
+
+Consider a system $\dot{x} = g(x)$ with a fixed point at the
+origin. If there exists a function $V(x)$ defined in a region $R$
+contained 0 with properties:
+
+1. The partial derivatives are continuous
+2. The function is positive definite (all positive for all x) except at 0
+3. The total time derivative is negative (semi) definite (all negative for all x) except at 0
+
+Then the origin 0 is asymoptotically stable. Note:
+- Negative defininite means $V < 0$
+- Negative semi definite means $V \leq 0$
+
+See page 79 for an example which illustrates using this theorem.
+
+$V(x)$ is not easy to find, but one can always try circles or ellipses.
+
+Note: FP is global stable. Attrats all trajectories.  
+
+*** Limit Cycles
+
+Instead of converging at fixed points, the trajectories may converge
+to a closed curve or periodic orbits. For a trajectory $\Gamma$ and a
+neighbourhood defined by $N(\Gamma,\epsilon)$:
+
+1. _Liapunov Orbital Stability_: The trajectory lies inside the
+   neighbourhood.
+2. _Asymtptotic Orbital Stability_: The trajectory approaches $\Gamma$.
+
+See page 80 for example on /van der Pol oscillator/.
+
+*** Poincare Bendixson Theorem
+
+Consider a system $\dot{x} = g(x)$. Suppose that:
+
+1. R is a closed bounded subset of the 2D plane.
+2. The system is well defined in R and $g(x)$ is continously
+   differentiable.
+3. Trajectory $x(t)$ confined in R.
+4. R does not contain any fixed points on the system. 
+
+Then the trajectory is a closed orbit or it tends to a closed orbit as
+t $\to \infty$.
+
+This theorem is used to prove the existence of limit cycles. 
+       
+*** Linearisation (Hartman-Grobman) Theorem
+
+As long as the eigenvalue of the Jacobian as a nonzero real component,
+the phase space portrait close to the fixed point remains
+qualitatively the same. i.e. Upon linearisation:
+
+\[ \dot{x} = G_{x_f} \cdot (x-x_f) + h(x-x_f) \]
+
+The phase portrait remains the same.
+
+*** Symmetry
+
+Symmetrical systems remain the same after the transformation $t\to -t,
+y\to -y$. All trajecotries of the full non-linear system are closed. 
+
+
+*** Additional Examples from lectures:
+
+1. System $\dot{x} = 0, \dot{y} = -y$
+
+Forms a system where the trajectories flow towards $x=0$ (below x axis
+vertical lines go up, above x axis vertical lines go down).
+
+2. /Liapunov Stability/  System $\dot{x} = -x^3, \dot{y} - y^3$ is a non-simple fixed point.
+
+Choose $V(x) = x^2+y^2$ which satisfies aforementioned criteria.
+
+3. System $\dot{x} = -x + 4y, \dot{y} = -x-y^3$ FP at origin.
+
+Choose $V(x,y) = x^2+4y$
+
+4. System $\dot{x} = y+x(1-x^2-y^2), \dot{y} = -x+y(1-x^2-y^2)$
+
+Do the Jacobian and evaluate at fixed point origin. 
+
+Eigenvalues at $\lambda_\pm = 1\pm i$. This is an unstable focus.
+
+Use the Jacobian to find the linearised phase portrait?
+
+Use Polar coordinates. 
+$\dot{r} = r(1-r^2), \dot{theta} = -1$
+
+** Week 7
+
+*** Conserved quantities
+    - Systems have conserved quantities, and for 2D systems: \[
+      \frac{d}{dt}Q(x,y) = \frac{\partial Q}{\partial x} \dot{x} +
+      \frac{\partial Q}{\partial Y}\dot{y} = 0 \]
+    - Thus it is easy to verify a given $Q$ is a conserved quantity of the linear system of a centre
+    - It however is not easy to find the conserved quantity for a given system
+
+*** Fist integrals and conservative system
+    - The first integral of differential equations is a function that
+      is constant on a given trajectory
+    - If: \begin{align*} \dot{x} &= g(y)\\ \dot{y} &= f(x)
+      \end{align*}
+    - Then: $y'(x) = \frac{dy}{dx} = \frac{f(x)}{g(y)}$
+    - Then: $\int dy g(y) = \int dx f(x) + c$
+    - Which can be rewritten as: $c = Q(x,y) = \int_{y_0}^y dy g(y) - \int_{x_0}^x dx f(x)$
+    - Reject trivial solutions
+**** Example 1
+\begin{align*}
+\dot{x} &= \frac{p}{m}\\
+\dot{p} = -\frac{dV(x)}{dx}\\
+\frac{dp}{dx} &= \frac{-dV/dx}{p/m}\\
+\therefore E &= \frac{p^2}{2m}+V(x)
+\end{align*}
+
+Notes: Generalized coordinates and momenta is always a conserved
+quantity *unless* there is an explicit time dependence.  Hamilton
+systems with no explicit time dependence have at least one conserved
+quantity.
+
+
+**** Example 2
+See page 87, on the hyperbolic surface / linear saddle point
+
+**** Example 3
+\begin{align*}
+\dot{x}&=-x\\
+\dot{y}&=-y
+\frac{dy}{dx} &=\frac{y}{x}\\
+Q(x,y) &= \frac{y}{x}
+\begin{align*}
+
+**** Questions
+    - How to go from the conserved quantity to the trajectory?
+    - i.e. "Analytically determine the shape of trajectories"
+*** Theorem: No attracting or repelling fixed points in conservative systems
+*** First Integrals and Trajectories
+    1. Fixed points are stationary points of the conserved quantity
+    2. Stationary points which are maxima or minima must be surrounded
+       by closed trajectories. The presence of linear centres is
+       preserved in non-linear conserved systems.
+    3. Saddle point of conserved quantity is a saddle point in the
+       phase portrait.
+    4. Trajectories:
+       * Homoclinic trajectories: trajectories which leave the saddle point return to the same saddle point.
+       * Heteroclinic trajectories: they leave one saddle to go to another
+We are now in a position to find detailed form of the solutions for various non-linear physical systems. 
+
+*** Nonlinear Pendulum
+\begin{align*}
+T &= \frac12 ml^2\dot{\theta}^2\\
+V &= -mgl\cos{\theta}\\
+L = T-V &= \frac12 ml^2\dot{\theta}^2 + mgl\cos{\theta}
+** Week 8
+   
+*** Bifurcations
+    - System of differential equations contain parameter $a$
+    - Bifurcation occurs when critical value $a=a_c$ causes solutions
+      to qualitatively change
+    - Associated with non-simple fixed points as they are by
+      definition unstable
+
+*** Analysis
+    1) Simple plotting of say $\dot{x} = a-x^2$
+    2) Expansion of $x = \sqrt{a}+\delta$
+       - To first order, the factor $\lambda$ multiplying $\delta$
+       - $|\lambda|=\sqrt{a}$ represents saddle-node bifurcations
+
+*** Bifurcation Diagram
+    - Plots location of fixed points as a function of $a$
+    - Dotted/dashed lines are unstable
+
+*** Pitchfork Bifurcation
+    - $\dot{x} = ax-x^3$
+    - -<- resembles a pitchfork
+    - Known as *supercritical pitchfork bifurcation*
+    - $\dot{x} = ax+x^3$
+    - Known as *subcritical pitchfork bifurcation*
+    - $\dot{x} = ax-x^2$
+    - Canonical example of *transcritical pitchfork bifurcation*
+    - /-
+
+*** General Comments
+    - Three cases cover generic, qualitatively different bifurcations
+    - Conservation: N(stable fixed points) - N(unstable fixed points) remain constant
+
+*** Bifurcations in 2D
+
+*** Hopf Bifurcation
+    - THe appearance of a stable limit cycle is a supercritical HB
+    - 
+
+** Week 9 & 10
+*** Lorenz Equations
+
+\begin{align*}
+\dot{x} &= \sigma(y-x)\\
+\dot{y} &= rx - y - xz\\
+\dot{x} &= xy - bz
+\end{align*}
+
+Canonical values:
+
+\[ sigma = 10, \qquad, b = \frac83, \qquad r = 28 \]
+
+Full eigenvalue equation:
+
+\[ \lambda^3 + \lambda^2(\sigma + b + 1) \lambda (\sigma + r) b + 2b\sigma (r-1) = 0\]
+
+*** Discrete Maps
+    - If $f'(x^*) >1$ deviation from fixed point decreases with every
+      iteration, *stable fixed point*
+    - Else, $|f'(x^*)|<1$ deviation increases, *unstable fixed point*.
+    - If $|f'(x^*)=1| then it is marginal and undetermined.
+    - 
