@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-10-12 Tue 16:10 -->
+<!-- 2022-04-17 Sun 00:40 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>Overall Notes for General Relativity</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Kelvin" />
 <style type="text/css">
@@ -251,25 +251,60 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
+<h1 class="title">Overall Notes for General Relativity</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd0c3209">1. Week 1</a>
+<li><a href="#orgf13bf34">1. Week 1</a>
 <ul>
-<li><a href="#org033982f">1.1. Vector that lives on the sheet</a></li>
+<li><a href="#orgc238655">1.1. Vector that lives on the sheet</a></li>
 </ul>
 </li>
-<li><a href="#org9314c86">2. Week 2</a>
+<li><a href="#orgddd3bc0">2. Week 2</a>
 <ul>
-<li><a href="#org829cba5">2.1. Tensors</a>
+<li><a href="#org18518d5">2.1. Tensors</a>
 <ul>
-<li><a href="#org85c220e">2.1.1. Tensors have upper and lower indices:</a></li>
-<li><a href="#org91c5e4a">2.1.2. Ranks</a></li>
-<li><a href="#org3efedbe">2.1.3. Contraction</a></li>
-<li><a href="#org4aade73">2.1.4. Partial Derivatives</a></li>
-<li><a href="#org3e46921">2.1.5. Manifolds</a></li>
-<li><a href="#orgc1104d0">2.1.6. Distance</a></li>
+<li><a href="#org1b63892">2.1.1. Tensors have upper and lower indices:</a></li>
+<li><a href="#orgcd62fdb">2.1.2. Ranks</a></li>
+<li><a href="#org064aa42">2.1.3. Contraction</a></li>
+<li><a href="#orgae87537">2.1.4. Partial Derivatives</a></li>
+<li><a href="#orgf3ab90c">2.1.5. Manifolds</a></li>
+<li><a href="#org27ca5af">2.1.6. Distance</a></li>
+<li><a href="#orgbf44183">2.1.7. Metric Signature</a></li>
+<li><a href="#org32153da">2.1.8. Geodesic Equation</a></li>
+</ul>
+</li>
+<li><a href="#org622c456">2.2. Summary:</a></li>
+</ul>
+</li>
+<li><a href="#org44125ed">3. Week 3</a>
+<ul>
+<li>
+<ul>
+<li><a href="#orge281ed8">3.0.1. Geodesic Equation in Polar Coordinates</a></li>
+<li><a href="#org8acc92e">3.0.2. The Christoffel symbol can be found in two ways</a></li>
+<li><a href="#org4fe2945">3.0.3. Simplified/reduced Lagragian gives the same EL equations</a></li>
+<li><a href="#org9ab7c54">3.0.4. Metric tensor</a></li>
+<li><a href="#orga74d132">3.0.5. Covariant Derivative</a></li>
+<li><a href="#org27dda89">3.0.6. Metricity</a></li>
+<li><a href="#org86015ba">3.0.7. Torsion</a></li>
+<li><a href="#org0e1c728">3.0.8. Fine \(\nabla_a A^i\)</a></li>
+<li><a href="#orga60b92b">3.0.9. Christoffel symbol components</a></li>
+<li><a href="#org456cf80">3.0.10. Parallel Transport</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org280a3d7">4. Week 4</a>
+<ul>
+<li>
+<ul>
+<li><a href="#org87780ae">4.0.1. Curvature</a></li>
+<li><a href="#org71e5d5a">4.0.2. Riemann Curvature Tensor</a></li>
+<li><a href="#orgf1e6f7c">4.0.3. Theorem:</a></li>
+<li><a href="#org0fe5ff7">4.0.4. Theorem: Let \(R_{abcd}\) be the Riemann curvature Tensor:</a></li>
+<li><a href="#orgd0a15d3">4.0.5. Ricci tensor and Riemann Tensor</a></li>
 </ul>
 </li>
 </ul>
@@ -277,12 +312,14 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd0c3209" class="outline-2">
-<h2 id="orgd0c3209"><span class="section-number-2">1</span> Week 1</h2>
+
+
+<div id="outline-container-orgf13bf34" class="outline-2">
+<h2 id="orgf13bf34"><span class="section-number-2">1</span> Week 1</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org033982f" class="outline-3">
-<h3 id="org033982f"><span class="section-number-3">1.1</span> Vector that lives on the sheet</h3>
+<div id="outline-container-orgc238655" class="outline-3">
+<h3 id="orgc238655"><span class="section-number-3">1.1</span> Vector that lives on the sheet</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 \(f: V \to R\)
@@ -306,19 +343,19 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org9314c86" class="outline-2">
-<h2 id="org9314c86"><span class="section-number-2">2</span> Week 2</h2>
+<div id="outline-container-orgddd3bc0" class="outline-2">
+<h2 id="orgddd3bc0"><span class="section-number-2">2</span> Week 2</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org829cba5" class="outline-3">
-<h3 id="org829cba5"><span class="section-number-3">2.1</span> Tensors</h3>
+<div id="outline-container-org18518d5" class="outline-3">
+<h3 id="org18518d5"><span class="section-number-3">2.1</span> Tensors</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Tensor of type (p,q) is: \(T^{i_1,i_2,...,i_p}_{j_1,j_2,...,j_q}\)
 </p>
 </div>
-<div id="outline-container-org85c220e" class="outline-4">
-<h4 id="org85c220e"><span class="section-number-4">2.1.1</span> Tensors have upper and lower indices:</h4>
+<div id="outline-container-org1b63892" class="outline-4">
+<h4 id="org1b63892"><span class="section-number-4">2.1.1</span> Tensors have upper and lower indices:</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <ul class="org-ul">
 <li>Upper indices transform contravariantly</li>
@@ -326,8 +363,8 @@ Tensor of type (p,q) is: \(T^{i_1,i_2,...,i_p}_{j_1,j_2,...,j_q}\)
 </ul>
 </div>
 </div>
-<div id="outline-container-org91c5e4a" class="outline-4">
-<h4 id="org91c5e4a"><span class="section-number-4">2.1.2</span> Ranks</h4>
+<div id="outline-container-orgcd62fdb" class="outline-4">
+<h4 id="orgcd62fdb"><span class="section-number-4">2.1.2</span> Ranks</h4>
 <div class="outline-text-4" id="text-2-1-2">
 <ul class="org-ul">
 <li>Scalar: 0</li>
@@ -336,8 +373,8 @@ Tensor of type (p,q) is: \(T^{i_1,i_2,...,i_p}_{j_1,j_2,...,j_q}\)
 </ul>
 </div>
 </div>
-<div id="outline-container-org3efedbe" class="outline-4">
-<h4 id="org3efedbe"><span class="section-number-4">2.1.3</span> Contraction</h4>
+<div id="outline-container-org064aa42" class="outline-4">
+<h4 id="org064aa42"><span class="section-number-4">2.1.3</span> Contraction</h4>
 <div class="outline-text-4" id="text-2-1-3">
 <ul class="org-ul">
 <li>Summing over a pair of indices results in a tensor of rank = p+q-2</li>
@@ -347,8 +384,8 @@ Tensor of type (p,q) is: \(T^{i_1,i_2,...,i_p}_{j_1,j_2,...,j_q}\)
 </ul>
 </div>
 </div>
-<div id="outline-container-org4aade73" class="outline-4">
-<h4 id="org4aade73"><span class="section-number-4">2.1.4</span> Partial Derivatives</h4>
+<div id="outline-container-orgae87537" class="outline-4">
+<h4 id="orgae87537"><span class="section-number-4">2.1.4</span> Partial Derivatives</h4>
 <div class="outline-text-4" id="text-2-1-4">
 <ul class="org-ul">
 <li>Not a tensor</li>
@@ -358,8 +395,8 @@ Tensor of type (p,q) is: \(T^{i_1,i_2,...,i_p}_{j_1,j_2,...,j_q}\)
 </ul>
 </div>
 </div>
-<div id="outline-container-org3e46921" class="outline-4">
-<h4 id="org3e46921"><span class="section-number-4">2.1.5</span> Manifolds</h4>
+<div id="outline-container-orgf3ab90c" class="outline-4">
+<h4 id="orgf3ab90c"><span class="section-number-4">2.1.5</span> Manifolds</h4>
 <div class="outline-text-4" id="text-2-1-5">
 <ul class="org-ul">
 <li>An n dimensional, smooth (inf. diff.) is a set</li>
@@ -375,8 +412,8 @@ Tensor of type (p,q) is: \(T^{i_1,i_2,...,i_p}_{j_1,j_2,...,j_q}\)
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc1104d0" class="outline-4">
-<h4 id="orgc1104d0"><span class="section-number-4">2.1.6</span> Distance</h4>
+<div id="outline-container-org27ca5af" class="outline-4">
+<h4 id="org27ca5af"><span class="section-number-4">2.1.6</span> Distance</h4>
 <div class="outline-text-4" id="text-2-1-6">
 <ul class="org-ul">
 <li>\(g_{ij}\) is a rank 2 tensor known as metric tensor</li>
@@ -399,12 +436,13 @@ Remark:
 
 <col  class="org-right" />
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="org-right">Dimensions</td>
-<td class="org-right">Independent components</td>
+<th scope="col" class="org-right">Dimensions</th>
+<th scope="col" class="org-right">Independent components</th>
 </tr>
-
+</thead>
+<tbody>
 <tr>
 <td class="org-right">2D</td>
 <td class="org-right">3</td>
@@ -422,18 +460,250 @@ Remark:
 
 <tr>
 <td class="org-right">N-D</td>
-<td class="org-right">\frac{N(N+1)}{2}</td>
+<td class="org-right">\(\frac{N(N+1)}{2}\)</td>
 </tr>
 </tbody>
 </table>
+<ul class="org-ul">
+<li>Other motivation for the metric structure:</li>
+</ul>
+<p>
+To introduce a mapping that links the covariant and the contravariant
+</p>
 </div>
 </div>
+<div id="outline-container-orgbf44183" class="outline-4">
+<h4 id="orgbf44183"><span class="section-number-4">2.1.7</span> Metric Signature</h4>
+<div class="outline-text-4" id="text-2-1-7">
+<ul class="org-ul">
+<li>Counts the number of positive and negative eigenvalues</li>
+<li>Kronecker delta: (/+,/+,+)</li>
+<li>GR: (-,/+,+,+)</li>
+<li>Line elements or metric in GR are called Lorentzian manifolds</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org32153da" class="outline-4">
+<h4 id="org32153da"><span class="section-number-4">2.1.8</span> Geodesic Equation</h4>
+<div class="outline-text-4" id="text-2-1-8">
+<ul class="org-ul">
+<li>Def: A curve \(C\) given by \(X^i(\lambda)\) is <b>geodesic</b></li>
+<li>if it satisfies \(\ddot{X}^n+\Gamma^{n}_{ms}\dot{X}^m\dot{X}^s = 0\)</li>
+</ul>
+<p>
+Where \(\Gamma^n_{ms} = \frac12 g^{nk}\left(\partial_m g_{sk} + \partial_s g_{km} - \partial_k g_{ms}\right)\)
+</p>
+<ul class="org-ul">
+<li>Geodesics are shortest distances between points</li>
+<li>Get metric tensors and you can computed</li>
+<li><b>Christoffel Symbol</b>: \(\Gamma^n_{ms}\)</li>
+<li>Derive from E-L and learn the actual derivations, watch it a few times</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org622c456" class="outline-3">
+<h3 id="org622c456"><span class="section-number-3">2.2</span> Summary:</h3>
+</div>
+</div>
+<div id="outline-container-org44125ed" class="outline-2">
+<h2 id="org44125ed"><span class="section-number-2">3</span> Week 3</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orge281ed8" class="outline-4">
+<h4 id="orge281ed8"><span class="section-number-4">3.0.1</span> Geodesic Equation in Polar Coordinates</h4>
+<div class="outline-text-4" id="text-3-0-1">
+<ul class="org-ul">
+<li>Solutions are given by straight lines (Exercise is to show this)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8acc92e" class="outline-4">
+<h4 id="org8acc92e"><span class="section-number-4">3.0.2</span> The Christoffel symbol can be found in two ways</h4>
+<div class="outline-text-4" id="text-3-0-2">
+<ul class="org-ul">
+<li>Explicit formula</li>
+<li>via Lagrangian approach</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4fe2945" class="outline-4">
+<h4 id="org4fe2945"><span class="section-number-4">3.0.3</span> Simplified/reduced Lagragian gives the same EL equations</h4>
+<div class="outline-text-4" id="text-3-0-3">
+<ul class="org-ul">
+<li>However one is used over the other</li>
+<li>Because sqrt is motivated from arc</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9ab7c54" class="outline-4">
+<h4 id="org9ab7c54"><span class="section-number-4">3.0.4</span> Metric tensor</h4>
+<div class="outline-text-4" id="text-3-0-4">
+<ul class="org-ul">
+<li>\(g_{ij}T^iT^j = ||T||^2\)</li>
+<li>Can be used to raise or lower indices (see Zee)</li>
+<li>Upper is column, lower is row
+<ol class="org-ol">
+<li>\(T_i^j = g_{is}T^{sj}\)</li>
+<li>\(T_j^i = g_{js}T^{is}\)</li>
+<li>\(T_{ij} = g_{im}g_{jn}T^{mn}\)</li>
+</ol></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga74d132" class="outline-4">
+<h4 id="orga74d132"><span class="section-number-4">3.0.5</span> Covariant Derivative</h4>
+<div class="outline-text-4" id="text-3-0-5">
+<ul class="org-ul">
+<li>A covariant derivative \(\nabla_a\) on a mapping</li>
+<li>From tensors of type (p,q) to tensors type (p,q+1)</li>
+<li>Has the following properties:
+<ol class="org-ol">
+<li>If f is a smooth function, then \(\nabla_{a}f=\partial_{a}f\)</li>
+<li>\(\nabla_a\) is linear (like Operators)</li>
+<li>Leibniz (product) rule</li>
+<li>Commutes with contraction
+<ul class="org-ul">
+<li>Contract first then differentiate or vice versa</li>
+</ul></li>
+</ol></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org27dda89" class="outline-4">
+<h4 id="org27dda89"><span class="section-number-4">3.0.6</span> Metricity</h4>
+<div class="outline-text-4" id="text-3-0-6">
+<ul class="org-ul">
+<li>Something is metric compatitable if:</li>
+<li>\(\nabla_a g_{bc} = 0\)</li>
+<li>Else, the non-metricity is \(Q_abc =  \nabla_a g_{bc} = 0\)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org86015ba" class="outline-4">
+<h4 id="org86015ba"><span class="section-number-4">3.0.7</span> Torsion</h4>
+<div class="outline-text-4" id="text-3-0-7">
+<ul class="org-ul">
+<li>Torsion is defined by:</li>
+<li>\((\nabla_a\nabla_b f - \nabla_b \nabla)a f) = T_{ab}^c\partial_{cf}\)</li>
+<li>GR assumes \(T_{ab}^c=0\)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0e1c728" class="outline-4">
+<h4 id="org0e1c728"><span class="section-number-4">3.0.8</span> Fine \(\nabla_a A^i\)</h4>
+<div class="outline-text-4" id="text-3-0-8">
+<ul class="org-ul">
+<li>\(\partial_a A^i\) is not a rank 2 tensor</li>
+<li>\(\partial_a f = \nabla_a A^i\)</li>
+<li>Thus \(\partial_a A^i\) should be linear in \(A^i\)</li>
+<li>Something about showing a C from the equation of this function</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga60b92b" class="outline-4">
+<h4 id="orga60b92b"><span class="section-number-4">3.0.9</span> Christoffel symbol components</h4>
+<div class="outline-text-4" id="text-3-0-9">
+<ul class="org-ul">
+<li>The C are actually the Christoffel symbol
+<ul class="org-ul">
+<li>Show that it is symmetric</li>
+<li>Torsion free</li>
+<li>Examinable proof of writing out the three equations
+<ul class="org-ul">
+<li>Adding up and subtracting</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org456cf80" class="outline-4">
+<h4 id="org456cf80"><span class="section-number-4">3.0.10</span> Parallel Transport</h4>
+<div class="outline-text-4" id="text-3-0-10">
+<ul class="org-ul">
+<li>In GR, the straightest curves are shortest</li>
+<li>However, in presence of torsion, this is no longer the case</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org280a3d7" class="outline-2">
+<h2 id="org280a3d7"><span class="section-number-2">4</span> Week 4</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org87780ae" class="outline-4">
+<h4 id="org87780ae"><span class="section-number-4">4.0.1</span> Curvature</h4>
+<div class="outline-text-4" id="text-4-0-1">
+<ul class="org-ul">
+<li>Introducing it with parallel transport</li>
+<li>Walk from equator, northpole then back to equator
+<ul class="org-ul">
+<li>The change of vector when parallelly transported</li>
+<li>Along a closed curve</li>
+<li>Defines the curvature</li>
+</ul></li>
+<li>Introducing it with Calculus</li>
+<li>Curvature of a curve matches closely with a circle</li>
+<li>curvature = 1/r ish</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org71e5d5a" class="outline-4">
+<h4 id="org71e5d5a"><span class="section-number-4">4.0.2</span> Riemann Curvature Tensor</h4>
+<div class="outline-text-4" id="text-4-0-2">
+<ul class="org-ul">
+<li>Let M be a manifold</li>
+<li>With covariant der. \(\nabla_a\) (metric and torsion free).</li>
+<li>\(\nabla_a\nabla_d V^b - \nabla_d \nabla_a V^b = -R_{ads}^b V^s\)</li>
+<li>Defines the Riemann curvature tensor</li>
+<li>(Short: Riemann tensor)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf1e6f7c" class="outline-4">
+<h4 id="orgf1e6f7c"><span class="section-number-4">4.0.3</span> Theorem:</h4>
+<div class="outline-text-4" id="text-4-0-3">
+<ul class="org-ul">
+<li>\(F_{ij} = \nabla_i A_j - \nabla_j A_i\)</li>
+<li>Satisfies the identity:</li>
+<li>\(\nabla_iF_{jk} + \nabla_k F_{ij} + \nabla_j F_{ki} = 0\)</li>
+<li>Proof:
+<ul class="org-ul">
+<li>Write out the covariant derivative of the F tensors</li>
+<li>Add up the three terms/lines</li>
+<li>skew symmetric tensors (negative of flip)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0fe5ff7" class="outline-4">
+<h4 id="org0fe5ff7"><span class="section-number-4">4.0.4</span> Theorem: Let \(R_{abcd}\) be the Riemann curvature Tensor:</h4>
+<div class="outline-text-4" id="text-4-0-4">
+<ol class="org-ol">
+<li>R<sub>abcd</sub> = -R<sub>bacd</sub></li>
+<li>R<sub>abcd</sub> = -R<sub>abdc</sub></li>
+<li>R<sub>abcd</sub> + R<sub>cabd</sub> + R<sub>bcad</sub> = 0
+<ul class="org-ul">
+<li>We are only permuting the first 3 indices</li>
+</ul></li>
+<li>&nabla;<sub>a</sub>R<sub>bcde</sub>+&nabla;<sub>c</sub>R<sub>abde</sub>+&nabla;<sub>b</sub>R<sub>cade</sub> = 0
+<ul class="org-ul">
+<li>This is called the Bianchi identity</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-orgd0a15d3" class="outline-4">
+<h4 id="orgd0a15d3"><span class="section-number-4">4.0.5</span> Ricci tensor and Riemann Tensor</h4>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kelvin</p>
-<p class="date">Created: 2021-10-12 Tue 16:10</p>
+<p class="date">Created: 2022-04-17 Sun 00:40</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

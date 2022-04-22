@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-21 Thu 00:12 -->
+<!-- 2022-04-18 Mon 20:05 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Important formulas</title>
+<title>Solid State Physics PHAS0041</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="Kelvin" />
+<meta name="author" content="Kelvin Ho" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -251,131 +251,284 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Important formulas</h1>
+<h1 class="title">Solid State Physics PHAS0041</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc6afa1c">1. Identities</a>
+<li><a href="#org58443a3">1. Revision</a>
 <ul>
-<li><a href="#org855d9d9">1.1. Kinetic energy calculations (seen in Approximation Methods)</a></li>
-<li><a href="#org830734a">1.2. Gaussian Standard Integrals</a></li>
+<li><a href="#orgbe3231f">1.1. Crystal</a></li>
+<li><a href="#orga348486">1.2. Planes of Symmetry</a></li>
+<li><a href="#orgf0de234">1.3. Reciprocal Space</a></li>
+<li><a href="#org3859896">1.4. Luue Condition</a></li>
 </ul>
 </li>
-<li><a href="#org893e8ce">2. Harmonic Oscillator</a>
+<li><a href="#org5772ca2">2. Week 2</a>
 <ul>
-<li><a href="#orge9b2955">2.1. Raising and Lowering Operators</a></li>
-<li><a href="#orgeaf8eb8">2.2. Other operators in terms of the Raising and Loweing Operators</a></li>
+<li><a href="#org88c4239">2.1. Bragg Law</a></li>
+<li><a href="#org77919e6">2.2. Reciprocal Space</a></li>
 </ul>
 </li>
-<li><a href="#org5a5354f">3. Angular Momentum Operators</a></li>
-<li><a href="#orgb354802">4. Spin</a>
+<li><a href="#org473ab36">3. Week 3</a>
 <ul>
-<li><a href="#org45889f1">4.1. Pauli Matrices:</a></li>
+<li><a href="#org5735410">3.1. Lecture 1: Low temperature correction to C - Heat Capacity</a></li>
+<li><a href="#org6ecdf55">3.2. Lecture 2: Anharmonicity</a></li>
+<li><a href="#org9e163f9">3.3. Five Steps to determining crystal structure</a></li>
+</ul>
+</li>
+<li><a href="#org000a944">4. 4: Phonon Theory of Heat</a></li>
+<li><a href="#orgb710fb4">5. 5: Free Electron Theory</a>
+<ul>
+<li><a href="#orge881134">5.1. Sommerfield Model and Fermi Energies</a></li>
+<li><a href="#orgc5f0463">5.2. Electric Field</a></li>
+<li><a href="#org271270e">5.3. Electron Heat transfer</a></li>
+<li><a href="#org43cfcb9">5.4. Wiedemann-Franz Law</a></li>
+<li><a href="#orgba3019a">5.5. Hall Effect</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgc6afa1c" class="outline-2">
-<h2 id="orgc6afa1c"><span class="section-number-2">1</span> Identities</h2>
+<div id="outline-container-org58443a3" class="outline-2">
+<h2 id="org58443a3"><span class="section-number-2">1</span> Revision</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org855d9d9" class="outline-3">
-<h3 id="org855d9d9"><span class="section-number-3">1.1</span> Kinetic energy calculations (seen in Approximation Methods)</h3>
+<div id="outline-container-orgbe3231f" class="outline-3">
+<h3 id="orgbe3231f"><span class="section-number-3">1.1</span> Crystal</h3>
 <div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Lattice + Basis</li>
+<li><b>Convolution</b> of lattice and basis</li>
+<li>Bravais Lattice</li>
+<li>Wigner-Seitz cell</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga348486" class="outline-3">
+<h3 id="orga348486"><span class="section-number-3">1.2</span> Planes of Symmetry</h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
-\[ \int \psi^*(\nabla^2\psi)d\tau = -\int|(\nabla\psi)^2|d\tau\]
+Why are those planes equivalent by symmetry?
 </p>
 </div>
 </div>
 
-<div id="outline-container-org830734a" class="outline-3">
-<h3 id="org830734a"><span class="section-number-3">1.2</span> Gaussian Standard Integrals</h3>
-<div class="outline-text-3" id="text-1-2">
-\begin{align*}
-\int_{-\infty}^{\infty}e^{-ax^2} &= \sqrt{\frac{\pi}{a}}\\
-\int_{-\infty}^{\infty}x^2e^{-ax^2} &= \frac{1}{2a}\sqrt{\frac{\pi}{a}}\\
-\end{align*}
+<div id="outline-container-orgf0de234" class="outline-3">
+<h3 id="orgf0de234"><span class="section-number-3">1.3</span> Reciprocal Space</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+The reciprocal space is simply a fourier transform of the lattice space
+</p>
+</div>
+</div>
 
+<div id="outline-container-org3859896" class="outline-3">
+<h3 id="org3859896"><span class="section-number-3">1.4</span> Luue Condition</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+\[ Q = G\] where \[ Q = k' - k\]
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5772ca2" class="outline-2">
+<h2 id="org5772ca2"><span class="section-number-2">2</span> Week 2</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org88c4239" class="outline-3">
+<h3 id="org88c4239"><span class="section-number-3">2.1</span> Bragg Law</h3>
+<div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
-<li>The integral of odd functions are zero</li>
-<li>Wavefunction at infinities are zero (useful in by parts)</li>
+<li>\(2d\sin{\theta} = n\lambda\)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org77919e6" class="outline-3">
+<h3 id="org77919e6"><span class="section-number-3">2.2</span> Reciprocal Space</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Crystal is periodic i.e. (electron) number density is given by:
+\[ n(r+T) = n(r) \]</li>
+<li>Fourier coefficients define the X-ray amplitudes</li>
+<li></li>
 </ul>
 </div>
 </div>
 </div>
-
-<div id="outline-container-org893e8ce" class="outline-2">
-<h2 id="org893e8ce"><span class="section-number-2">2</span> Harmonic Oscillator</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-orge9b2955" class="outline-3">
-<h3 id="orge9b2955"><span class="section-number-3">2.1</span> Raising and Lowering Operators</h3>
-<div class="outline-text-3" id="text-2-1">
-\begin{align*}
-\hat{a}_\pm &= \frac{1}{\sqrt{2}}\left(\alpha \hat{x} \mp\frac{i}{\hbar \alpha}\hat{p}\right)\\	
-\alpha &= \sqrt{\frac{m\omega}{\hbar}}
-\end{align*}
-</div>
-</div>
-
-<div id="outline-container-orgeaf8eb8" class="outline-3">
-<h3 id="orgeaf8eb8"><span class="section-number-3">2.2</span> Other operators in terms of the Raising and Loweing Operators</h3>
-<div class="outline-text-3" id="text-2-2">
-\begin{align*}
-\hat{x} &= \frac{1}{\alpha \sqrt{2}}(\hat{a} + \hat{a}^\dagger)\\
-\hat{p} &= \frac{i\hbar\alpha}{\sqrt{2}}(\hat{a}-\hat{a}^\dagger)\\
-\hat{H} &= \left(\hat{a}\hat{a}^\dagger+\frac12\right)\hbar\omega\\
-\end{align*}
-</div>
-</div>
-</div>
-
-<div id="outline-container-org5a5354f" class="outline-2">
-<h2 id="org5a5354f"><span class="section-number-2">3</span> Angular Momentum Operators</h2>
+<div id="outline-container-org473ab36" class="outline-2">
+<h2 id="org473ab36"><span class="section-number-2">3</span> Week 3</h2>
 <div class="outline-text-2" id="text-3">
-\begin{align*}
-\hat{J}^2
+</div>
+<div id="outline-container-org5735410" class="outline-3">
+<h3 id="org5735410"><span class="section-number-3">3.1</span> Lecture 1: Low temperature correction to C - Heat Capacity</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>C is defined to be the change in heat required for change in
+temperature.
+<ul class="org-ul">
+<li>Summary: 
+<ul class="org-ul">
+<li>Classical Model: equipartition times \(\frac12 k_b T\)</li>
+<li>Einstein Model: Derivative of harmonic oscillator with
+occupancy distribution with one frequency</li>
+<li>Debye Model: Integrate over many frequencies, revisit the
+distribution of k vectors over annular/spherical region</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6ecdf55" class="outline-3">
+<h3 id="org6ecdf55"><span class="section-number-3">3.2</span> Lecture 2: Anharmonicity</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Umklapp event vs Normal Event:
+<ul class="org-ul">
+<li>Crosses over first bruillion zone introduces vector incoming
+from left</li>
+</ul></li>
+<li>The thermal current can be written as energy at \(x+l\) where \(l\)
+is the mean path</li>
+<li>Then it can be taylor expanded so it can be expressed as
+temperature gradient and heat capacity</li>
+<li>Produce \(\kappa\) term</li>
+<li>Current equals the 'something' multiplied by the (negative) temperature gradient</li>
+</ul>
+</div>
+</div>
 
-\end{align*}
+<div id="outline-container-org9e163f9" class="outline-3">
+<h3 id="org9e163f9"><span class="section-number-3">3.3</span> Five Steps to determining crystal structure</h3>
+<div class="outline-text-3" id="text-3-3">
+<ol class="org-ol">
+<li>From \(2\theta\) values determine \(sin^2\theta\) values</li>
+<li>Normalize by smallest values</li>
+<li>Clear fractions</li>
+<li>Produce the clear fractions with combinations of hkl</li>
+<li>Ensure that \(\frac{sin^2\theta}{h^2+k^2+l^2}\) is constant</li>
+</ol>
 </div>
 </div>
-<div id="outline-container-orgb354802" class="outline-2">
-<h2 id="orgb354802"><span class="section-number-2">4</span> Spin</h2>
+</div>
+
+<div id="outline-container-org000a944" class="outline-2">
+<h2 id="org000a944"><span class="section-number-2">4</span> 4: Phonon Theory of Heat</h2>
 <div class="outline-text-2" id="text-4">
-</div>
-<div id="outline-container-org45889f1" class="outline-3">
-<h3 id="org45889f1"><span class="section-number-3">4.1</span> Pauli Matrices:</h3>
-<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>Heat current:</li>
+</ul>
 <p>
-The Pauli Matrices all have eigenvalues of \(\lambda = \pm1\).
+\[ j_u = -\kappa \frac{dT}{dx}\] Where \[ \kappa = \frac13 v l C_v\]
+Where v is velocity of particles, l is mean free path (no collision)
+and C is heat capacity 
+</p>
+<ul class="org-ul">
+<li>Umklapp process (German for reverse or something)
+<ul class="org-ul">
+<li>\(k_1+k_2\) results in a \(k_3\) that extends beyond the B zone</li>
+<li>Add \(G\) so it comes back (or see it as \(k_3 + G\) is the <b>real</b>
+resultant vector</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb710fb4" class="outline-2">
+<h2 id="orgb710fb4"><span class="section-number-2">5</span> 5: Free Electron Theory</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orge881134" class="outline-3">
+<h3 id="orge881134"><span class="section-number-3">5.1</span> Sommerfield Model and Fermi Energies</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Use of QM by Sommerfield to explain electronic properties</li>
+<li>Particle in a box model / Solve TISE |-&gt; Solution in the form of
+exponentials</li>
+<li>This naturally extends to expressing energy (eigenvalues) in terms
+of wavevector \(k\)</li>
+<li>Page 4 derivation equating density states in terms of energy and
+wavevectors</li>
+<li>At T=0 states up to Fermi energy is filled, so integrate energy
+state density would be equal to electrons in crystals, and the
+Fermi energy can be solved:
+\[ \epsilon_F = \frac{\hbar^2}{2m}\left(3\pi^2\frac{N}{V}\right)^{2/3}\]</li>
+<li>Using \(\epsilon=\frac{\hbar^2k^2}{2m}\) the Fermi energy can be
+rewritten to represent filled states in terms of \(k\). This is
+known as the <b>Fermi Surface</b> (important!)</li>
+<li>This can be substituted into the density function \(g\) to get the
+density of states at the surface:
+\[g(\epsilon_F)=\frac32\frac{N}{\epsilon_F}\]</li>
+<li>Then consider the additional heat capacity of metals</li>
+<li>This can be explained by: In thermal equilibrium, the number of
+electrons per unit energy range is given by the product of the
+density of states and the Fermi-Dirac distribution function</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc5f0463" class="outline-3">
+<h3 id="orgc5f0463"><span class="section-number-3">5.2</span> Electric Field</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li><p>
+Particle momentum is given by \(\hbar k\), equating time derivative
+of that with Lorentz Force:
 </p>
 \begin{align*}
-\sigma_x &= 
-\begin{pmatrix}
-0 & 1 \\
-1 & 0 \\
-\end{pmatrix}\\
-\sigma_y &= 
-\begin{pmatrix}
-0 & -i \\
-i & 0 \\
-\end{pmatrix}\\
-\sigma_z &= 
-\begin{pmatrix}
-1 & 0 \\
-0 & -1 \\
-\end{pmatrix}\\
-\end{align*}
+\hbar \frac{d\mathbf{k}}{dt} &= -e\mathbf{E}\\
+\Delta k &= -\frac{e\mathbf{E}}{\hbar}t
+\end{align*}</li>
+<li>The whole Fermi sphere shifts the same way as the E field but
+opposite</li>
+<li>Normally accelerate indefinitely, but realistically there are
+collisions</li>
+<li>Add a damping term \(\frac{v}{\tau}\) where \(\tau\) is relaxation
+time i.e. where the electron maintains finite drift velocity (?)
+and derive Ohm's Law \(j = \sigma E\)</li>
+<li><i>Mattheisen's Rule</i>: The resistivity depends on both the ideal
+resistivity and residual resistivity affected by purity&#x2026;</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org271270e" class="outline-3">
+<h3 id="org271270e"><span class="section-number-3">5.3</span> Electron Heat transfer</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>Use the kinetic theory again</li>
+<li>Values - mean velocity same, mean path length is velocity times
+relaxation time and electronic heat capacity</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org43cfcb9" class="outline-3">
+<h3 id="org43cfcb9"><span class="section-number-3">5.4</span> Wiedemann-Franz Law</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>Ratio of E to Thermal Conductivity proportional to temperature</li>
+<li>Something about different process for conductivity</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgba3019a" class="outline-3">
+<h3 id="orgba3019a"><span class="section-number-3">5.5</span> Hall Effect</h3>
+<div class="outline-text-3" id="text-5-5">
+<ul class="org-ul">
+<li></li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Kelvin</p>
-<p class="date">Created: 2022-04-21 Thu 00:12</p>
+<p class="author">Author: Kelvin Ho</p>
+<p class="date">Created: 2022-04-18 Mon 20:05</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

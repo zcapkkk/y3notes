@@ -1,0 +1,9 @@
+#+TITLE: Formula
+#+AUTHOR: Kelvin 
+
+* Free Electron Theory
+
+** Electrical Conductivity
+
+\[ \sigma = \frac{ne^2\tau}{m}\]
+where \(\tau = \frac{l}{v_f}\) 

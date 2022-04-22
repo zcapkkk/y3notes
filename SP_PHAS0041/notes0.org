@@ -52,7 +52,14 @@ The reciprocal space is simply a fourier transform of the lattice space
      temperature gradient and heat capacity
    - Produce $\kappa$ term
    - Current equals the 'something' multiplied by the (negative) temperature gradient
-     
+ 
+** Five Steps to determining crystal structure
+1. From \(2\theta\) values determine \(sin^2\theta\) values
+2. Normalize by smallest values
+3. Clear fractions
+4. Produce the clear fractions with combinations of hkl
+5. Ensure that \(\frac{sin^2\theta}{h^2+k^2+l^2}\) is constant
+
 * 4: Phonon Theory of Heat
   - Heat current:
 \[ j_u = -\kappa \frac{dT}{dx}\] Where \[ \kappa = \frac13 v l C_v\]

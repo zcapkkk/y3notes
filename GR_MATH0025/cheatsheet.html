@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-21 Thu 17:21 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>General Relativity Formulas</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Kelvin Ho" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">General Relativity Formulas</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org80675a5">1. Vectors and Tensors</a>
+<ul>
+<li><a href="#org8188cd7">1.1. Coordinate Transformation</a></li>
+<li><a href="#orgda79509">1.2. Contravariant and Covariant vectors</a></li>
+<li><a href="#orgd5d521b">1.3. Dual Vector Space</a></li>
+<li><a href="#org0aede90">1.4. Basis Vectors</a></li>
+<li><a href="#org6ae5cee">1.5. Classical Differential</a></li>
+<li><a href="#orge569123">1.6. Vector Calculus</a></li>
+<li><a href="#org1e89002">1.7. Tensors</a>
+<ul>
+<li><a href="#org8060043">1.7.1. Contraction</a></li>
+<li><a href="#orgc81dd50">1.7.2. Symmetry and Skew-symmetry</a></li>
+<li><a href="#org42c06de">1.7.3. Partial Derivative</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org68ddb91">2. Differential Geometry</a>
+<ul>
+<li><a href="#org197a29d">2.1. Manifold</a></li>
+<li><a href="#orgff7ba0f">2.2. Metric and Line Element</a>
+<ul>
+<li><a href="#orgaa5b6ed">2.2.1. Metric Signature</a></li>
+<li><a href="#orgd7caf2f">2.2.2. Lorentzian Metric</a></li>
+<li><a href="#orgb7b9767">2.2.3. Volume of a space</a></li>
+<li><a href="#org14cf46c">2.2.4. Minkowski Space</a></li>
+</ul>
+</li>
+<li><a href="#org3294212">2.3. Geodesics</a></li>
+<li><a href="#orga970ea8">2.4. Geodesic and Christoffel Symbol</a></li>
+<li><a href="#org75dd590">2.5. Covariant Derivative</a>
+<ul>
+<li><a href="#orgca5c1aa">2.5.1. Properties</a></li>
+<li><a href="#org40dcacd">2.5.2. Metricity</a></li>
+<li><a href="#org7692f47">2.5.3. Torsion</a></li>
+<li><a href="#orgb561708">2.5.4. Uniqueness of the Covariant Derivative</a></li>
+<li><a href="#orgdccb71a">2.5.5. Important Formulas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org80675a5" class="outline-2">
+<h2 id="org80675a5"><span class="section-number-2">1</span> Vectors and Tensors</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org8188cd7" class="outline-3">
+<h3 id="org8188cd7"><span class="section-number-3">1.1</span> Coordinate Transformation</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+\[ J^i_j = \frac{\partial Y^i}{\partial X^j}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda79509" class="outline-3">
+<h3 id="orgda79509"><span class="section-number-3">1.2</span> Contravariant and Covariant vectors</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Contravariant vector \(T^i\) transforms as:
+\[ T'^i = \frac{\partial X'^i}{\partial X^j} X^j\]
+Covariant vector \(S_i\) transforms as:
+\[ S'_i = \frac{\partial X^j}{\partial X'^i} S_j\]
+</p>
+
+<ul class="org-ul">
+<li>Contravariant are <b>upstairs</b> (equation goes up)</li>
+<li>Covariant are <b>downstairs</b> (equation goes down)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd5d521b" class="outline-3">
+<h3 id="orgd5d521b"><span class="section-number-3">1.3</span> Dual Vector Space</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+A space in which operation with the `mother' space produces a map to real number. Example: bras are the <b>dual space</b> of kets and the inner product produces a complex number.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0aede90" class="outline-3">
+<h3 id="org0aede90"><span class="section-number-3">1.4</span> Basis Vectors</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+\[ \mathbf{e}_i = \partial/\partial X^i \qquad \mathbf{E}^i = \dX^i\]
+</p>
+
+<p>
+Therefore:
+\mathbf{E}<sup>i</sup>(\mathbf{e}<sub>j</sub>) = dX<sup>i\left</sup>(\frac{\partial}{\partial X^j}\right) = &delta;<sup>i</sup><sub>j</sub>\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ae5cee" class="outline-3">
+<h3 id="org6ae5cee"><span class="section-number-3">1.5</span> Classical Differential</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Exists in the dual space, defined as:
+\[ df = \frac{\partial f}{\partial X^i}dX^i\]
+COnsidering:
+\[ df(\mathbf{T}) = T&amp;i\frac{\partial f}{\partial X^i}
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge569123" class="outline-3">
+<h3 id="orge569123"><span class="section-number-3">1.6</span> Vector Calculus</h3>
+<div class="outline-text-3" id="text-1-6">
+\begin{align*}
+\nabla f &= \partial_i f \mathbf{e}^i\\
+\nabla \cdot \mathbf{A} &= \partial_i A^i\\
+\nabla \times \mathbf{A} = \epsilon^{ijk}\partial_iA_j\mathbf{e}_k
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-org1e89002" class="outline-3">
+<h3 id="org1e89002"><span class="section-number-3">1.7</span> Tensors</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+Someone once said, a tensor is something that transforms like a tensor (Zee, <i>Gravity in a Nutshell</i>). 
+</p>
+
+<p>
+\[ T'^{i_1 i_2 ... i_p}_{j_1 j_2 ... j_q} = \frac{\partial X'^{i_1}}{\partial X^{k_1}}...\frac{\partial X'^{i_p}}{\partial X^{k_p}}\frac{\partial X^{n_1}}{\partial X'^{j_1}}...\frac{\partial X'^{n_q}}{\partial X^{j_q}}...T^{m_1 m_2...m_p}_{n_1 n_2 ... n_q}\]
+</p>
+</div>
+
+<div id="outline-container-org8060043" class="outline-4">
+<h4 id="org8060043"><span class="section-number-4">1.7.1</span> Contraction</h4>
+<div class="outline-text-4" id="text-1-7-1">
+<p>
+You pick an index from the top and the bottom to be the same and sum over it, resulting in a tensor which is \( (p-1,q-1)\). 
+</p>
+
+<p>
+Special case: the trace is defined to be: \( \text{tr} A = A^i_i\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc81dd50" class="outline-4">
+<h4 id="orgc81dd50"><span class="section-number-4">1.7.2</span> Symmetry and Skew-symmetry</h4>
+<div class="outline-text-4" id="text-1-7-2">
+<p>
+Symmetric and skew symmetric parts are defined respectively as:
+</p>
+\begin{align*}
+T_{(ab)} &= \frac12 (T_{ab} + T_{ba})\\
+T_{[ab]} &= \frac12 (T_{ab}-T_{ba})
+\end{align*}
+<p>
+Any tensor can be written as the sum of the symmetric and skew-symmetric parts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42c06de" class="outline-4">
+<h4 id="org42c06de"><span class="section-number-4">1.7.3</span> Partial Derivative</h4>
+<div class="outline-text-4" id="text-1-7-3">
+<p>
+Results in a second term that shows that it does not transform as a covariant tensor.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org68ddb91" class="outline-2">
+<h2 id="org68ddb91"><span class="section-number-2">2</span> Differential Geometry</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org197a29d" class="outline-3">
+<h3 id="org197a29d"><span class="section-number-3">2.1</span> Manifold</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Patches with its own coordinate system that has `instructions' in how to move between the patches. Example: Maps in an Atlas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff7ba0f" class="outline-3">
+<h3 id="orgff7ba0f"><span class="section-number-3">2.2</span> Metric and Line Element</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+\[ \langle U, V \rangle = g_{ij} U^i V^j\]
+</p>
+
+<p>
+Then
+</p>
+
+<p>
+\[ ds^2 = g_{ij}dX^idX^j\]
+</p>
+</div>
+
+<div id="outline-container-orgaa5b6ed" class="outline-4">
+<h4 id="orgaa5b6ed"><span class="section-number-4">2.2.1</span> Metric Signature</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+Something like (-,+,+,+).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd7caf2f" class="outline-4">
+<h4 id="orgd7caf2f"><span class="section-number-4">2.2.2</span> Lorentzian Metric</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+Something with signature of (p,1) or (1,q).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7b9767" class="outline-4">
+<h4 id="orgb7b9767"><span class="section-number-4">2.2.3</span> Volume of a space</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<p>
+\[ V = \int \sqrt{|\det{g_{ij}}|}d^nx\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14cf46c" class="outline-4">
+<h4 id="org14cf46c"><span class="section-number-4">2.2.4</span> Minkowski Space</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<p>
+\[ ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2\]
+Signature: (-,+,+,+)
+It is referred to as \(\eta_{ij}\)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3294212" class="outline-3">
+<h3 id="org3294212"><span class="section-number-3">2.3</span> Geodesics</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+From Lagrangian calculus, the shortest distance is given by: 
+</p>
+
+<p>
+\[ s = \int \sqrt(g_{ij} \dot{X}^i \dot{X}^j d\lambda \]
+The Lagrangian of the system is:
+\[ L(X^i, \dot{X}^j) = \sqrt{g_{ij}\dot{X}^i \dot{X}^j}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga970ea8" class="outline-3">
+<h3 id="orga970ea8"><span class="section-number-3">2.4</span> Geodesic and Christoffel Symbol</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+The derivation would give the geodesic equation as:
+</p>
+
+<p>
+\[ \ddot{X}^n + \Gamma^n_{ij}\dot{X}^i\dot{X}^j = 0\]
+</p>
+
+<p>
+Where the Christoffel symbol is defined to be:
+</p>
+
+<p>
+\[  \Gamma^n_{ij} = \frac12g^{nk}(\partial_i g_{jk} + \partial_j g_{ki} - \partial_k g_{ij})\]
+</p>
+
+<p>
+(You cyclically permute back the indices starting from ijk)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75dd590" class="outline-3">
+<h3 id="org75dd590"><span class="section-number-3">2.5</span> Covariant Derivative</h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+<div id="outline-container-orgca5c1aa" class="outline-4">
+<h4 id="orgca5c1aa"><span class="section-number-4">2.5.1</span> Properties</h4>
+<div class="outline-text-4" id="text-2-5-1">
+<ol class="org-ol">
+<li>For smooth function it coincides with partial derivative</li>
+<li>Linear (relates to addition)</li>
+<li>Obeys Leibniz rule (product rule)</li>
+<li>Commutes with contraction (can contract then cov. dev.)</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org40dcacd" class="outline-4">
+<h4 id="org40dcacd"><span class="section-number-4">2.5.2</span> Metricity</h4>
+<div class="outline-text-4" id="text-2-5-2">
+<p>
+Covariant derivative is metric compatitable if it satisfies:
+\[ \nabla_a g_{ij} = 0\] 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7692f47" class="outline-4">
+<h4 id="org7692f47"><span class="section-number-4">2.5.3</span> Torsion</h4>
+<div class="outline-text-4" id="text-2-5-3">
+<p>
+Torsion-free is defined by:
+\[ \nabla_a \nabla_b f - \nabla_b \nabla_a f = 0\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb561708" class="outline-4">
+<h4 id="orgb561708"><span class="section-number-4">2.5.4</span> Uniqueness of the Covariant Derivative</h4>
+<div class="outline-text-4" id="text-2-5-4">
+<p>
+If the covariant derivative is:
+</p>
+<ul class="org-ul">
+<li>Metric compatitable</li>
+<li>Torsion-free</li>
+</ul>
+<p>
+Then the connection coefficient is given by the Christoffel symbol
+</p>
+
+<p>
+The proof is on page 36, requires writing out the torsion and writing out the CD of the metric three times (permuting the indices), adding the first two and subtracting the third. The coefficient and metric is symmetric. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdccb71a" class="outline-4">
+<h4 id="orgdccb71a"><span class="section-number-4">2.5.5</span> Important Formulas</h4>
+<div class="outline-text-4" id="text-2-5-5">
+\begin{align*}
+\nabla_a A^b &= \partial_a A^b + \Gamma^b_{ac}A^c\\
+\nabla_a A_b &=  \partial_a A^b - \Gamma^b_{ac}A^c\\
+\nabla_a T^{ij} &= \partial_aT^{ij} + \Gamma^i_{ac}T^{cj}+\Gamma^j_{ac}T^{ic}\\
+\nabla_aT^i_j &= \partial_aT^i_j + \Gamma^i_{ac}T^c_j-\Gamma^c_{aj}T^i_c\\
+\nabla_aT_{ij} &= \partial_aT_{ij} -\Gamma^c_{ai}T_{cj}-\Gamma^c_{aj}T_{ic}
+\end{align*}
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Kelvin Ho</p>
+<p class="date">Created: 2022-04-21 Thu 17:21</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

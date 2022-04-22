@@ -1,0 +1,225 @@
+#+TITLE: Formula
+#+AUTHOR: Kelvin 
+
+* Thermal Properties
+
+
+** Debye
+
+*** Debye Temperature:
+\[ \Theta_D = \frac{\hbar \omega_D}{k_B}\]
+** Heat Capacity
+
+Low-temperature limit \( T \rightarrow 0, x\rightarrow \infty\)
+
+\[ C_V = \frac{12}{5}Nk_B\pi^4\left(\frac{T}{\Theta_D}\right)^3\]
+
+** Thermal Conductivity
+
+\[ \kappa = \frac13\bar{v}l\bar{C_V}\]
+
+* Free Electron Theory
+
+** Density
+\[ n = \frac{N}{V}\]
+
+** Fermi things
+
+*** Density of States
+- The k-vector is like a radius and is positive
+- Must multiply by 2 to account for negative values as well (important in a line)
+- Multiplicity 2s+1 means you can fit 2 electrons per states
+*** Density of States (Sphere)
+\[ g(\epsilon) = \frac{V}{\pi^2}k^2\frac{dk}{d\epsilon}\]
+Or with \(\epsilon = \frac{\hbar^2k^2}{2m}\)
+\[ g(\epsilon) = \frac{V}{2\pi^2}\left(\frac{2m}{\hbar^2}\right)^{3/2}\epsilon^{1/2}\]
+
+*** Fermi Energy
+
+\[ \epsilon_F = \frac{\hbar^2}{2m}\left(3\pi^2\frac{N}{V}\right)^{2/3}\]
+
+*** Fermi Wavevector/Surface
+\[ k_F = \left(e\pi^2\frac{N}{V}\right)^{1/3}\]
+
+*** Fermi Density of States
+\[ g(\epsilon_F) = \frac32 \frac{N}{\epsilon_F}\]
+
+
+** Heat Capacities
+
+\[C_\text{el} = \frac{\pi^2}{2}Nk_B\left(\frac{T}{T_F}\right)\]
+
+
+
+** Electrical Conductivity
+
+\[ \sigma = \frac{ne^2\tau}{m}\]
+where \(\tau = \frac{l}{v_f}\) 
+
+** Thermal Conductivity
+\[ \kappa = \frac{\pi^2}{3}\frac{nk_B^2T\tau}{m}\]
+
+** Wiedemann-Franz Law
+
+\[ \kappa = L\sigma T\]
+
+
+** Hall Effect 
+
+*** Description
+
+ \[ \mathbf{E}_H = R_H \mathbf{B \times j}\]
+
+*** Hall Coefficient
+\[ R_H = -\frac{1}{ne} \]
+
+** Effective Mass 
+
+\[\gamma = \frac{\pi^2}{2}\frac{N}{\epsilon_F}k_B^2\]
+
+Which makes the ratio known as /effective mass/: 
+
+\[\frac{m^*}{m_e} =\frac{\gamma^\text{observed}}{\gamma^\text{free electron}}\]
+
+
+* Electron Energy Bands
+
+** Insulators and Conductors
+
+- Insulators have filled bands
+- Conductors (metals) have empty states
+
+** 1D
+
+Allowed states:
+\[ \Delta k = \frac{2\pi}{L} = \frac{2\pi}{Na}\]
+Number of states in first BZB:
+\[ \frac{\Delta\text{BZB}}{\delta k} = \frac{2\pi/a}{\frac{2\pi}{L}}= \frac{L}{a} = N\]
+Each state can be occupied by *two* electrons, so 2N possible states
+
+*** One electron per primitive cell
+Monovalent atoms means only half the states will be filled, so *metal*
+
+*** Two electrons per primitive cell
+Two monovalent atoms or divalent atom, fully filled so *insulator*
+
+** 2D
+2N allowed states as before:
+
+*** Monovalent
+Half the states are filled, so area is \(\frac12\left(\frac{2\pi}{a}\right)^2\):
+\[ \pi k_F^2 = \frac12\left(\frac{2\pi}{a}\right)^2\]
+Fermi sphere lies within BZB so metal.
+
+*** Divalent
+Double of the above states are filled, so \(\pi k_F^2 = (2\pi/a)^2\)
+
+** Effective Mass
+
+\[ m^* = \frac{\hbar^2}{\frac{d^2\epsilon}{dk^2}}\]
+
+* Semiconductor
+
+** CB and VB
+- Conduction Band (CB) on top
+- Valence Band (VB) on bottom
+- Gap is given by \(\epsilon_g\)
+
+** Carriers
+Carriers carry electrons, and the number per unit volume:
+\[ n = \frac1V\int_{\epsilon_g}^\infty f(\epsilon)g(\epsilon)d\epsilon\]
+With:
+
+\begin{align*}
+g(\epsilon) &=\frac{V}{2\pi^2}\left(\frac{2m^*_e}{\hbar^2}\right)^\frac32(\epsilon-\epsilon_g)^\frac12\\
+f(\epsilon) &= \frac{1}{e^{(\epsilon-\mu)/k_BT1}} \approx e^{(\mu-\epsilon)k_BT}
+\end{align*}
+
+
+\[ n = N_Ce^{(\mu-\epsilon_g)/k_BT}\]
+where
+\[N_C = 2\left(\frac{m^*_ek_BT}{2\pi\hbar^2}\right)^\frac32\]
+which is the effective density of states per unit volume.
+
+** Holes
+Similarly:
+\[ n = \frac1V\int_{\epsilon_g}^\infty f(\epsilon)g(\epsilon)d\epsilon\]
+So:
+\begin{align*}
+p &= N_Ve^{-\mu/k_B T}\\
+N_V &= 2\left(\frac{m^*_h k_BT}{2\pi\hbar^2}\right)^\frac32\\
+\end{align*}
+
+
+** Law of Mass Action
+\[ np = N_CN_Ve^{-\epsilon_g/k_BT}\]
+
+** Doping
+
+At low temperature donor (\(N_D\)) ionisation dominates:
+
+\[ n = (N_CN_D)^\frac12 e^{-E_D/2k_BT}\]
+
+At high temperatures, all donors are ionised, temperature independent (extrinsic regime):
+\[ n = N_D\]
+
+
+*** Intrinsic
+\begin{align*}
+n_i &= p_i = (N_CN_V)^{1/2} e^{-E_g/2k_BT}\\
+\mu \approx \frac12 E_g + \frac12k_BTln(N_V/N_C)
+
+*** Extrinsic
+\[ n \approx N_D\]
+
+*** Freeze-out
+\begin{align*}
+n &= (N_CN_D)^{1/2{e^{-E_D/2k_BT}}}\\
+\mu &\approx E_g - \frac12E_D-\frac12k_BTln(N_C/N_D)
+\end{align*}
+
+** Transport Properties
+
+*** Velocity per unit field (cm^2/Vs)
+
+\[ \mu_e = \frac{e\tau_e}{m^*_e} \qquad \mu_h = \frac{e\tau_h}{m^*_h}\]
+
+*** Conductivity
+\begin{align*}
+\mathbf{j} &=-ne\mathbf{v_e} + pe\mathbf{v_h} = \sigma\mathbf{E}\\
+\sigma &= \left(\frac{ne^2}{\tau_e{m^*_h}}+\frac{pe^2\tau_h}{m^*_h}\right) = ne\mu_e+pe\mu_h
+\end{align*}
+
+** Hall Effect 
+\begin{align*}
+\sigma &= ne\mu_e\\
+\mu_e &= |R_H|\sigma
+\end{align*}
+
+** p-n Junction 
+
+\[ e\Delta\phi_0 = \mu_n - \mu_p\]
+
+** Currents
+
+From p to n:
+
+\[ I_{e0} = e\left(\frac{n_p}{\tau_p}\right)(L_eA)\]
+
+Using law of mass action:
+
+\[ I_{e0} = \frac{en^2_iL_eA}{N_A\tau_p}\]
+
+Net electron current across junction:
+
+\[ I_e = I_{e0}(e^{eV/k_BT}-1)\]
+(The same expression can be performed for \(I_{h0}\))
+
+Total current:
+
+\[ I = I_e + I_h = I_0(e^{eV/k_BT}-1)\]
+
+** Problem Solving
+
+- Saturation/reverse-bias is equal to \(I_0\)
+- 

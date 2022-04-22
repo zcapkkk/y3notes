@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-19 Tue 18:31 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Formula</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Kelvin" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Formula</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org563e0f5">1. Thermal Properties</a>
+<ul>
+<li><a href="#org96d4f21">1.1. Debye</a>
+<ul>
+<li><a href="#orge6dadcb">1.1.1. Debye Temperature:</a></li>
+</ul>
+</li>
+<li><a href="#org90d8505">1.2. Heat Capacity</a></li>
+<li><a href="#orgdbf2e7a">1.3. Thermal Conductivity</a></li>
+</ul>
+</li>
+<li><a href="#org2afce33">2. Free Electron Theory</a>
+<ul>
+<li><a href="#org6f6cfe5">2.1. Density</a></li>
+<li><a href="#orgdd38d7f">2.2. Fermi things</a>
+<ul>
+<li><a href="#org5ef8044">2.2.1. Density of States</a></li>
+<li><a href="#org1a7d7fe">2.2.2. Density of States (Sphere)</a></li>
+<li><a href="#orgf573c36">2.2.3. Fermi Energy</a></li>
+<li><a href="#org85763dd">2.2.4. Fermi Wavevector/Surface</a></li>
+<li><a href="#org854d21e">2.2.5. Fermi Density of States</a></li>
+</ul>
+</li>
+<li><a href="#org189abff">2.3. Heat Capacities</a></li>
+<li><a href="#orgb40f7db">2.4. Electrical Conductivity</a></li>
+<li><a href="#org3c4a266">2.5. Thermal Conductivity</a></li>
+<li><a href="#org729cb09">2.6. Wiedemann-Franz Law</a></li>
+<li><a href="#org8541955">2.7. Hall Effect</a>
+<ul>
+<li><a href="#orgee289e4">2.7.1. Description</a></li>
+<li><a href="#org68b1a39">2.7.2. Hall Coefficient</a></li>
+</ul>
+</li>
+<li><a href="#org0c575ad">2.8. Effective Mass</a></li>
+</ul>
+</li>
+<li><a href="#orgc8e29f0">3. Electron Energy Bands</a>
+<ul>
+<li><a href="#org839200f">3.1. Insulators and Conductors</a></li>
+<li><a href="#org6dd1040">3.2. 1D</a>
+<ul>
+<li><a href="#org87c5cf7">3.2.1. One electron per primitive cell</a></li>
+<li><a href="#org6f6fe4b">3.2.2. Two electrons per primitive cell</a></li>
+</ul>
+</li>
+<li><a href="#org22f62b7">3.3. 2D</a>
+<ul>
+<li><a href="#orgaf40526">3.3.1. Monovalent</a></li>
+<li><a href="#org28d908d">3.3.2. Divalent</a></li>
+</ul>
+</li>
+<li><a href="#orgdd1dd14">3.4. Effective Mass</a></li>
+</ul>
+</li>
+<li><a href="#org7f13326">4. Semiconductor</a>
+<ul>
+<li><a href="#orgecefdee">4.1. CB and VB</a></li>
+<li><a href="#org781b58f">4.2. Carriers</a></li>
+<li><a href="#orge377fe0">4.3. Holes</a></li>
+<li><a href="#orgd8346e0">4.4. Law of Mass Action</a></li>
+<li><a href="#orgb6f8c4c">4.5. Doping</a>
+<ul>
+<li><a href="#orgb00b06b">4.5.1. Intrinsic</a></li>
+<li><a href="#org763d73e">4.5.2. Extrinsic</a></li>
+<li><a href="#org93d6a5e">4.5.3. Freeze-out</a></li>
+</ul>
+</li>
+<li><a href="#org8399918">4.6. Transport Properties</a>
+<ul>
+<li><a href="#org7986fdf">4.6.1. Velocity per unit field (cm<sup>2</sup>/Vs)</a></li>
+<li><a href="#orgd1e6606">4.6.2. Conductivity</a></li>
+</ul>
+</li>
+<li><a href="#org897e479">4.7. Hall Effect</a></li>
+<li><a href="#orge885089">4.8. p-n Junction</a></li>
+<li><a href="#orgff4b0c2">4.9. Currents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org563e0f5" class="outline-2">
+<h2 id="org563e0f5"><span class="section-number-2">1</span> Thermal Properties</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org96d4f21" class="outline-3">
+<h3 id="org96d4f21"><span class="section-number-3">1.1</span> Debye</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orge6dadcb" class="outline-4">
+<h4 id="orge6dadcb"><span class="section-number-4">1.1.1</span> Debye Temperature:</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+\[ \Theta_D = \frac{\hbar \omega_D}{k_B}\]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org90d8505" class="outline-3">
+<h3 id="org90d8505"><span class="section-number-3">1.2</span> Heat Capacity</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Low-temperature limit \( T \rightarrow 0, x\rightarrow \infty\)
+</p>
+
+<p>
+\[ C_V = \frac{12}{5}Nk_B\pi^4\left(\frac{T}{\Theta_D}\right)^3\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdbf2e7a" class="outline-3">
+<h3 id="orgdbf2e7a"><span class="section-number-3">1.3</span> Thermal Conductivity</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+\[ \kappa = \frac13\bar{v}l\bar{C_V}\]
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2afce33" class="outline-2">
+<h2 id="org2afce33"><span class="section-number-2">2</span> Free Electron Theory</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org6f6cfe5" class="outline-3">
+<h3 id="org6f6cfe5"><span class="section-number-3">2.1</span> Density</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+\[ n = \frac{N}{V}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd38d7f" class="outline-3">
+<h3 id="orgdd38d7f"><span class="section-number-3">2.2</span> Fermi things</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org5ef8044" class="outline-4">
+<h4 id="org5ef8044"><span class="section-number-4">2.2.1</span> Density of States</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>The k-vector is like a radius and is positive</li>
+<li>Must multiply by 2 to account for negative values as well (important in a line)</li>
+<li>Multiplicity 2s+1 means you can fit 2 electrons per states</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1a7d7fe" class="outline-4">
+<h4 id="org1a7d7fe"><span class="section-number-4">2.2.2</span> Density of States (Sphere)</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+\[ g(\epsilon) = \frac{V}{\pi^2}k^2\frac{dk}{d\epsilon}\]
+Or with \(\epsilon = \frac{\hbar^2k^2}{2m}\)
+\[ g(\epsilon) = \frac{V}{2\pi^2}\left(\frac{2m}{\hbar^2}\right)^{3/2}\epsilon^{1/2}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf573c36" class="outline-4">
+<h4 id="orgf573c36"><span class="section-number-4">2.2.3</span> Fermi Energy</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<p>
+\[ \epsilon_F = \frac{\hbar^2}{2m}\left(3\pi^2\frac{N}{V}\right)^{2/3}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85763dd" class="outline-4">
+<h4 id="org85763dd"><span class="section-number-4">2.2.4</span> Fermi Wavevector/Surface</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<p>
+\[ k_F = \left(e\pi^2\frac{N}{V}\right)^{1/3}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org854d21e" class="outline-4">
+<h4 id="org854d21e"><span class="section-number-4">2.2.5</span> Fermi Density of States</h4>
+<div class="outline-text-4" id="text-2-2-5">
+<p>
+\[ g(\epsilon_F) = \frac32 \frac{N}{\epsilon_F}\]
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org189abff" class="outline-3">
+<h3 id="org189abff"><span class="section-number-3">2.3</span> Heat Capacities</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+\[C_\text{el} = \frac{\pi^2}{2}Nk_B\left(\frac{T}{T_F}\right)\]
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgb40f7db" class="outline-3">
+<h3 id="orgb40f7db"><span class="section-number-3">2.4</span> Electrical Conductivity</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+\[ \sigma = \frac{ne^2\tau}{m}\]
+where \(\tau = \frac{l}{v_f}\) 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c4a266" class="outline-3">
+<h3 id="org3c4a266"><span class="section-number-3">2.5</span> Thermal Conductivity</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+\[ \kappa = \frac{\pi^2}{3}\frac{nk_B^2T\tau}{m}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org729cb09" class="outline-3">
+<h3 id="org729cb09"><span class="section-number-3">2.6</span> Wiedemann-Franz Law</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+\[ \kappa = L\sigma T\]
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org8541955" class="outline-3">
+<h3 id="org8541955"><span class="section-number-3">2.7</span> Hall Effect</h3>
+<div class="outline-text-3" id="text-2-7">
+</div>
+<div id="outline-container-orgee289e4" class="outline-4">
+<h4 id="orgee289e4"><span class="section-number-4">2.7.1</span> Description</h4>
+<div class="outline-text-4" id="text-2-7-1">
+<p>
+\[ \mathbf{E}_H = R_H \mathbf{B \times j}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org68b1a39" class="outline-4">
+<h4 id="org68b1a39"><span class="section-number-4">2.7.2</span> Hall Coefficient</h4>
+<div class="outline-text-4" id="text-2-7-2">
+<p>
+\[ R_H = -\frac{1}{ne} \]
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0c575ad" class="outline-3">
+<h3 id="org0c575ad"><span class="section-number-3">2.8</span> Effective Mass</h3>
+<div class="outline-text-3" id="text-2-8">
+<p>
+\[\gamma = \frac{\pi^2}{2}\frac{N}{\epsilon_F}k_B^2\]
+</p>
+
+<p>
+Which makes the ratio known as <i>effective mass</i>: 
+</p>
+
+<p>
+\[\frac{m^*}{m_e} =\frac{\gamma^\text{observed}}{\gamma^\text{free electron}}\]
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgc8e29f0" class="outline-2">
+<h2 id="orgc8e29f0"><span class="section-number-2">3</span> Electron Energy Bands</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org839200f" class="outline-3">
+<h3 id="org839200f"><span class="section-number-3">3.1</span> Insulators and Conductors</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Insulators have filled bands</li>
+<li>Conductors (metals) have empty states</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6dd1040" class="outline-3">
+<h3 id="org6dd1040"><span class="section-number-3">3.2</span> 1D</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Allowed states:
+\[ \Delta k = \frac{2\pi}{L} = \frac{2\pi}{Na}\]
+Number of states in first BZB:
+\[ \frac{\Delta\text{BZB}}{\delta k} = \frac{2\pi/a}{\frac{2\pi}{L}}= \frac{L}{a} = N\]
+Each state can be occupied by <b>two</b> electrons, so 2N possible states
+</p>
+</div>
+
+<div id="outline-container-org87c5cf7" class="outline-4">
+<h4 id="org87c5cf7"><span class="section-number-4">3.2.1</span> One electron per primitive cell</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+Monovalent atoms means only half the states will be filled, so <b>metal</b>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6f6fe4b" class="outline-4">
+<h4 id="org6f6fe4b"><span class="section-number-4">3.2.2</span> Two electrons per primitive cell</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+Two monovalent atoms or divalent atom, fully filled so <b>insulator</b>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org22f62b7" class="outline-3">
+<h3 id="org22f62b7"><span class="section-number-3">3.3</span> 2D</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+2N allowed states as before:
+</p>
+</div>
+
+<div id="outline-container-orgaf40526" class="outline-4">
+<h4 id="orgaf40526"><span class="section-number-4">3.3.1</span> Monovalent</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+Half the states are filled, so area is \(\frac12\left(\frac{2\pi}{a}\right)^2\):
+\[ \pi k_F^2 = \frac12\left(\frac{2\pi}{a}\right)^2\]
+Fermi sphere lies within BZB so metal.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org28d908d" class="outline-4">
+<h4 id="org28d908d"><span class="section-number-4">3.3.2</span> Divalent</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+Double of the above states are filled, so \(\pi k_F^2 = (2\pi/a)^2\)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdd1dd14" class="outline-3">
+<h3 id="orgdd1dd14"><span class="section-number-3">3.4</span> Effective Mass</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+\[ m^* = \frac{\hbar^2}{\frac{d^2\epsilon}{dk^2}}\]
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7f13326" class="outline-2">
+<h2 id="org7f13326"><span class="section-number-2">4</span> Semiconductor</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgecefdee" class="outline-3">
+<h3 id="orgecefdee"><span class="section-number-3">4.1</span> CB and VB</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>Conduction Band (CB) on top</li>
+<li>Valence Band (VB) on bottom</li>
+<li>Gap is given by \(\epsilon_g\)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org781b58f" class="outline-3">
+<h3 id="org781b58f"><span class="section-number-3">4.2</span> Carriers</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Carriers carry electrons, and the number per unit volume:
+\[ n = \frac1V\int_{\epsilon_g}^\infty f(\epsilon)g(\epsilon)d\epsilon\]
+With:
+</p>
+
+\begin{align*}
+g(\epsilon) &=\frac{V}{2\pi^2}\left(\frac{2m^*_e}{\hbar^2}\right)^\frac32(\epsilon-\epsilon_g)^\frac12\\
+f(\epsilon) &= \frac{1}{e^{(\epsilon-\mu)/k_BT1}} \approx e^{(\mu-\epsilon)k_BT}
+\end{align*}
+
+
+<p>
+\[ n = N_Ce^{(\mu-\epsilon_g)/k_BT}\]
+where
+\[N_C = 2\left(\frac{m^*_ek_BT}{2\pi\hbar^2}\right)^\frac32\]
+which is the effective density of states per unit volume.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge377fe0" class="outline-3">
+<h3 id="orge377fe0"><span class="section-number-3">4.3</span> Holes</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Similarly:
+\[ n = \frac1V\int_{\epsilon_g}^\infty f(\epsilon)g(\epsilon)d\epsilon\]
+So:
+</p>
+\begin{align*}
+p &= N_Ve^{-\mu/k_B T}\\
+N_V &= 2\left(\frac{m^*_h k_BT}{2\pi\hbar^2}\right)^\frac32\\
+\end{align*}
+</div>
+</div>
+
+
+<div id="outline-container-orgd8346e0" class="outline-3">
+<h3 id="orgd8346e0"><span class="section-number-3">4.4</span> Law of Mass Action</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+\[ np = N_CN_Ve^{-\epsilon_g/k_BT}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6f8c4c" class="outline-3">
+<h3 id="orgb6f8c4c"><span class="section-number-3">4.5</span> Doping</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+At low temperature donor (\(N_D\)) ionisation dominates:
+</p>
+
+<p>
+\[ n = (N_CN_D)^\frac12 e^{-E_D/2k_BT}\]
+</p>
+
+<p>
+At high temperatures, all donors are ionised, temperature independent (extrinsic regime):
+\[ n = N_D\]
+</p>
+</div>
+
+
+<div id="outline-container-orgb00b06b" class="outline-4">
+<h4 id="orgb00b06b"><span class="section-number-4">4.5.1</span> Intrinsic</h4>
+<div class="outline-text-4" id="text-4-5-1">
+<p>
+\begin{align*}
+n<sub>i</sub> &amp;= p<sub>i</sub> = (N<sub>CN</sub><sub>V</sub>)<sup>1/2</sup> e<sup>-E<sub>g</sub>/2k<sub>BT</sub></sup><br />
+&mu; &asymp; &frac12; E<sub>g</sub> + \frac12k<sub>BTln</sub>(N<sub>V</sub>/N<sub>C</sub>)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org763d73e" class="outline-4">
+<h4 id="org763d73e"><span class="section-number-4">4.5.2</span> Extrinsic</h4>
+<div class="outline-text-4" id="text-4-5-2">
+<p>
+\[ n \approx N_D\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93d6a5e" class="outline-4">
+<h4 id="org93d6a5e"><span class="section-number-4">4.5.3</span> Freeze-out</h4>
+<div class="outline-text-4" id="text-4-5-3">
+\begin{align*}
+n &= (N_CN_D)^{1/2{e^{-E_D/2k_BT}}}
+\mu &= \approx E_g - \frac12E_D-\frac12k_BTln(N_C/N_D)
+\end{align*}
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8399918" class="outline-3">
+<h3 id="org8399918"><span class="section-number-3">4.6</span> Transport Properties</h3>
+<div class="outline-text-3" id="text-4-6">
+</div>
+<div id="outline-container-org7986fdf" class="outline-4">
+<h4 id="org7986fdf"><span class="section-number-4">4.6.1</span> Velocity per unit field (cm<sup>2</sup>/Vs)</h4>
+<div class="outline-text-4" id="text-4-6-1">
+<p>
+\[ \mu_e = \frac{e\tau_e}{m^*_e} \qquad \mu_h = \frac{e\tau_h}{m^*_h}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1e6606" class="outline-4">
+<h4 id="orgd1e6606"><span class="section-number-4">4.6.2</span> Conductivity</h4>
+<div class="outline-text-4" id="text-4-6-2">
+\begin{align*}
+\mathbf{j} &=-ne\mathbf{v_e} + pe\mathbf{v_h} = \sigma\mathbf{E}\\
+\sigma &= \left(\frac{ne^2}{\tau_e{m^*_h}}+\frac{pe^2\tau_h}{m^*_h}\right) = ne\mu_e+pe\mu_h
+\end{align*}
+</div>
+</div>
+</div>
+
+<div id="outline-container-org897e479" class="outline-3">
+<h3 id="org897e479"><span class="section-number-3">4.7</span> Hall Effect</h3>
+<div class="outline-text-3" id="text-4-7">
+\begin{align*}
+\sigma &= ne\mu_e\\
+\mu_e = |R_H|\sigma
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-orge885089" class="outline-3">
+<h3 id="orge885089"><span class="section-number-3">4.8</span> p-n Junction</h3>
+<div class="outline-text-3" id="text-4-8">
+<p>
+\[ e\Delta\phi_0 = \mu_n - \mu_p\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff4b0c2" class="outline-3">
+<h3 id="orgff4b0c2"><span class="section-number-3">4.9</span> Currents</h3>
+<div class="outline-text-3" id="text-4-9">
+<p>
+From p to n:
+</p>
+
+<p>
+\[ I_{e0} = e\left(\frac{n_p}{\tau_p}\right)(L_eA)\]
+</p>
+
+<p>
+Using law of mass action:
+</p>
+
+<p>
+\[ I_{e0} = \frac{en^2_iL_eA}{N_A\tau_p}\]
+</p>
+
+<p>
+Net electron current across junction:
+</p>
+
+<p>
+\[ I_e = I_{e0}(e^{eV/k_BT}-1)\]
+(The same expression can be performed for \(I_{h0}\))
+</p>
+
+<p>
+Total current:
+</p>
+
+<p>
+\[ I = I_e + I_h = I_0(e^{eV/k_BT}-1)\]
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Kelvin</p>
+<p class="date">Created: 2022-04-19 Tue 18:31</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

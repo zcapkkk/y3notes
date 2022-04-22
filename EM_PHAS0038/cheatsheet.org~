@@ -1,0 +1,14 @@
+#+TITLE: Important formulas
+#+AUTHOR: Kelvin
+
+* Magnetostatics
+
+** Current
+
+*** Surface Current (K)
+
+\[ \mathbf{K} = \frac{d\mathbf{I}}{dl_\perp} \qquad \mathbf{K} = \sigma \mathbf{v} \]
+
+*** Volume Current (J)
+\[ \mathbf{J} = \frac{d\mathbf{I}}{da_\perp} \qquad \mathbf{J} = \rho\mathbf{v} \]
+

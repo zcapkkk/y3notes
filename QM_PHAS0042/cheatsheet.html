@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-11 Mon 02:06 -->
+<!-- 2022-04-21 Thu 00:14 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Important formulas</title>
@@ -256,33 +256,34 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgff5127b">1. Identities</a>
+<li><a href="#orgfe72f66">1. Identities</a>
 <ul>
-<li><a href="#org90b3c32">1.1. Kinetic energy calculations (seen in Approximation Methods)</a></li>
-<li><a href="#orgd293987">1.2. Gaussian Standard Integrals</a></li>
+<li><a href="#orgdc265d0">1.1. Kinetic energy calculations (seen in Approximation Methods)</a></li>
+<li><a href="#org7bc41e9">1.2. Gaussian Standard Integrals</a></li>
 </ul>
 </li>
-<li><a href="#org9215357">2. Harmonic Oscillator</a>
+<li><a href="#org33eb152">2. Harmonic Oscillator</a>
 <ul>
-<li><a href="#org8093956">2.1. Raising and Lowering Operators</a></li>
-<li><a href="#orgee4d661">2.2. Other operators in terms of the Raising and Loweing Operators</a></li>
+<li><a href="#orgfcfca05">2.1. Raising and Lowering Operators</a></li>
+<li><a href="#org48424bc">2.2. Other operators in terms of the Raising and Loweing Operators</a></li>
 </ul>
 </li>
-<li><a href="#orge67f2dc">3. Spin</a>
+<li><a href="#org334abc7">3. Angular Momentum Operators</a></li>
+<li><a href="#org61c6272">4. Spin</a>
 <ul>
-<li><a href="#orged7ac4c">3.1. Pauli Matrices:</a></li>
+<li><a href="#orgc11a8df">4.1. Pauli Matrices:</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgff5127b" class="outline-2">
-<h2 id="orgff5127b"><span class="section-number-2">1</span> Identities</h2>
+<div id="outline-container-orgfe72f66" class="outline-2">
+<h2 id="orgfe72f66"><span class="section-number-2">1</span> Identities</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org90b3c32" class="outline-3">
-<h3 id="org90b3c32"><span class="section-number-3">1.1</span> Kinetic energy calculations (seen in Approximation Methods)</h3>
+<div id="outline-container-orgdc265d0" class="outline-3">
+<h3 id="orgdc265d0"><span class="section-number-3">1.1</span> Kinetic energy calculations (seen in Approximation Methods)</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 \[ \int \psi^*(\nabla^2\psi)d\tau = -\int|(\nabla\psi)^2|d\tau\]
@@ -290,8 +291,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgd293987" class="outline-3">
-<h3 id="orgd293987"><span class="section-number-3">1.2</span> Gaussian Standard Integrals</h3>
+<div id="outline-container-org7bc41e9" class="outline-3">
+<h3 id="org7bc41e9"><span class="section-number-3">1.2</span> Gaussian Standard Integrals</h3>
 <div class="outline-text-3" id="text-1-2">
 \begin{align*}
 \int_{-\infty}^{\infty}e^{-ax^2} &= \sqrt{\frac{\pi}{a}}\\
@@ -306,12 +307,12 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org9215357" class="outline-2">
-<h2 id="org9215357"><span class="section-number-2">2</span> Harmonic Oscillator</h2>
+<div id="outline-container-org33eb152" class="outline-2">
+<h2 id="org33eb152"><span class="section-number-2">2</span> Harmonic Oscillator</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org8093956" class="outline-3">
-<h3 id="org8093956"><span class="section-number-3">2.1</span> Raising and Lowering Operators</h3>
+<div id="outline-container-orgfcfca05" class="outline-3">
+<h3 id="orgfcfca05"><span class="section-number-3">2.1</span> Raising and Lowering Operators</h3>
 <div class="outline-text-3" id="text-2-1">
 \begin{align*}
 \hat{a}_\pm &= \frac{1}{\sqrt{2}}\left(\alpha \hat{x} \mp\frac{i}{\hbar \alpha}\hat{p}\right)\\	
@@ -320,8 +321,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgee4d661" class="outline-3">
-<h3 id="orgee4d661"><span class="section-number-3">2.2</span> Other operators in terms of the Raising and Loweing Operators</h3>
+<div id="outline-container-org48424bc" class="outline-3">
+<h3 id="org48424bc"><span class="section-number-3">2.2</span> Other operators in terms of the Raising and Loweing Operators</h3>
 <div class="outline-text-3" id="text-2-2">
 \begin{align*}
 \hat{x} &= \frac{1}{\alpha \sqrt{2}}(\hat{a} + \hat{a}^\dagger)\\
@@ -332,13 +333,23 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orge67f2dc" class="outline-2">
-<h2 id="orge67f2dc"><span class="section-number-2">3</span> Spin</h2>
+<div id="outline-container-org334abc7" class="outline-2">
+<h2 id="org334abc7"><span class="section-number-2">3</span> Angular Momentum Operators</h2>
 <div class="outline-text-2" id="text-3">
+\begin{align*}
+\hat{J}^2|j, m\rangle &= \hbar j(j+1) |j, m\rangle\\
+\hat{J}_z|j, m\rangle &= \hbar m|j, m\rangle\\
+\hat{J}_\pm|j,m\rangle &= \hbar\sqrt{j(j+1)-m(m\pm1)}|s,m\pm1\rangle\\
+\end{align*}
 </div>
-<div id="outline-container-orged7ac4c" class="outline-3">
-<h3 id="orged7ac4c"><span class="section-number-3">3.1</span> Pauli Matrices:</h3>
-<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org61c6272" class="outline-2">
+<h2 id="org61c6272"><span class="section-number-2">4</span> Spin</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgc11a8df" class="outline-3">
+<h3 id="orgc11a8df"><span class="section-number-3">4.1</span> Pauli Matrices:</h3>
+<div class="outline-text-3" id="text-4-1">
 <p>
 The Pauli Matrices all have eigenvalues of \(\lambda = \pm1\).
 </p>
@@ -365,7 +376,7 @@ i & 0 \\
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kelvin</p>
-<p class="date">Created: 2022-04-11 Mon 02:06</p>
+<p class="date">Created: 2022-04-21 Thu 00:14</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

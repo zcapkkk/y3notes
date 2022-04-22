@@ -65,7 +65,7 @@ To introduce a mapping that links the covariant and the contravariant
 - Line elements or metric in GR are called Lorentzian manifolds
 *** Geodesic Equation
 - Def: A curve $C$ given by $X^i(\lambda)$ is *geodesic*
-- if it satisfies $\ddot(X)^n+Gamma^{n}_{ms}\dot(X)^m\dot(X)^s = 0$
+- if it satisfies $\ddot{X}^n+\Gamma^{n}_{ms}\dot{X}^m\dot{X}^s = 0$
 Where $\Gamma^n_{ms} = \frac12 g^{nk}\left(\partial_m g_{sk} + \partial_s g_{km} - \partial_k g_{ms}\right)$
 - Geodesics are shortest distances between points
 - Get metric tensors and you can computed
@@ -150,7 +150,7 @@ Where $\Gamma^n_{ms} = \frac12 g^{nk}\left(\partial_m g_{sk} + \partial_s g_{km}
     2. R_{abcd} = -R_{abdc}
     3. R_{abcd} + R_{cabd} + R_{bcad} = 0
        * We are only permuting the first 3 indices
-    4. \nabla_aR_{bcde}+\nabla_cR_{abde}+\nabla_bR_{cade} = 0
+    4. \nabla_{a}R_{bcde}+\nabla_{c}R_{abde}+\nabla_{b}R_{cade} = 0
        * This is called the Bianchi identity
 
 

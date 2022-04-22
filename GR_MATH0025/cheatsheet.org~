@@ -1,0 +1,47 @@
+#+TITLE: General Relativity Formulas
+#+AUTHOR: Kelvin Ho
+
+
+* Vectors and Tensors
+
+** Coordinate Transformation
+\[ J^i_j = \frac{\partial Y^i}{\partial X^j}\]
+
+** Contravariant and Covariant vectors
+
+Contravariant vector \(T^i\) transforms as:
+\[ T'^i = \frac{\partial X'^i}{\partial X^j} X^j\]
+Covariant vector \(S_i\) transforms as:
+\[ S'_i = \frac{\partial X^j}{\partial X'^i} S_j\]
+
+- Contravariant are *upstairs* (equation goes up)
+- Covariant are *downstairs* (equation goes down)
+
+** Dual Vector Space
+A space in which operation with the `mother' space produces a map to real number. Example: bras are the *dual space* of kets and the inner product produces a complex number.
+
+** Basis Vectors
+\[ \mathbf{e}_i = \partial/\partial X^i \qquad \mathbf{E}^i = \dX^i\]
+
+Therefore:
+\mathbf{E}^i(\mathbf{e}_j) = dX^i\left(\frac{\partial}{\partial X^j}\right) = \delta^i_j\]
+
+** Classical Differential
+
+Exists in the dual space, defined as:
+\[ df = \frac{\partial f}{\partial X^i}dX^i\]
+COnsidering:
+\[ df(\mathbf{T}) = T&i\frac{\partial f}{\partial X^i}
+
+** Vector Calculus
+\begin{align*}
+\nabla f &= \partial_i f \mathbf{e}^i\\
+\nabla \cdot \mathbf{A} &= \partial_i A^i\\
+\nabla \times \mathbf{A} = \epsilon^{ijk}\partial_iA_j\mathbf{e}_k
+\end{align*}
+
+** Tensors
+Someone once said, a tensor is something that transforms like a tensor (Zee, /Gravity in a Nutshell/). 
+
+\[ T'^{i_1 i_2 ... i_p}_{j_1 j_2 ... j_q} = \frac{\partial X'^{i_1}}{\partial X^{k_1}}...\frac{\partial X'^{i_p}}{\partial X^{k_p}}\frac{\partial X^{n_1}}{\partial X'^{j_1}}...\frac{\partial X'^{n_q}}{\partial X^{j_q}}...T^{m_1 m_2...m_p}_{n_1 n_2 ... n_q}\]
+

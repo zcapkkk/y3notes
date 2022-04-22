@@ -1,0 +1,230 @@
+#+TITLE: General Relativity Formulas
+#+AUTHOR: Kelvin Ho
+
+
+* Vectors and Tensors
+
+** Coordinate Transformation
+\[ J^i_j = \frac{\partial Y^i}{\partial X^j}\]
+
+** Contravariant and Covariant vectors
+
+Contravariant vector \(T^i\) transforms as:
+\[ T'^i = \frac{\partial X'^i}{\partial X^j} X^j\]
+Covariant vector \(S_i\) transforms as:
+\[ S'_i = \frac{\partial X^j}{\partial X'^i} S_j\]
+
+- Contravariant are *upstairs* (equation goes up)
+- Covariant are *downstairs* (equation goes down)
+
+** Dual Vector Space
+A space in which operation with the `mother' space produces a map to real number. Example: bras are the *dual space* of kets and the inner product produces a complex number.
+
+** Basis Vectors
+\[ \mathbf{e}_i = \partial/\partial X^i \qquad \mathbf{E}^i = \dX^i\]
+
+Therefore:
+\mathbf{E}^i(\mathbf{e}_j) = dX^i\left(\frac{\partial}{\partial X^j}\right) = \delta^i_j\]
+
+** Classical Differential
+
+Exists in the dual space, defined as:
+\[ df = \frac{\partial f}{\partial X^i}dX^i\]
+COnsidering:
+\[ df(\mathbf{T}) = T&i\frac{\partial f}{\partial X^i}
+
+** Vector Calculus
+\begin{align*}
+\nabla f &= \partial_i f \mathbf{e}^i\\
+\nabla \cdot \mathbf{A} &= \partial_i A^i\\
+\nabla \times \mathbf{A} = \epsilon^{ijk}\partial_iA_j\mathbf{e}_k
+\end{align*}
+
+** Tensors
+Someone once said, a tensor is something that transforms like a tensor (Zee, /Gravity in a Nutshell/). 
+
+\[ T'^{i_1 i_2 ... i_p}_{j_1 j_2 ... j_q} = \frac{\partial X'^{i_1}}{\partial X^{k_1}}...\frac{\partial X'^{i_p}}{\partial X^{k_p}}\frac{\partial X^{n_1}}{\partial X'^{j_1}}...\frac{\partial X'^{n_q}}{\partial X^{j_q}}...T^{m_1 m_2...m_p}_{n_1 n_2 ... n_q}\]
+
+*** Contraction
+You pick an index from the top and the bottom to be the same and sum over it, resulting in a tensor which is \( (p-1,q-1)\). 
+
+Special case: the trace is defined to be: \( \text{tr} A = A^i_i\)
+
+*** Symmetry and Skew-symmetry
+
+Symmetric and skew symmetric parts are defined respectively as:
+\begin{align*}
+T_{(ab)} &= \frac12 (T_{ab} + T_{ba})\\
+T_{[ab]} &= \frac12 (T_{ab}-T_{ba})
+\end{align*}
+Any tensor can be written as the sum of the symmetric and skew-symmetric parts.
+
+*** Partial Derivative
+
+Results in a second term that shows that it does not transform as a covariant tensor.
+
+* Differential Geometry
+
+** Manifold
+
+Patches with its own coordinate system that has `instructions' in how to move between the patches. Example: Maps in an Atlas.
+
+** Metric and Line Element
+
+\[ \langle U, V \rangle = g_{ij} U^i V^j\]
+
+Then
+
+\[ ds^2 = g_{ij}dX^idX^j\]
+
+*** Metric Signature
+
+Something like (-,+,+,+).
+
+*** Lorentzian Metric
+
+Something with signature of (p,1) or (1,q).
+
+*** Volume of a space
+\[ V = \int \sqrt{|\det{g_{ij}}|}d^nx\]
+
+*** Minkowski Space
+\[ ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2\]
+Signature: (-,+,+,+)
+It is referred to as \(\eta_{ij}\)
+
+** Geodesics
+
+From Lagrangian calculus, the shortest distance is given by: 
+
+\[ s = \int \sqrt(g_{ij} \dot{X}^i \dot{X}^j d\lambda \]
+The Lagrangian of the system is:
+\[ L(X^i, \dot{X}^j) = \sqrt{g_{ij}\dot{X}^i \dot{X}^j}\]
+
+** Geodesic and Christoffel Symbol
+
+The derivation would give the geodesic equation as:
+
+\[ \ddot{X}^n + \Gamma^n_{ij}\dot{X}^i\dot{X}^j = 0\]
+
+Where the Christoffel symbol is defined to be:
+
+\[  \Gamma^n_{ij} = \frac12g^{nk}(\partial_i g_{jk} + \partial_j g_{ki} - \partial_k g_{ij})\]
+
+(You cyclically permute back the indices starting from ijk)
+
+** Covariant Derivative
+
+*** Properties
+
+1. For smooth function it coincides with partial derivative
+2. Linear (relates to addition)
+3. Obeys Leibniz rule (product rule)
+4. Commutes with contraction (can contract then cov. dev.)
+
+*** Metricity
+
+Covariant derivative is metric compatitable if it satisfies:
+\[ \nabla_a g_{ij} = 0\] 
+
+*** Torsion
+Torsion-free is defined by:
+\[ \nabla_a \nabla_b f - \nabla_b \nabla_a f = 0\]
+
+*** Uniqueness of the Covariant Derivative
+
+If the covariant derivative is:
+- Metric compatitable
+- Torsion-free
+Then the connection coefficient is given by the Christoffel symbol
+
+The proof is on page 36, requires writing out the torsion and writing out the CD of the metric three times (permuting the indices), adding the first two and subtracting the third. The coefficient and metric is symmetric. 
+
+*** Important Formulas
+
+\begin{align*}
+\nabla_a A^b &= \partial_a A^b + \Gamma^b_{ac}A^c\\
+\nabla_a A_b &=  \partial_a A^b - \Gamma^b_{ac}A^c\\
+\nabla_a T^{ij} &= \partial_aT^{ij} + \Gamma^i_{ac}T^{cj}+\Gamma^j_{ac}T^{ic}\\
+\nabla_aT^i_j &= \partial_aT^i_j + \Gamma^i_{ac}T^c_j-\Gamma^c_{aj}T^i_c\\
+\nabla_aT_{ij} &= \partial_aT_{ij} -\Gamma^c_{ai}T_{cj}-\Gamma^c_{aj}T_{ic}
+\end{align*}
+
+** Parallel Transport
+
+- \( C\) is a curve
+- \( T^a\) is a tangent vector
+- \( V^a \) is a vector
+
+The vector is parallelly transported along the curve if:
+\[ T^a \nabla_a V^b = 0\]
+
+Alternative form:
+\[ \frac{dV^b}{d\lambda} = -T^a\Gamma^b_{ac}V^c\]
+
+** Geodesic and Parallel Transport
+
+\[ T^a \nalba_a T^b = 0\]
+
+defines a geodesic.
+
+** Riemann Curvature Tensor
+
+This is motivated by the difference when parallelly transporting a vector through different paths in a parallelogram in curved space. The difference is related to the torsion. With:
+
+- \(\nabla_a\) being a covariant derivative
+- \(V^b\) being a vector
+
+\[ \nabla_a\nabla_d V^b - \nabla_d \nabla_a V^b = -R_{adi}^b V^i\]
+
+defines the Riemann curvature tensor:
+
+\[ R_{adf}^b = \partial_d\Gamma^b_{af}-\partial_a\Gamma^b_{df}+\Gamma^b_{dc}\Gamma^c_{af}-\Gamma^b_{ac}\Gamma^c_{df}\]
+
+(If this is defined with a covariant vector, there would not be a minus sign preceding the Riemann tensor.)
+
+** Cross tensor thingy?
+
+Note that:
+\[ \nabla_i A_j - \nabla_j A_i = \partial_i A_j - \partial_j A_i\]
+as the Christoffel symbols cancel.
+
+For \(F_{ij} = \nabla_i A_j - \nabla_k A_i = -F_{ji}\):
+
+\[ \nabla)i F_{jk} + \nabla_k F_{ij} + \nabla)j F_{ki} = 0\]
+
+Which can be proven by writing three of the above with cycled permutations and adding them up, then expanding the covariant derivatives in terms of partial derivatives and expanding those as well and noticing that partial derivative commute. 
+
+** Riemann Tensor Identities
+
+1. \( R_{abcd} = -R_{bacd}\)
+2. \( R_{abcd} = -R_{abdc}\)
+3. \(R_abcd} + R_{cabd} + R_{bcad} = 0\)
+4. \( \nabla_aR_{bcde}+\nabla_c R_{abdc} + \nabla_b R_{cade} = 0 \) (This is known as Bianchi identity, permute the first 3 indices abc)
+
+** W property
+
+If a tensor satisfies the above 3 identities, then it satisfies:
+\[ W_{abcd} = W_{cdab}\]
+
+** Ricci Tensor and Ricci Scalar
+
+The Ricci tensor is:
+\[ R_{ab} = R_{acb}^c\]
+
+(Contract over the 2nd and 4th indices)
+
+The Ricci Scalar (scalar curvature) is defined by:
+
+\[ R = R_c^c\]
+
+** Einstein Tensor
+
+This is given by:
+
+\[ G_{ab} = R_{ab} - \frac12 R g_{ab}\]
+
+which satisfies:
+
+\[ \nabla_a G^a_b = 0\] 
+

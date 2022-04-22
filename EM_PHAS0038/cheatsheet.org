@@ -1,0 +1,64 @@
+#+TITLE: Important formulas
+#+AUTHOR: Kelvin
+
+
+
+* Magnetostatics
+
+** Current
+
+*** Surface Current (K)
+
+\[ \mathbf{K} = \frac{d\mathbf{I}}{dl_\perp} \qquad \mathbf{K} = \sigma \mathbf{v} \]
+
+*** Volume Current (J)
+\[ \mathbf{J} = \frac{d\mathbf{I}}{da_\perp} \qquad \mathbf{J} = \rho\mathbf{v} \]
+
+** Magnetic Potential
+
+*** Vector Potential
+\[ \nabla \times \mathbf{A}  = \mathbf{B} \]
+
+*** Poisson Equation and Formulation
+\begin{align*}
+\nabla^2\mathbf{A} &= -\mu_0 \mathbf{J}\\
+\mathbf{A(r)} = \frac{\mu_0}{4\pi}\int \frac{\mathbf{J(r')}}{\mathit{r}}d\tau'
+\end{align*}
+
+
+* Electric Fields in Matter
+
+** Volume and Surface Bound Charges
+
+\[ \mathbf{\rho_b} =-\nabla\cdot\mathbf{P} \qquad \mathbf{\sigma_b} = \mathbf{P}\cdot\mathbf{\hat{n}}\]
+
+** Electric Displacement
+
+\begin{align*}
+\nabla \cdot \mathbf{D} &= \rho \\
+\oint \mathbf{D}\cdot d\mathbf{a} &= Q_\text{fenc}\\
+D &\equiv \epsilon_0 \mathbf{E} + \mathbf{P}
+\end{align*}
+
+
+** Polarization
+\[ \mathbf{P} = \epsilon_0\chi_e\mathbf{E}\]
+
+* Magnetic Fields in Matter 
+
+** Volume and Surface Currents
+
+\[ \mathbf{J_b} = \nabla\times\mathbf{M} \qquad \mathbf{K_b} = \mathbf{M} \times \mathbf{\hat{n}}\]
+
+** Ampere's Law in Matter
+
+\begin{align*}
+\nabla\times\mathbf{H} &= \mathbf{J_f}\\
+\oint \mathbf{H} \cdot d\mathbf{I} = I_\text{fenc}\\
+\mathbf{H} \equiv \frac{1}{\mu_0}\mathbf{B} - \mathbf{M}
+\end{align*}
+
+** Examples
+
+*** Field of Uniformly Magnetized Sphere
+\[ \mathbf{B} = \frac23\mu_0\mathbf{M} \]

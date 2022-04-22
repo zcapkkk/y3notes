@@ -15,6 +15,21 @@
 - The integral of odd functions are zero
 - Wavefunction at infinities are zero (useful in by parts)
 
+* Dirac Notation
+
+** Operators with Resolution of Identity
+
+\[ \hat{A} = \hat{I}\hat{A}\hat{I} = \sum_{j,k}|\psi_j\rangle\langle\psi_j|\hat{A}|\psi_k\rangle\langle\psi_k| = \sum_{j,k} \langle \psi_j|\hat{A}|\psi_k\rangle |\psi_j\rangle \langle \psi_k|\]
+
+** Hermitian Operators
+
+\[ \langle \hat{A} f|g\rangle = \langle f|\hat{A}g\rangle\]
+
+OR:
+
+\[ \langle f| \hat{A} |g \rangle = \left( \langle f|\hat{A}^\dagger |g\rangle\right)*\]
+
+
 * Harmonic Oscillator
 
 ** Raising and Lowering Operators
@@ -32,6 +47,13 @@
 \hat{H} &= \left(\hat{a}\hat{a}^\dagger+\frac12\right)\hbar\omega\\
 \end{align*}
 
+* Angular Momentum Operators
+
+\begin{align*}
+\hat{J}^2|j, m\rangle &= \hbar j(j+1) |j, m\rangle\\
+\hat{J}_z|j, m\rangle &= \hbar m|j, m\rangle\\
+\hat{J}_\pm|j,m\rangle &= \hbar\sqrt{j(j+1)-m(m\pm1)}|s,m\pm1\rangle\\
+\end{align*}
 * Spin
 
 ** Pauli Matrices:

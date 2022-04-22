@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-21 Thu 00:12 -->
+<!-- 2022-04-18 Mon 11:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Important formulas</title>
@@ -256,126 +256,175 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc6afa1c">1. Identities</a>
+<li><a href="#orgea13881">1. Magnetostatics</a>
 <ul>
-<li><a href="#org855d9d9">1.1. Kinetic energy calculations (seen in Approximation Methods)</a></li>
-<li><a href="#org830734a">1.2. Gaussian Standard Integrals</a></li>
+<li><a href="#org8a8cfdc">1.1. Current</a>
+<ul>
+<li><a href="#orgb3cf426">1.1.1. Surface Current (K)</a></li>
+<li><a href="#org396b81f">1.1.2. Volume Current (J)</a></li>
 </ul>
 </li>
-<li><a href="#org893e8ce">2. Harmonic Oscillator</a>
+<li><a href="#org6be7025">1.2. Magnetic Potential</a>
 <ul>
-<li><a href="#orge9b2955">2.1. Raising and Lowering Operators</a></li>
-<li><a href="#orgeaf8eb8">2.2. Other operators in terms of the Raising and Loweing Operators</a></li>
+<li><a href="#orgfb9c8b4">1.2.1. Vector Potential</a></li>
+<li><a href="#orge97c0b7">1.2.2. Poisson Equation and Formulation</a></li>
 </ul>
 </li>
-<li><a href="#org5a5354f">3. Angular Momentum Operators</a></li>
-<li><a href="#orgb354802">4. Spin</a>
+</ul>
+</li>
+<li><a href="#org0ec30de">2. Electric Fields in Matter</a>
 <ul>
-<li><a href="#org45889f1">4.1. Pauli Matrices:</a></li>
+<li><a href="#org428cbe1">2.1. Volume and Surface Bound Charges</a></li>
+<li><a href="#org31845df">2.2. Electric Displacement</a></li>
+<li><a href="#org6723bf6">2.3. Polarization</a></li>
+</ul>
+</li>
+<li><a href="#org5e8f307">3. Magnetic Fields in Matter</a>
+<ul>
+<li><a href="#orgef8fa3a">3.1. Volume and Surface Currents</a></li>
+<li><a href="#org811720a">3.2. Ampere's Law in Matter</a></li>
+<li><a href="#org1a1639c">3.3. Examples</a>
+<ul>
+<li><a href="#org9bcd19a">3.3.1. Field of Uniformly Magnetized Sphere</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgc6afa1c" class="outline-2">
-<h2 id="orgc6afa1c"><span class="section-number-2">1</span> Identities</h2>
+
+
+<div id="outline-container-orgea13881" class="outline-2">
+<h2 id="orgea13881"><span class="section-number-2">1</span> Magnetostatics</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org855d9d9" class="outline-3">
-<h3 id="org855d9d9"><span class="section-number-3">1.1</span> Kinetic energy calculations (seen in Approximation Methods)</h3>
+<div id="outline-container-org8a8cfdc" class="outline-3">
+<h3 id="org8a8cfdc"><span class="section-number-3">1.1</span> Current</h3>
 <div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgb3cf426" class="outline-4">
+<h4 id="orgb3cf426"><span class="section-number-4">1.1.1</span> Surface Current (K)</h4>
+<div class="outline-text-4" id="text-1-1-1">
 <p>
-\[ \int \psi^*(\nabla^2\psi)d\tau = -\int|(\nabla\psi)^2|d\tau\]
+\[ \mathbf{K} = \frac{d\mathbf{I}}{dl_\perp} \qquad \mathbf{K} = \sigma \mathbf{v} \]
 </p>
 </div>
 </div>
 
-<div id="outline-container-org830734a" class="outline-3">
-<h3 id="org830734a"><span class="section-number-3">1.2</span> Gaussian Standard Integrals</h3>
+<div id="outline-container-org396b81f" class="outline-4">
+<h4 id="org396b81f"><span class="section-number-4">1.1.2</span> Volume Current (J)</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+\[ \mathbf{J} = \frac{d\mathbf{I}}{da_\perp} \qquad \mathbf{J} = \rho\mathbf{v} \]
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6be7025" class="outline-3">
+<h3 id="org6be7025"><span class="section-number-3">1.2</span> Magnetic Potential</h3>
 <div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orgfb9c8b4" class="outline-4">
+<h4 id="orgfb9c8b4"><span class="section-number-4">1.2.1</span> Vector Potential</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+\[ \nabla \times \mathbf{A}  = \mathbf{B} \]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge97c0b7" class="outline-4">
+<h4 id="orge97c0b7"><span class="section-number-4">1.2.2</span> Poisson Equation and Formulation</h4>
+<div class="outline-text-4" id="text-1-2-2">
 \begin{align*}
-\int_{-\infty}^{\infty}e^{-ax^2} &= \sqrt{\frac{\pi}{a}}\\
-\int_{-\infty}^{\infty}x^2e^{-ax^2} &= \frac{1}{2a}\sqrt{\frac{\pi}{a}}\\
+\nabla^2\mathbf{A} &= -\mu_0 \mathbf{J}\\
+\mathbf{A(r)} = \frac{\mu_0}{4\pi}\int \frac{\mathbf{J(r')}}{\mathit{r}}d\tau'
 \end{align*}
-
-<ul class="org-ul">
-<li>The integral of odd functions are zero</li>
-<li>Wavefunction at infinities are zero (useful in by parts)</li>
-</ul>
+</div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org893e8ce" class="outline-2">
-<h2 id="org893e8ce"><span class="section-number-2">2</span> Harmonic Oscillator</h2>
+
+<div id="outline-container-org0ec30de" class="outline-2">
+<h2 id="org0ec30de"><span class="section-number-2">2</span> Electric Fields in Matter</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orge9b2955" class="outline-3">
-<h3 id="orge9b2955"><span class="section-number-3">2.1</span> Raising and Lowering Operators</h3>
+<div id="outline-container-org428cbe1" class="outline-3">
+<h3 id="org428cbe1"><span class="section-number-3">2.1</span> Volume and Surface Bound Charges</h3>
 <div class="outline-text-3" id="text-2-1">
-\begin{align*}
-\hat{a}_\pm &= \frac{1}{\sqrt{2}}\left(\alpha \hat{x} \mp\frac{i}{\hbar \alpha}\hat{p}\right)\\	
-\alpha &= \sqrt{\frac{m\omega}{\hbar}}
-\end{align*}
+<p>
+\[ \mathbf{\rho_b} =-\nabla\cdot\mathbf{P} \qquad \mathbf{\sigma_b} = \mathbf{P}\cdot\mathbf{\hat{n}}\]
+</p>
 </div>
 </div>
 
-<div id="outline-container-orgeaf8eb8" class="outline-3">
-<h3 id="orgeaf8eb8"><span class="section-number-3">2.2</span> Other operators in terms of the Raising and Loweing Operators</h3>
+<div id="outline-container-org31845df" class="outline-3">
+<h3 id="org31845df"><span class="section-number-3">2.2</span> Electric Displacement</h3>
 <div class="outline-text-3" id="text-2-2">
 \begin{align*}
-\hat{x} &= \frac{1}{\alpha \sqrt{2}}(\hat{a} + \hat{a}^\dagger)\\
-\hat{p} &= \frac{i\hbar\alpha}{\sqrt{2}}(\hat{a}-\hat{a}^\dagger)\\
-\hat{H} &= \left(\hat{a}\hat{a}^\dagger+\frac12\right)\hbar\omega\\
+\nabla \cdot \mathbf{D} &= \rho \\
+\oint \mathbf{D}\cdot d\mathbf{a} &= Q_\text{fenc}\\
+D &\equiv \epsilon_0 \mathbf{E} + \mathbf{P}
 \end{align*}
 </div>
 </div>
-</div>
 
-<div id="outline-container-org5a5354f" class="outline-2">
-<h2 id="org5a5354f"><span class="section-number-2">3</span> Angular Momentum Operators</h2>
-<div class="outline-text-2" id="text-3">
-\begin{align*}
-\hat{J}^2
 
-\end{align*}
-</div>
-</div>
-<div id="outline-container-orgb354802" class="outline-2">
-<h2 id="orgb354802"><span class="section-number-2">4</span> Spin</h2>
-<div class="outline-text-2" id="text-4">
-</div>
-<div id="outline-container-org45889f1" class="outline-3">
-<h3 id="org45889f1"><span class="section-number-3">4.1</span> Pauli Matrices:</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-org6723bf6" class="outline-3">
+<h3 id="org6723bf6"><span class="section-number-3">2.3</span> Polarization</h3>
+<div class="outline-text-3" id="text-2-3">
 <p>
-The Pauli Matrices all have eigenvalues of \(\lambda = \pm1\).
+\[ \mathbf{P} = \epsilon_0\chi_e\mathbf{E}\]
 </p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5e8f307" class="outline-2">
+<h2 id="org5e8f307"><span class="section-number-2">3</span> Magnetic Fields in Matter</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgef8fa3a" class="outline-3">
+<h3 id="orgef8fa3a"><span class="section-number-3">3.1</span> Volume and Surface Currents</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+\[ \mathbf{J_b} = \nabla\times\mathbf{M} \qquad \mathbf{K_b} = \mathbf{M} \times \mathbf{\hat{n}}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org811720a" class="outline-3">
+<h3 id="org811720a"><span class="section-number-3">3.2</span> Ampere's Law in Matter</h3>
+<div class="outline-text-3" id="text-3-2">
 \begin{align*}
-\sigma_x &= 
-\begin{pmatrix}
-0 & 1 \\
-1 & 0 \\
-\end{pmatrix}\\
-\sigma_y &= 
-\begin{pmatrix}
-0 & -i \\
-i & 0 \\
-\end{pmatrix}\\
-\sigma_z &= 
-\begin{pmatrix}
-1 & 0 \\
-0 & -1 \\
-\end{pmatrix}\\
+\nabla\times\mathbf{H} &= \mathbf{J_f}\\
+\oint \mathbf{H} \cdot d\mathbf{I} = I_\text{fenc}\\
+\mathbf{H} = \frac{1}{\mu_0}\mathbf{B} - \mathbf{M}
 \end{align*}
+</div>
+</div>
+
+<div id="outline-container-org1a1639c" class="outline-3">
+<h3 id="org1a1639c"><span class="section-number-3">3.3</span> Examples</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org9bcd19a" class="outline-4">
+<h4 id="org9bcd19a"><span class="section-number-4">3.3.1</span> Field of Uniformly Magnetized Sphere</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+\[ \mathbf{B} = \frac23\mu_0\mathbf{M} \]</p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kelvin</p>
-<p class="date">Created: 2022-04-21 Thu 00:12</p>
+<p class="date">Created: 2022-04-18 Mon 11:43</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

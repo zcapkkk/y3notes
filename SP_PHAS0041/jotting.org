@@ -1,0 +1,20 @@
+#+TITLE: Jotting
+#+AUTHOR: Kelvin
+
+* Marked PSTs
+
+** PST1 
+
+*** Check Q2d again explanations are weird
+
+*** Determination of crystallography
+
+*** The phase velocity equals the group velocity and represents the speed of sound?????
+
+*** Atoms which propagate higher frequency waves and lower frequency waves are indistinguishable IF they differ by \(k+\frac{2\pi}{a}\)
+
+** PST2
+
+*** Reciprocal lattice of bcc is fcc with side \(\frac{4\pi}{a}\)
+
+*** Section 5.3 on thermal conductivity and Fermi energies
