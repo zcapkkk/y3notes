@@ -1,0 +1,9 @@
+#+TITLE: Nuclear Physics Cheatsheet
+#+AUTHOR: Kelvin
+
+* Interaction
+
+** Range of forces
+- Photon: infinite
+- Pion: 1.4 fm
+- Z-boson: 0.002 fm

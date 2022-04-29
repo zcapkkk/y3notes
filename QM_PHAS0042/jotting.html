@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-29 Fri 10:42 -->
+<!-- 2022-04-24 Sun 00:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Important formulas</title>
+<title>Thoughts on the go</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Kelvin" />
 <style type="text/css">
@@ -251,208 +251,283 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Important formulas</h1>
+<h1 class="title">Thoughts on the go</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org60730cb">1. Identities</a>
+<li><a href="#org697544f">1. Problem sheets</a>
 <ul>
-<li><a href="#org52dd621">1.1. Kinetic energy calculations (seen in Approximation Methods)</a></li>
-<li><a href="#org44bc9b5">1.2. Gaussian Standard Integrals</a></li>
-<li><a href="#org0636e38">1.3. Commutator Identities</a></li>
+<li><a href="#org803f6ae">1.1. CW1:</a>
+<ul>
+<li><a href="#org2c09ab8">1.1.1. Resolution of identity is a bit shaky</a></li>
+<li><a href="#org335103d">1.1.2. Change of basis (transformation matrix is just sandwiching the basis?)</a></li>
+<li><a href="#org93b55ee">1.1.3. Linear algebra I guess</a></li>
 </ul>
 </li>
-<li><a href="#org04b098b">2. Dirac Notation</a>
+<li><a href="#orgfaf55be">1.2. CW2:</a>
 <ul>
-<li><a href="#org101e3a3">2.1. Operators with Resolution of Identity</a></li>
-<li><a href="#org927a933">2.2. Hermitian Operators</a></li>
+<li><a href="#org825ab41">1.2.1. Sandwiching new and old states = probability of ground state?</a></li>
+<li><a href="#orgaaff4bb">1.2.2. Last part of q2 does not make sense</a></li>
+<li><a href="#org73d059e">1.2.3. Operators of different coordinates commute:</a></li>
+<li><a href="#org86c8ae5">1.2.4. \(\hat{H}\psi = E\psi \) but even for non harmonic potentials as per question specification?</a></li>
 </ul>
 </li>
-<li><a href="#org2579d19">3. Harmonic Oscillator</a>
+<li><a href="#org485a089">1.3. CW4:</a>
 <ul>
-<li><a href="#org455b0b5">3.1. Raising and Lowering Operators</a></li>
-<li><a href="#org8f1e03c">3.2. Other operators in terms of the Raising and Lowering Operators</a></li>
+<li><a href="#orgf659cd6">1.3.1. If diagonal matrix, read off eigenvalues and eigenvectors i.e. (100),(010)</a></li>
+<li><a href="#org9b28265">1.3.2. In general for integration by parts of inner product with a Laplacian</a></li>
+<li><a href="#org809d46d">1.3.3. The first term (product/no integral) is zero because the wavefunction is zero at infinities (I think?)</a></li>
+<li><a href="#org890c43d">1.3.4. Integral of odd functions are zero</a></li>
+<li><a href="#orgfa7e144">1.3.5. A lot of fancy pants algebra:</a></li>
 </ul>
 </li>
-<li><a href="#org376bc37">4. Angular Momentum Operators</a></li>
-<li><a href="#org03fb893">5. Spin</a>
+</ul>
+</li>
+<li><a href="#org5839060">2. Past Papers</a>
 <ul>
-<li><a href="#orgafd9fcb">5.1. Spin Operators</a></li>
-<li><a href="#org98a719b">5.2. Pauli Matrices:</a></li>
+<li><a href="#orgba2c207">2.1. 2018</a>
+<ul>
+<li><a href="#org1db1353">2.1.1. Q8</a></li>
+<li><a href="#orge429d43">2.1.2. Q10</a></li>
+</ul>
+</li>
+<li><a href="#org0cf707b">2.2. 2019</a>
+<ul>
+<li><a href="#org1a24d81">2.2.1. Q1</a></li>
+<li><a href="#orge5d37fe">2.2.2. Q2</a></li>
+<li><a href="#orgcf869b4">2.2.3. Q3</a></li>
+</ul>
+</li>
+<li><a href="#org0a9ce1d">2.3. 2017</a>
+<ul>
+<li><a href="#orgc67537e">2.3.1. Q8</a></li>
+<li><a href="#org2f71db2">2.3.2. Q9</a></li>
+<li><a href="#org3f5695b">2.3.3. Q10</a></li>
+</ul>
+</li>
+<li><a href="#orgc86fbee">2.4. 2014</a>
+<ul>
+<li><a href="#orgc90a903">2.4.1. Q1</a></li>
+<li><a href="#orgc60abcf">2.4.2. Q2</a></li>
+<li><a href="#orgeb11c1c">2.4.3. </a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org60730cb" class="outline-2">
-<h2 id="org60730cb"><span class="section-number-2">1</span> Identities</h2>
+<div id="outline-container-org697544f" class="outline-2">
+<h2 id="org697544f"><span class="section-number-2">1</span> Problem sheets</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org52dd621" class="outline-3">
-<h3 id="org52dd621"><span class="section-number-3">1.1</span> Kinetic energy calculations (seen in Approximation Methods)</h3>
+<div id="outline-container-org803f6ae" class="outline-3">
+<h3 id="org803f6ae"><span class="section-number-3">1.1</span> CW1:</h3>
 <div class="outline-text-3" id="text-1-1">
-<p>
-\[ \int \psi^*(\nabla^2\psi)d\tau = -\int|(\nabla\psi)^2|d\tau\]
-</p>
+</div>
+<div id="outline-container-org2c09ab8" class="outline-4">
+<h4 id="org2c09ab8"><span class="section-number-4">1.1.1</span> Resolution of identity is a bit shaky</h4>
+</div>
+<div id="outline-container-org335103d" class="outline-4">
+<h4 id="org335103d"><span class="section-number-4">1.1.2</span> Change of basis (transformation matrix is just sandwiching the basis?)</h4>
+</div>
+<div id="outline-container-org93b55ee" class="outline-4">
+<h4 id="org93b55ee"><span class="section-number-4">1.1.3</span> Linear algebra I guess</h4>
 </div>
 </div>
-
-<div id="outline-container-org44bc9b5" class="outline-3">
-<h3 id="org44bc9b5"><span class="section-number-3">1.2</span> Gaussian Standard Integrals</h3>
+<div id="outline-container-orgfaf55be" class="outline-3">
+<h3 id="orgfaf55be"><span class="section-number-3">1.2</span> CW2:</h3>
 <div class="outline-text-3" id="text-1-2">
-\begin{align*}
-\int_{-\infty}^{\infty}e^{-ax^2} &= \sqrt{\frac{\pi}{a}}\\
-\int_{-\infty}^{\infty}x^2e^{-ax^2} &= \frac{1}{2a}\sqrt{\frac{\pi}{a}}\\
-\end{align*}
-
-<ul class="org-ul">
-<li>The integral of odd functions are zero</li>
-<li>Wavefunction at infinities are zero (useful in by parts)</li>
-</ul>
+</div>
+<div id="outline-container-org825ab41" class="outline-4">
+<h4 id="org825ab41"><span class="section-number-4">1.2.1</span> Sandwiching new and old states = probability of ground state?</h4>
+</div>
+<div id="outline-container-orgaaff4bb" class="outline-4">
+<h4 id="orgaaff4bb"><span class="section-number-4">1.2.2</span> Last part of q2 does not make sense</h4>
+</div>
+<div id="outline-container-org73d059e" class="outline-4">
+<h4 id="org73d059e"><span class="section-number-4">1.2.3</span> Operators of different coordinates commute:</h4>
+<div class="outline-text-4" id="text-1-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="org7ee6076"></a>Seems obvious but never occur to me<br /></li>
+<li><a id="orgf326123"></a>But then remember \(L_x, L_y, L_z\) does not commute<br /></li>
+<li><a id="orgde49ba9"></a>Raising and lowering which kind of but kind of not makes sense<br /></li>
+</ol>
+</div>
+<div id="outline-container-org86c8ae5" class="outline-4">
+<h4 id="org86c8ae5"><span class="section-number-4">1.2.4</span> \(\hat{H}\psi = E\psi \) but even for non harmonic potentials as per question specification?</h4>
 </div>
 </div>
-
-<div id="outline-container-org0636e38" class="outline-3">
-<h3 id="org0636e38"><span class="section-number-3">1.3</span> Commutator Identities</h3>
+<div id="outline-container-org485a089" class="outline-3">
+<h3 id="org485a089"><span class="section-number-3">1.3</span> CW4:</h3>
 <div class="outline-text-3" id="text-1-3">
-<p>
-Triple operators:
-\[ [A\circ B, C] = A\circ [B,C] + [A,C]\circ B\]
-or:
-\[ [A,B\circ C] = [A,B]\circ C + B\circ[A,C]\]
-</p>
+</div>
+<div id="outline-container-orgf659cd6" class="outline-4">
+<h4 id="orgf659cd6"><span class="section-number-4">1.3.1</span> If diagonal matrix, read off eigenvalues and eigenvectors i.e. (100),(010)</h4>
+</div>
+<div id="outline-container-org9b28265" class="outline-4">
+<h4 id="org9b28265"><span class="section-number-4">1.3.2</span> In general for integration by parts of inner product with a Laplacian</h4>
+</div>
+<div id="outline-container-org809d46d" class="outline-4">
+<h4 id="org809d46d"><span class="section-number-4">1.3.3</span> The first term (product/no integral) is zero because the wavefunction is zero at infinities (I think?)</h4>
+</div>
+<div id="outline-container-org890c43d" class="outline-4">
+<h4 id="org890c43d"><span class="section-number-4">1.3.4</span> Integral of odd functions are zero</h4>
+</div>
+<div id="outline-container-orgfa7e144" class="outline-4">
+<h4 id="orgfa7e144"><span class="section-number-4">1.3.5</span> A lot of fancy pants algebra:</h4>
+<div class="outline-text-4" id="text-1-3-5">
+</div>
+<ol class="org-ol">
+<li><a id="org8678232"></a>Symmetry of coordinates \(x_1,x_2\) means swapping or times 2<br /></li>
+<li><a id="org1093b13"></a>Separation of double integrals results in <b>products</b> of Gaussian integrals<br /></li>
+<li><a id="orgdf93fd4"></a>Do not pull stupid stunts by assuming the sum of coordinates can just be a Gaussian integral<br /></li>
+</ol>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org04b098b" class="outline-2">
-<h2 id="org04b098b"><span class="section-number-2">2</span> Dirac Notation</h2>
+<div id="outline-container-org5839060" class="outline-2">
+<h2 id="org5839060"><span class="section-number-2">2</span> Past Papers</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org101e3a3" class="outline-3">
-<h3 id="org101e3a3"><span class="section-number-3">2.1</span> Operators with Resolution of Identity</h3>
+<div id="outline-container-orgba2c207" class="outline-3">
+<h3 id="orgba2c207"><span class="section-number-3">2.1</span> 2018</h3>
 <div class="outline-text-3" id="text-2-1">
-<p>
-An operator can be expressed in a basis as:
-\[ \hat{A}_\chi = \langle \chi_m|\hat{A} | \chi_n \rangle\]
-Can stick the resolution of identity anywhere, such as between the operator and the \(\chi\) basis. 
-</p>
+</div>
+<div id="outline-container-org1db1353" class="outline-4">
+<h4 id="org1db1353"><span class="section-number-4">2.1.1</span> Q8</h4>
+<div class="outline-text-4" id="text-2-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgb51220b"></a>Matrix ordering is largest to smallest for l but spin down then up<br /></li>
+</ol>
+</div>
+<div id="outline-container-orge429d43" class="outline-4">
+<h4 id="orge429d43"><span class="section-number-4">2.1.2</span> Q10</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orge5ef0f6"></a>For variational principle, the trial wavefunction can be expanded with orthonormal basis<br /></li>
 
-<p>
-\[ \hat{A} = \hat{I}\hat{A}\hat{I} = \sum_{j,k}|\psi_j\rangle\langle\psi_j|\hat{A}|\psi_k\rangle\langle\psi_k| = \sum_{j,k} \langle \psi_j|\hat{A}|\psi_k\rangle |\psi_j\rangle \langle \psi_k|\]
-</p>
+<li><a id="orgfabefac"></a>The inner product of the trial function is the sum of the coefficients<br /></li>
+</ol>
 </div>
 </div>
 
-<div id="outline-container-org927a933" class="outline-3">
-<h3 id="org927a933"><span class="section-number-3">2.2</span> Hermitian Operators</h3>
+<div id="outline-container-org0cf707b" class="outline-3">
+<h3 id="org0cf707b"><span class="section-number-3">2.2</span> 2019</h3>
 <div class="outline-text-3" id="text-2-2">
-<p>
-\[ \langle \hat{A} f|g\rangle = \langle f|\hat{A}g\rangle\]
-</p>
-
-<p>
-OR:
-</p>
-
-<p>
-\[ \langle f| \hat{A} |g \rangle = \left( \langle f|\hat{A}^\dagger |g\rangle\right)*\]
-</p>
 </div>
-</div>
+<div id="outline-container-org1a24d81" class="outline-4">
+<h4 id="org1a24d81"><span class="section-number-4">2.2.1</span> Q1</h4>
 </div>
 
+<div id="outline-container-orge5d37fe" class="outline-4">
+<h4 id="orge5d37fe"><span class="section-number-4">2.2.2</span> Q2</h4>
+<div class="outline-text-4" id="text-2-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org12728c6"></a>Decompose matrices in terms of Pauli matrices<br /></li>
 
-<div id="outline-container-org2579d19" class="outline-2">
-<h2 id="org2579d19"><span class="section-number-2">3</span> Harmonic Oscillator</h2>
-<div class="outline-text-2" id="text-3">
-</div>
-<div id="outline-container-org455b0b5" class="outline-3">
-<h3 id="org455b0b5"><span class="section-number-3">3.1</span> Raising and Lowering Operators</h3>
-<div class="outline-text-3" id="text-3-1">
-\begin{align*}
-\hat{a}_\pm &= \frac{1}{\sqrt{2}}\left(\alpha \hat{x} \mp\frac{i}{\hbar \alpha}\hat{p}\right)\\	
-\alpha &= \sqrt{\frac{m\omega}{\hbar}}
-\end{align*}
-</div>
+<li><a id="orgb696699"></a>Take middle section<br /></li>
+
+<li><a id="org693555d"></a>Eigenvalues are shifted by constants times identity<br /></li>
+
+<li><a id="org31be082"></a>Eigenvectors should not change / add Pauli matrices?<br /></li>
+</ol>
 </div>
 
-<div id="outline-container-org8f1e03c" class="outline-3">
-<h3 id="org8f1e03c"><span class="section-number-3">3.2</span> Other operators in terms of the Raising and Lowering Operators</h3>
-<div class="outline-text-3" id="text-3-2">
-\begin{align*}
-\hat{x} &= \frac{1}{\alpha \sqrt{2}}(\hat{a} + \hat{a}^\dagger)\\
-\hat{p} &= \frac{i\hbar\alpha}{\sqrt{2}}(\hat{a}-\hat{a}^\dagger)\\
-\hat{H} &= \left(\hat{a}\hat{a}^\dagger+\frac12\right)\hbar\omega\\
-\end{align*}
-
-\begin{align*}
-\hat{p}^2 &= \frac{\hbar^2\alpha^2}{2}(\hat{a}^2_+ + \hat{a}^2_- -\hat{a}_-\hat{a}+ - \hat{a}_+\hat{a}-)\\
-\hat{x}^2 &= \frac{1}{2\alpha^2}(\hat{a}_+^2+\hat{a}_-^2+\hat{a}_-\hat{a}_+ + \hat{a}_+\hat{a}_-)
-\end{align*}
+<div id="outline-container-orgcf869b4" class="outline-4">
+<h4 id="orgcf869b4"><span class="section-number-4">2.2.3</span> Q3</h4>
+<div class="outline-text-4" id="text-2-2-3">
 </div>
+<ol class="org-ol">
+<li><a id="org8a031d3"></a>Spot odd/even functions<br /></li>
+
+<li><a id="org3a936ee"></a>Or use Mathematica to save time<br /></li>
+</ol>
 </div>
 </div>
 
-<div id="outline-container-org376bc37" class="outline-2">
-<h2 id="org376bc37"><span class="section-number-2">4</span> Angular Momentum Operators</h2>
-<div class="outline-text-2" id="text-4">
-\begin{align*}
-\hat{J}^2|j, m\rangle &= \hbar j(j+1) |j, m\rangle\\
-\hat{J}_z|j, m\rangle &= \hbar m|j, m\rangle\\
-\hat{J}_\pm|j,m\rangle &= \hbar\sqrt{j(j+1)-m(m\pm1)}|s,m\pm1\rangle\\
-\end{align*}
+<div id="outline-container-org0a9ce1d" class="outline-3">
+<h3 id="org0a9ce1d"><span class="section-number-3">2.3</span> 2017</h3>
+<div class="outline-text-3" id="text-2-3">
 </div>
+<div id="outline-container-orgc67537e" class="outline-4">
+<h4 id="orgc67537e"><span class="section-number-4">2.3.1</span> Q8</h4>
+<div class="outline-text-4" id="text-2-3-1">
 </div>
-<div id="outline-container-org03fb893" class="outline-2">
-<h2 id="org03fb893"><span class="section-number-2">5</span> Spin</h2>
-<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li><a id="orgeb5276b"></a>Is wrong, redo if have time, normalisation constant<br /></li>
+</ol>
 </div>
-<div id="outline-container-orgafd9fcb" class="outline-3">
-<h3 id="orgafd9fcb"><span class="section-number-3">5.1</span> Spin Operators</h3>
-<div class="outline-text-3" id="text-5-1">
-<p>
-For addition and annihilation operators, they have the coefficient of \(\hbar\).
-</p>
+
+<div id="outline-container-org2f71db2" class="outline-4">
+<h4 id="org2f71db2"><span class="section-number-4">2.3.2</span> Q9</h4>
+<div class="outline-text-4" id="text-2-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgc124e52"></a>Showing might need to be a bit more explicit<br /></li>
+
+<li><a id="org3fa1774"></a>Forgot constant at the end<br /></li>
+
+<li><a id="orge1e7525"></a>Symmetric oscillation leads to 0 expectation value<br /></li>
+
+<li><a id="orgd77e0ad"></a>Mixed states / superposition have varied oscillations<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-org3f5695b" class="outline-4">
+<h4 id="org3f5695b"><span class="section-number-4">2.3.3</span> Q10</h4>
+<div class="outline-text-4" id="text-2-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgcdafc44"></a>First order is useful for non-odd pertubation<br /></li>
+
+<li><a id="org70796fe"></a>Power series must converge<br /></li>
+
+<li><a id="orgc38d8b1"></a>Lambda must satisfy first order correction to be way smaller than zero / original energy (absolute value of the above two)<br /></li>
+</ol>
 </div>
 </div>
 
-<div id="outline-container-org98a719b" class="outline-3">
-<h3 id="org98a719b"><span class="section-number-3">5.2</span> Pauli Matrices:</h3>
-<div class="outline-text-3" id="text-5-2">
-<p>
-The Pauli Matrices all have eigenvalues of \(\lambda = \pm1\).
-</p>
-\begin{align*}
-\sigma_x &= 
-\begin{pmatrix}
-0 & 1 \\
-1 & 0 \\
-\end{pmatrix}\\
-\sigma_y &= 
-\begin{pmatrix}
-0 & -i \\
-i & 0 \\
-\end{pmatrix}\\
-\sigma_z &= 
-\begin{pmatrix}
-1 & 0 \\
-0 & -1 \\
-\end{pmatrix}\\
-\end{align*}
+<div id="outline-container-orgc86fbee" class="outline-3">
+<h3 id="orgc86fbee"><span class="section-number-3">2.4</span> 2014</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-orgc90a903" class="outline-4">
+<h4 id="orgc90a903"><span class="section-number-4">2.4.1</span> Q1</h4>
+<div class="outline-text-4" id="text-2-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgfd69479"></a>Remember for coefficients \( c_n = \langle n | \psi\rangle\)<br /></li>
+</ol>
+</div>
 
-<p>
-These all have eigenvalues of \(\pm 1\), with eigenvalues of \(\{(1,1),(1,-1)\},\{(1,i),(1,-i)\},\{(1,0),(0,1)\}\) (please append normalising factor of \(\frac{1}{\sqrt{2}}\) accordingly).
-</p>
+<div id="outline-container-orgc60abcf" class="outline-4">
+<h4 id="orgc60abcf"><span class="section-number-4">2.4.2</span> Q2</h4>
+<div class="outline-text-4" id="text-2-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="org544fa09"></a>Compatible if they have simultaneous eigenfunctions<br /></li>
+
+<li><a id="orgcd318bf"></a>Measure A then B then A again gives the same A (i.e. unchanging measurement?)<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgeb11c1c" class="outline-4">
+<h4 id="orgeb11c1c"><span class="section-number-4">2.4.3</span> </h4>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kelvin</p>
-<p class="date">Created: 2022-04-29 Fri 10:42</p>
+<p class="date">Created: 2022-04-24 Sun 00:37</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

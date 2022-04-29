@@ -21,10 +21,10 @@ Covariant vector \(S_i\) transforms as:
 A space in which operation with the `mother' space produces a map to real number. Example: bras are the *dual space* of kets and the inner product produces a complex number.
 
 ** Basis Vectors
-\[ \mathbf{e}_i = \partial/\partial X^i \qquad \mathbf{E}^i = \dX^i\]
+\[ \mathbf{e}_i = \partial/\partial X^i \qquad \mathbf{E}^i = dX^i\]
 
 Therefore:
-\mathbf{E}^i(\mathbf{e}_j) = dX^i\left(\frac{\partial}{\partial X^j}\right) = \delta^i_j\]
+\[\mathbf{E}^i(\mathbf{e}_j) = dX^i\left(\frac{\partial}{\partial X^j}\right) = \delta^i_j\]
 
 ** Classical Differential
 
@@ -37,7 +37,7 @@ COnsidering:
 \begin{align*}
 \nabla f &= \partial_i f \mathbf{e}^i\\
 \nabla \cdot \mathbf{A} &= \partial_i A^i\\
-\nabla \times \mathbf{A} = \epsilon^{ijk}\partial_iA_j\mathbf{e}_k
+\nabla \times \mathbf{A} &= \epsilon^{ijk}\partial_iA_j\mathbf{e}_k
 \end{align*}
 
 ** Tensors
@@ -164,7 +164,7 @@ Alternative form:
 
 ** Geodesic and Parallel Transport
 
-\[ T^a \nalba_a T^b = 0\]
+\[ T^a \nabla_a T^b = 0\]
 
 defines a geodesic.
 
@@ -183,6 +183,13 @@ defines the Riemann curvature tensor:
 
 (If this is defined with a covariant vector, there would not be a minus sign preceding the Riemann tensor.)
 
+\[ \nabla_a \nabla_d V_b - \nabla_d \nabla_a V_b = R_{adb}^i V_i\]
+
+For order two tensor:
+
+\[ (\nabla_a\nabla_d - \nabla_d \nabla_a) W_{bc} = R_{adb}^sW_{sc} + R_{adc}^s W_{bs}\]
+
+
 ** Cross tensor thingy?
 
 Note that:
@@ -191,7 +198,7 @@ as the Christoffel symbols cancel.
 
 For \(F_{ij} = \nabla_i A_j - \nabla_k A_i = -F_{ji}\):
 
-\[ \nabla)i F_{jk} + \nabla_k F_{ij} + \nabla)j F_{ki} = 0\]
+\[ \nabla_i F_{jk} + \nabla_k F_{ij} + \nabla_j F_{ki} = 0\]
 
 Which can be proven by writing three of the above with cycled permutations and adding them up, then expanding the covariant derivatives in terms of partial derivatives and expanding those as well and noticing that partial derivative commute. 
 
@@ -199,7 +206,7 @@ Which can be proven by writing three of the above with cycled permutations and a
 
 1. \( R_{abcd} = -R_{bacd}\)
 2. \( R_{abcd} = -R_{abdc}\)
-3. \(R_abcd} + R_{cabd} + R_{bcad} = 0\)
+3. \(R_{abcd} + R_{cabd} + R_{bcad} = 0\)
 4. \( \nabla_aR_{bcde}+\nabla_c R_{abdc} + \nabla_b R_{cade} = 0 \) (This is known as Bianchi identity, permute the first 3 indices abc)
 
 ** W property
@@ -228,3 +235,169 @@ which satisfies:
 
 \[ \nabla_a G^a_b = 0\] 
 
+** Geodesic Deviation
+
+For tangent vector \(T^a\) and the vector which connects nearby curves \(N^a\), the covariant derivative form states: 
+\[ T^i \nabla_i N^a = N^i \nabla_i T^a\]
+
+In other forms:
+
+\begin{align*}
+\frac{DN^a}{D\lambda} &= T^i\nabla_i N^a\\
+\frac{D^2N^a}{D\lambda^2} = (R_{ijc}^a T^j T^c)N^i
+\end{align*}
+
+
+* Einstein Field Equations
+
+** Stress-Energy Tensors
+
+The stress-energy tensor is a diagonal tensor: \(T^{ij} = \text{diag}{(\rho c^2,p,p,p)}\).
+
+With a velocity vector \(u^a\), in which \(\eta_{ij}u^i u^j = -1\):
+
+\[ T^ij = (\rho c + p )u
+
+
+** Geodesics and Newton's Law
+
+Comparing the geodesic equation and Newton's second law yields the identification that:
+
+\[ \frac{1}{c^2}\mathbf{g} \longleftrightarrow \Gamma^a_{bc}\]
+
+which when defined with the gravitational potential \( \phi_N = -\frac{G}{M}r\):
+
+\[ \frac{1}{c^2}\phi_N \longleftrightarrow \frac12 g_{ij}\]
+
+For consistency with an empty space in which the metric is flat, up to an overall sign (awaiting clarification from Christian):
+
+\[ 1\pm \frac{2GM}{c^2 r} \longleftrightarrow g_{ij}\]
+
+The static line element is:
+
+\[ds^2 = -(1+2\phi)c^2dt^2 + (1-2\phi) [dx^2+dy^2+dz^2]\)
+
+** Curvature in vacuum
+
+The geodesic deviation equation can be used to show that:
+
+\[ R_{ij} \longleftrightarrow \partial^a\partial_a\phi = 0\]
+
+** Einstein Field Equations
+
+The energy-momentum conservation equation states that:
+
+\[ \nabla_aT^{ab} = 0\]
+
+CD of Ricci tensor is nonzero, so the field equation cannot be purely dependent on the Ricci tensor. Thus, an alternative that gives the right result (due to the twice-contracted Bianchi identity):
+
+\[ G_{ij} = R_{ij} -\frac12 Rg_{ij} = \kappa T_{ij}\]
+
+Multiply by \(g^{ij}\) gives \(-R = \kappa T\) where \(T = g^{ij}T_{ij}\) is the trace of the energy-momentum tensor. This can be used to give:
+
+\[ R_{ij} = \kappa \left(T_{ij} - \frac12 Tg_{ij}\right)\]
+
+** Minimal Coupling
+Basically to make GR consistent with SR, replace partial derivatives with covariant ones and replace Minkowski by a general metric. But this leads to issue in deriving Maxwell's Equation. (Rewrite \(F^{ij}\) in terms of A with the cross tensor thingy, and you can replace the partials with covariants before or after, leading to different results.)
+
+** Linearised Riemann and Ricci Tensors
+
+ The pertubation metric and its inverse is given by:
+
+\[ g_{ab} = \eta_{ab}+h_{ab} \longleftrightarrow g^{ab} = \eta^{ab}-h^{ab}\]
+
+The trace is given by:
+\[ h^s_s = h\]
+
+The D'Alembertian is:
+\[ \eta^{cs}\partial_{sc}h_{ab} = \Box h_{ab}\]
+
+where: \(\Box = \left(-\frac{\partial}{\partial t^2} + \Delta\right)\)
+
+The trace-reversed tensor:
+
+\[\bar{h}_{ab} = h_{ab} - \eta_{ab}h/2\]
+
+** SOme bullshit...
+
+\[ \kappa = \frac{8\pi G}{c^4}\]
+
+** Gravitational Waves
+
+The linearised field equations become:
+
+\[ \left(-\frac{\partial^2}{\partial t^2} + \frac{\partial^2}{\partial z^2} \right) \bar{h}_ab = 0\]
+
+which has a solution of:
+\[ \bar{h}_{ab} = A_{ab} cos(\omega z - \omega t) \]
+
+
+
+* Schwarzschild Solutions
+
+** Schwarzschild Solution
+
+The most general spherically symmetric metric in vacuum is in the form:
+
+\[ ds^2 = -e^{A(r)}dt^2 + e^{B(r)}dr^2 + r^2 d\Omega^2\]
+
+The independent Einstein field equations are:
+\begin{align*}
+G_{00} &= \frac{1}{r^2}e^{A-B}(e^B+rB'-1)\\
+G_{11} &= \frac{1}{r^2}(1+rA'-e^B)\\
+G_{22} &= \frac12 e^{-B}r^2\left(A'' + (A'-B')\left(\frac{1}{r}-\frac12 A'\right)\right)\\
+G_{33} &= sin^2\theta G_{22}
+\end{align*}
+
+\[ ds^2  = -\left(1-\frac{2M}{r}\right)dt^2 + \left(1-\frac{2M}{r}\right)^{-1}dr^2+r^2 d\Omega^2\]
+
+** Schwarzschild Radius
+
+\[ r_S = \frac{2GM}{c^2}\]
+
+** Schwarzschild Metric under Cartesian Coordinates
+
+\[ ds^2 = -\frac{(1-\frac{M}{2r})^2}{(1+\frac{M}{2r})^2}dt^2 + \left(1+\frac{M}{2r}\right)^4(dx^2+dy^2+dz^2)\]
+
+** Geodesics in Schwarzschild Spacetime
+
+The Lagrangian is given by:
+
+\[ L = -f(r)\dot{t}^2 + \frac{\dot{r}^2}{f(r)}+r^2\dot{\theta}^2+r^2\sin^2\theta\dot{\phi}^2\]
+where dots represent derivative with respect to lambda.
+
+1. Confine motion to equatorial plane so \(\theta=\frac\pi2\)
+2. Independent of time:
+\[ \frac{d}{d\lambda}\frac{\partial L}{\partial \dot{t}} = 0 \rightarrow -f(r)(2\dot{t}) = -2E \rightarrow E = \left(1 - \frac{2m}{r}\right)\dot{t}\]
+3. Independent of angular variable \(\phi\):
+\[ \frac{d}{d\lambda}\frac{\partial L}{\partial \dot{phi}} = 0 \rightarrow r^2\dot{phi} = l\]
+
+The Lagrangian can be rewritten as:
+\[ L = -\frac{E^2}{f(r)} + \frac{\dot{r}^2}{f(r)}+\frac{l^2}{r^2}\]
+or compared to a classical mechanical system:
+\[ \frac{1}{r}\dot{r}^2 + \frac12\left(1-\frac{2M}{r}\right)\left(\frac{l^2}{r^2}-L\right) = \frac12 E^2\]
+where the effective potential is defined by:
+\[ V_\text{eff} = \frac{l^2}{2r^2}+L\frac{M}{r}-\frac{Ml^2}{r^3} - \frac{L}{2}\]
+This is useful in orbits for example where the potential will have a stationary point.
+
+*** Setting the Lagrangian
+- \( L = -1 \) for massive particles
+- \( L = 0 \) for light
+
+
+** Hints for Solving Geodesics
+
+*** Mercury Perihelion Precession
+
+- Use substitution \(u = \frac{1}{r}\)
+- Divide an equation with \(\dot{r}\) by \(\dot{\phi}\) to get \(\frac{dr}{d\theta}\) to get perihelion
+- Completing the square
+*** Light Deflection by the Sun
+
+- Same as step 1 before
+- Taylor Expansion
+
+** Brief Summary on Attacking Problems
+- \( l =0 \) if no angular momentum
+- Set the correct Lagrangian value depending on particles
+- 

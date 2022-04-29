@@ -37,3 +37,68 @@
 **** For variational principle, the trial wavefunction can be expanded with orthonormal basis
 
 **** The inner product of the trial function is the sum of the coefficients
+
+** 2019
+
+*** Q1
+
+*** Q2
+
+**** Decompose matrices in terms of Pauli matrices
+
+**** Take middle section
+
+**** Eigenvalues are shifted by constants times identity
+
+**** Eigenvectors should not change / add Pauli matrices?
+
+*** Q3
+
+**** Spot odd/even functions
+
+**** Or use Mathematica to save time
+
+** 2017
+
+*** Q8
+
+**** Is wrong, redo if have time, normalisation constant
+
+*** Q9
+
+**** Showing might need to be a bit more explicit
+
+**** Forgot constant at the end
+
+**** Symmetric oscillation leads to 0 expectation value
+
+**** Mixed states / superposition have varied oscillations
+
+*** Q10 
+
+**** First order is useful for non-odd pertubation 
+
+**** Power series must converge 
+
+**** Lambda must satisfy first order correction to be way smaller than zero / original energy (absolute value of the above two)
+
+** 2014
+
+*** Q1
+
+**** Remember for coefficients \( c_n = \langle n | \psi\rangle\)
+
+*** Q2
+
+**** Compatible if they have simultaneous eigenfunctions
+
+**** Measure A then B then A again gives the same A (i.e. unchanging measurement?)
+
+*** Q10
+
+**** Variational principle: trial wavefunction is hopefully ground state
+
+**** Parameters to vary to improve estimate or make more minimum
+
+** 2015
+

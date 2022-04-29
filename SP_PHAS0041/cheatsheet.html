@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-19 Tue 18:32 -->
+<!-- 2022-04-27 Wed 18:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Formula</title>
@@ -256,108 +256,200 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgaccdaa5">1. Thermal Properties</a>
+<li><a href="#org29967f3">1. Lattice Diffraction</a>
 <ul>
-<li><a href="#org65f94e0">1.1. Debye</a>
-<ul>
-<li><a href="#org56d2e05">1.1.1. Debye Temperature:</a></li>
+<li><a href="#orgfda62d2">1.1. Bragg's Rule</a></li>
+<li><a href="#org486d485">1.2. Reciprocal lattice</a></li>
+<li><a href="#org752b993">1.3. Laue Condition</a></li>
+<li><a href="#org531c706">1.4. Scattered Intensities</a></li>
+<li><a href="#orgf3ad300">1.5. Restrictions on hkl</a></li>
 </ul>
 </li>
-<li><a href="#orgde35c2a">1.2. Heat Capacity</a></li>
-<li><a href="#org8b58a71">1.3. Thermal Conductivity</a></li>
+<li><a href="#org9671e84">2. Thermal Properties</a>
+<ul>
+<li><a href="#orgc88471b">2.1. Debye</a>
+<ul>
+<li><a href="#org500cbdc">2.1.1. Debye Temperature:</a></li>
 </ul>
 </li>
-<li><a href="#org2279bf2">2. Free Electron Theory</a>
-<ul>
-<li><a href="#orge1dce3c">2.1. Density</a></li>
-<li><a href="#org98f3572">2.2. Fermi things</a>
-<ul>
-<li><a href="#org238328e">2.2.1. Density of States</a></li>
-<li><a href="#orgae7b9b4">2.2.2. Density of States (Sphere)</a></li>
-<li><a href="#org5f00abc">2.2.3. Fermi Energy</a></li>
-<li><a href="#org2f0eee8">2.2.4. Fermi Wavevector/Surface</a></li>
-<li><a href="#org7b51978">2.2.5. Fermi Density of States</a></li>
+<li><a href="#org81c5f54">2.2. Heat Capacity</a></li>
+<li><a href="#org8e1a673">2.3. Thermal Conductivity</a></li>
 </ul>
 </li>
-<li><a href="#org4b28ad9">2.3. Heat Capacities</a></li>
-<li><a href="#orga0e32cc">2.4. Electrical Conductivity</a></li>
-<li><a href="#org4a12fb9">2.5. Thermal Conductivity</a></li>
-<li><a href="#orge229d58">2.6. Wiedemann-Franz Law</a></li>
-<li><a href="#orgc983dd2">2.7. Hall Effect</a>
+<li><a href="#orgee41299">3. Free Electron Theory</a>
 <ul>
-<li><a href="#org7ebd896">2.7.1. Description</a></li>
-<li><a href="#orgdf790ae">2.7.2. Hall Coefficient</a></li>
+<li><a href="#org9c17296">3.1. Density</a></li>
+<li><a href="#orgd3da9ec">3.2. Fermi things</a>
+<ul>
+<li><a href="#orga90298d">3.2.1. Density of States</a></li>
+<li><a href="#org8330151">3.2.2. Density of States (Sphere)</a></li>
+<li><a href="#org3c993ad">3.2.3. Fermi Energy</a></li>
+<li><a href="#org218c37f">3.2.4. Fermi Wavevector/Surface</a></li>
+<li><a href="#org0b11e7b">3.2.5. Fermi Density of States</a></li>
 </ul>
 </li>
-<li><a href="#org88eb6af">2.8. Effective Mass</a></li>
+<li><a href="#orgc489b25">3.3. Heat Capacities</a></li>
+<li><a href="#orge4db489">3.4. Electrical Conductivity</a></li>
+<li><a href="#orge757e8c">3.5. Thermal Conductivity</a></li>
+<li><a href="#orgb37ecf2">3.6. Wiedemann-Franz Law</a></li>
+<li><a href="#org9a836b6">3.7. Hall Effect</a>
+<ul>
+<li><a href="#org3afa23e">3.7.1. Description</a></li>
+<li><a href="#orgd74a9c3">3.7.2. Hall Coefficient</a></li>
 </ul>
 </li>
-<li><a href="#orgcef6597">3. Electron Energy Bands</a>
-<ul>
-<li><a href="#orgc6e26d4">3.1. Insulators and Conductors</a></li>
-<li><a href="#org005338b">3.2. 1D</a>
-<ul>
-<li><a href="#org80af7ed">3.2.1. One electron per primitive cell</a></li>
-<li><a href="#org52cca68">3.2.2. Two electrons per primitive cell</a></li>
+<li><a href="#org798c6a6">3.8. Effective Mass</a></li>
 </ul>
 </li>
-<li><a href="#org046b5f8">3.3. 2D</a>
+<li><a href="#org9faaa6f">4. Electron Energy Bands</a>
 <ul>
-<li><a href="#org8d2cbed">3.3.1. Monovalent</a></li>
-<li><a href="#org9953db3">3.3.2. Divalent</a></li>
+<li><a href="#org48ff236">4.1. Insulators and Conductors</a></li>
+<li><a href="#org4a44564">4.2. 1D</a>
+<ul>
+<li><a href="#org046351a">4.2.1. One electron per primitive cell</a></li>
+<li><a href="#orgc9698de">4.2.2. Two electrons per primitive cell</a></li>
 </ul>
 </li>
-<li><a href="#orgfdb32e5">3.4. Effective Mass</a></li>
+<li><a href="#orge99680f">4.3. 2D</a>
+<ul>
+<li><a href="#org7a95a12">4.3.1. Monovalent</a></li>
+<li><a href="#org32de2b1">4.3.2. Divalent</a></li>
 </ul>
 </li>
-<li><a href="#org3d3a6f4">4. Semiconductor</a>
-<ul>
-<li><a href="#org5cba819">4.1. CB and VB</a></li>
-<li><a href="#orgc139f53">4.2. Carriers</a></li>
-<li><a href="#orga4009aa">4.3. Holes</a></li>
-<li><a href="#orgbd86d34">4.4. Law of Mass Action</a></li>
-<li><a href="#orgf9f2336">4.5. Doping</a>
-<ul>
-<li><a href="#orgdb2e078">4.5.1. Intrinsic</a></li>
-<li><a href="#orgb15ebe0">4.5.2. Extrinsic</a></li>
-<li><a href="#orged8ce54">4.5.3. Freeze-out</a></li>
+<li><a href="#org662a664">4.4. Effective Mass</a></li>
 </ul>
 </li>
-<li><a href="#org4cb135f">4.6. Transport Properties</a>
+<li><a href="#org638d0fd">5. Semiconductor</a>
 <ul>
-<li><a href="#orgf8b5bfc">4.6.1. Velocity per unit field (cm<sup>2</sup>/Vs)</a></li>
-<li><a href="#org10c8a2d">4.6.2. Conductivity</a></li>
+<li><a href="#org367616e">5.1. CB and VB</a></li>
+<li><a href="#org3797221">5.2. Carriers</a></li>
+<li><a href="#org6f29307">5.3. Holes</a></li>
+<li><a href="#org0599d64">5.4. Law of Mass Action</a></li>
+<li><a href="#org2c9ead9">5.5. Doping</a>
+<ul>
+<li><a href="#org471e1b2">5.5.1. Intrinsic</a></li>
+<li><a href="#org3eae5ec">5.5.2. Extrinsic</a></li>
+<li><a href="#orgfeaa81a">5.5.3. Freeze-out</a></li>
 </ul>
 </li>
-<li><a href="#org7ec5deb">4.7. Hall Effect</a></li>
-<li><a href="#org921f229">4.8. p-n Junction</a></li>
-<li><a href="#org3f0d350">4.9. Currents</a></li>
+<li><a href="#orgbcf73a7">5.6. Transport Properties</a>
+<ul>
+<li><a href="#org2a60108">5.6.1. Velocity per unit field (cm<sup>2</sup>/Vs)</a></li>
+<li><a href="#orga3367a9">5.6.2. Conductivity</a></li>
+</ul>
+</li>
+<li><a href="#orgb47932a">5.7. Hall Effect</a></li>
+<li><a href="#org832ff59">5.8. p-n Junction</a></li>
+<li><a href="#org1d34999">5.9. Currents</a></li>
+<li><a href="#org238f17c">5.10. Problem Solving</a></li>
+</ul>
+</li>
+<li><a href="#orgbd5bd8a">6. Magnetism</a>
+<ul>
+<li><a href="#orgd11ee7c">6.1. Hund's Rule</a></li>
+<li><a href="#orge1b141c">6.2. Zeeman energy</a></li>
+<li><a href="#org0519ea4">6.3. Quenching</a></li>
+<li><a href="#org5dc2bb5">6.4. Paramagnetism</a></li>
+<li><a href="#orgbc2b86e">6.5. Conduction Electrons</a></li>
+<li><a href="#orge552f97">6.6. Curie Weiss Rule</a></li>
+<li><a href="#org681ab5e">6.7. Equilibrium Magnetisation</a></li>
+</ul>
+</li>
+<li><a href="#orgb055909">7. Superconductivity</a>
+<ul>
+<li><a href="#org255487a">7.1. Type 1</a></li>
+<li><a href="#org772bc33">7.2. Critical Current</a></li>
+<li><a href="#org5f8b6bf">7.3. Gibb's Free Energy</a></li>
+<li><a href="#org137d4c4">7.4. Type 2</a></li>
+<li><a href="#orgd03faad">7.5. London Equations</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgaccdaa5" class="outline-2">
-<h2 id="orgaccdaa5"><span class="section-number-2">1</span> Thermal Properties</h2>
+<div id="outline-container-org29967f3" class="outline-2">
+<h2 id="org29967f3"><span class="section-number-2">1</span> Lattice Diffraction</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org65f94e0" class="outline-3">
-<h3 id="org65f94e0"><span class="section-number-3">1.1</span> Debye</h3>
+<div id="outline-container-orgfda62d2" class="outline-3">
+<h3 id="orgfda62d2"><span class="section-number-3">1.1</span> Bragg's Rule</h3>
 <div class="outline-text-3" id="text-1-1">
+<p>
+\[ 2d\sin\theta = n\lambda\]
+</p>
 </div>
-<div id="outline-container-org56d2e05" class="outline-4">
-<h4 id="org56d2e05"><span class="section-number-4">1.1.1</span> Debye Temperature:</h4>
-<div class="outline-text-4" id="text-1-1-1">
+</div>
+
+<div id="outline-container-org486d485" class="outline-3">
+<h3 id="org486d485"><span class="section-number-3">1.2</span> Reciprocal lattice</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+\[ \mathbf{b}_i = \frac{2\pi}{V}\mathbf{a}_j\times\mathbf{a}_k\]
+and other cyclical permutations
+\[ e^{i \mathbf{G\cdot R}} = 1\]
+where R are lattice vectors.
+</p>
+
+<p>
+Lattice space:
+\[ d_{hkl} = \frac{2\pi}{|\mathbf{G_{hkl}}|}\]
+For cubic crystals:
+\[ d = \frac{a}{\sqrt{h^2+k^2+l^2}}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org752b993" class="outline-3">
+<h3 id="org752b993"><span class="section-number-3">1.3</span> Laue Condition</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+\[ \mathbf{Q} = \mathbf{G}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org531c706" class="outline-3">
+<h3 id="org531c706"><span class="section-number-3">1.4</span> Scattered Intensities</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+\[ S_\mathbf{G} = \sum_j f_j e^{-i\mathbf{G\cdot r_j}}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3ad300" class="outline-3">
+<h3 id="orgf3ad300"><span class="section-number-3">1.5</span> Restrictions on hkl</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>Simple Cubic: No restrictions</li>
+<li>FCC: hkl all even or all odd</li>
+<li>BCC: 2f is h+k+l is even, and 0 if odd</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9671e84" class="outline-2">
+<h2 id="org9671e84"><span class="section-number-2">2</span> Thermal Properties</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgc88471b" class="outline-3">
+<h3 id="orgc88471b"><span class="section-number-3">2.1</span> Debye</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org500cbdc" class="outline-4">
+<h4 id="org500cbdc"><span class="section-number-4">2.1.1</span> Debye Temperature:</h4>
+<div class="outline-text-4" id="text-2-1-1">
 <p>
 \[ \Theta_D = \frac{\hbar \omega_D}{k_B}\]
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgde35c2a" class="outline-3">
-<h3 id="orgde35c2a"><span class="section-number-3">1.2</span> Heat Capacity</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org81c5f54" class="outline-3">
+<h3 id="org81c5f54"><span class="section-number-3">2.2</span> Heat Capacity</h3>
+<div class="outline-text-3" id="text-2-2">
 <p>
 Low-temperature limit \( T \rightarrow 0, x\rightarrow \infty\)
 </p>
@@ -368,9 +460,9 @@ Low-temperature limit \( T \rightarrow 0, x\rightarrow \infty\)
 </div>
 </div>
 
-<div id="outline-container-org8b58a71" class="outline-3">
-<h3 id="org8b58a71"><span class="section-number-3">1.3</span> Thermal Conductivity</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-org8e1a673" class="outline-3">
+<h3 id="org8e1a673"><span class="section-number-3">2.3</span> Thermal Conductivity</h3>
+<div class="outline-text-3" id="text-2-3">
 <p>
 \[ \kappa = \frac13\bar{v}l\bar{C_V}\]
 </p>
@@ -378,26 +470,26 @@ Low-temperature limit \( T \rightarrow 0, x\rightarrow \infty\)
 </div>
 </div>
 
-<div id="outline-container-org2279bf2" class="outline-2">
-<h2 id="org2279bf2"><span class="section-number-2">2</span> Free Electron Theory</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-orgee41299" class="outline-2">
+<h2 id="orgee41299"><span class="section-number-2">3</span> Free Electron Theory</h2>
+<div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orge1dce3c" class="outline-3">
-<h3 id="orge1dce3c"><span class="section-number-3">2.1</span> Density</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-org9c17296" class="outline-3">
+<h3 id="org9c17296"><span class="section-number-3">3.1</span> Density</h3>
+<div class="outline-text-3" id="text-3-1">
 <p>
 \[ n = \frac{N}{V}\]
 </p>
 </div>
 </div>
 
-<div id="outline-container-org98f3572" class="outline-3">
-<h3 id="org98f3572"><span class="section-number-3">2.2</span> Fermi things</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-orgd3da9ec" class="outline-3">
+<h3 id="orgd3da9ec"><span class="section-number-3">3.2</span> Fermi things</h3>
+<div class="outline-text-3" id="text-3-2">
 </div>
-<div id="outline-container-org238328e" class="outline-4">
-<h4 id="org238328e"><span class="section-number-4">2.2.1</span> Density of States</h4>
-<div class="outline-text-4" id="text-2-2-1">
+<div id="outline-container-orga90298d" class="outline-4">
+<h4 id="orga90298d"><span class="section-number-4">3.2.1</span> Density of States</h4>
+<div class="outline-text-4" id="text-3-2-1">
 <ul class="org-ul">
 <li>The k-vector is like a radius and is positive</li>
 <li>Must multiply by 2 to account for negative values as well (important in a line)</li>
@@ -405,9 +497,9 @@ Low-temperature limit \( T \rightarrow 0, x\rightarrow \infty\)
 </ul>
 </div>
 </div>
-<div id="outline-container-orgae7b9b4" class="outline-4">
-<h4 id="orgae7b9b4"><span class="section-number-4">2.2.2</span> Density of States (Sphere)</h4>
-<div class="outline-text-4" id="text-2-2-2">
+<div id="outline-container-org8330151" class="outline-4">
+<h4 id="org8330151"><span class="section-number-4">3.2.2</span> Density of States (Sphere)</h4>
+<div class="outline-text-4" id="text-3-2-2">
 <p>
 \[ g(\epsilon) = \frac{V}{\pi^2}k^2\frac{dk}{d\epsilon}\]
 Or with \(\epsilon = \frac{\hbar^2k^2}{2m}\)
@@ -416,27 +508,27 @@ Or with \(\epsilon = \frac{\hbar^2k^2}{2m}\)
 </div>
 </div>
 
-<div id="outline-container-org5f00abc" class="outline-4">
-<h4 id="org5f00abc"><span class="section-number-4">2.2.3</span> Fermi Energy</h4>
-<div class="outline-text-4" id="text-2-2-3">
+<div id="outline-container-org3c993ad" class="outline-4">
+<h4 id="org3c993ad"><span class="section-number-4">3.2.3</span> Fermi Energy</h4>
+<div class="outline-text-4" id="text-3-2-3">
 <p>
 \[ \epsilon_F = \frac{\hbar^2}{2m}\left(3\pi^2\frac{N}{V}\right)^{2/3}\]
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2f0eee8" class="outline-4">
-<h4 id="org2f0eee8"><span class="section-number-4">2.2.4</span> Fermi Wavevector/Surface</h4>
-<div class="outline-text-4" id="text-2-2-4">
+<div id="outline-container-org218c37f" class="outline-4">
+<h4 id="org218c37f"><span class="section-number-4">3.2.4</span> Fermi Wavevector/Surface</h4>
+<div class="outline-text-4" id="text-3-2-4">
 <p>
 \[ k_F = \left(e\pi^2\frac{N}{V}\right)^{1/3}\]
 </p>
 </div>
 </div>
 
-<div id="outline-container-org7b51978" class="outline-4">
-<h4 id="org7b51978"><span class="section-number-4">2.2.5</span> Fermi Density of States</h4>
-<div class="outline-text-4" id="text-2-2-5">
+<div id="outline-container-org0b11e7b" class="outline-4">
+<h4 id="org0b11e7b"><span class="section-number-4">3.2.5</span> Fermi Density of States</h4>
+<div class="outline-text-4" id="text-3-2-5">
 <p>
 \[ g(\epsilon_F) = \frac32 \frac{N}{\epsilon_F}\]
 </p>
@@ -445,9 +537,9 @@ Or with \(\epsilon = \frac{\hbar^2k^2}{2m}\)
 </div>
 
 
-<div id="outline-container-org4b28ad9" class="outline-3">
-<h3 id="org4b28ad9"><span class="section-number-3">2.3</span> Heat Capacities</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-orgc489b25" class="outline-3">
+<h3 id="orgc489b25"><span class="section-number-3">3.3</span> Heat Capacities</h3>
+<div class="outline-text-3" id="text-3-3">
 <p>
 \[C_\text{el} = \frac{\pi^2}{2}Nk_B\left(\frac{T}{T_F}\right)\]
 </p>
@@ -456,9 +548,9 @@ Or with \(\epsilon = \frac{\hbar^2k^2}{2m}\)
 
 
 
-<div id="outline-container-orga0e32cc" class="outline-3">
-<h3 id="orga0e32cc"><span class="section-number-3">2.4</span> Electrical Conductivity</h3>
-<div class="outline-text-3" id="text-2-4">
+<div id="outline-container-orge4db489" class="outline-3">
+<h3 id="orge4db489"><span class="section-number-3">3.4</span> Electrical Conductivity</h3>
+<div class="outline-text-3" id="text-3-4">
 <p>
 \[ \sigma = \frac{ne^2\tau}{m}\]
 where \(\tau = \frac{l}{v_f}\) 
@@ -466,18 +558,18 @@ where \(\tau = \frac{l}{v_f}\)
 </div>
 </div>
 
-<div id="outline-container-org4a12fb9" class="outline-3">
-<h3 id="org4a12fb9"><span class="section-number-3">2.5</span> Thermal Conductivity</h3>
-<div class="outline-text-3" id="text-2-5">
+<div id="outline-container-orge757e8c" class="outline-3">
+<h3 id="orge757e8c"><span class="section-number-3">3.5</span> Thermal Conductivity</h3>
+<div class="outline-text-3" id="text-3-5">
 <p>
 \[ \kappa = \frac{\pi^2}{3}\frac{nk_B^2T\tau}{m}\]
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge229d58" class="outline-3">
-<h3 id="orge229d58"><span class="section-number-3">2.6</span> Wiedemann-Franz Law</h3>
-<div class="outline-text-3" id="text-2-6">
+<div id="outline-container-orgb37ecf2" class="outline-3">
+<h3 id="orgb37ecf2"><span class="section-number-3">3.6</span> Wiedemann-Franz Law</h3>
+<div class="outline-text-3" id="text-3-6">
 <p>
 \[ \kappa = L\sigma T\]
 </p>
@@ -485,22 +577,22 @@ where \(\tau = \frac{l}{v_f}\)
 </div>
 
 
-<div id="outline-container-orgc983dd2" class="outline-3">
-<h3 id="orgc983dd2"><span class="section-number-3">2.7</span> Hall Effect</h3>
-<div class="outline-text-3" id="text-2-7">
+<div id="outline-container-org9a836b6" class="outline-3">
+<h3 id="org9a836b6"><span class="section-number-3">3.7</span> Hall Effect</h3>
+<div class="outline-text-3" id="text-3-7">
 </div>
-<div id="outline-container-org7ebd896" class="outline-4">
-<h4 id="org7ebd896"><span class="section-number-4">2.7.1</span> Description</h4>
-<div class="outline-text-4" id="text-2-7-1">
+<div id="outline-container-org3afa23e" class="outline-4">
+<h4 id="org3afa23e"><span class="section-number-4">3.7.1</span> Description</h4>
+<div class="outline-text-4" id="text-3-7-1">
 <p>
 \[ \mathbf{E}_H = R_H \mathbf{B \times j}\]
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgdf790ae" class="outline-4">
-<h4 id="orgdf790ae"><span class="section-number-4">2.7.2</span> Hall Coefficient</h4>
-<div class="outline-text-4" id="text-2-7-2">
+<div id="outline-container-orgd74a9c3" class="outline-4">
+<h4 id="orgd74a9c3"><span class="section-number-4">3.7.2</span> Hall Coefficient</h4>
+<div class="outline-text-4" id="text-3-7-2">
 <p>
 \[ R_H = -\frac{1}{ne} \]
 </p>
@@ -508,9 +600,9 @@ where \(\tau = \frac{l}{v_f}\)
 </div>
 </div>
 
-<div id="outline-container-org88eb6af" class="outline-3">
-<h3 id="org88eb6af"><span class="section-number-3">2.8</span> Effective Mass</h3>
-<div class="outline-text-3" id="text-2-8">
+<div id="outline-container-org798c6a6" class="outline-3">
+<h3 id="org798c6a6"><span class="section-number-3">3.8</span> Effective Mass</h3>
+<div class="outline-text-3" id="text-3-8">
 <p>
 \[\gamma = \frac{\pi^2}{2}\frac{N}{\epsilon_F}k_B^2\]
 </p>
@@ -527,13 +619,13 @@ Which makes the ratio known as <i>effective mass</i>:
 </div>
 
 
-<div id="outline-container-orgcef6597" class="outline-2">
-<h2 id="orgcef6597"><span class="section-number-2">3</span> Electron Energy Bands</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org9faaa6f" class="outline-2">
+<h2 id="org9faaa6f"><span class="section-number-2">4</span> Electron Energy Bands</h2>
+<div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgc6e26d4" class="outline-3">
-<h3 id="orgc6e26d4"><span class="section-number-3">3.1</span> Insulators and Conductors</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org48ff236" class="outline-3">
+<h3 id="org48ff236"><span class="section-number-3">4.1</span> Insulators and Conductors</h3>
+<div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>Insulators have filled bands</li>
 <li>Conductors (metals) have empty states</li>
@@ -541,9 +633,9 @@ Which makes the ratio known as <i>effective mass</i>:
 </div>
 </div>
 
-<div id="outline-container-org005338b" class="outline-3">
-<h3 id="org005338b"><span class="section-number-3">3.2</span> 1D</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org4a44564" class="outline-3">
+<h3 id="org4a44564"><span class="section-number-3">4.2</span> 1D</h3>
+<div class="outline-text-3" id="text-4-2">
 <p>
 Allowed states:
 \[ \Delta k = \frac{2\pi}{L} = \frac{2\pi}{Na}\]
@@ -553,18 +645,18 @@ Each state can be occupied by <b>two</b> electrons, so 2N possible states
 </p>
 </div>
 
-<div id="outline-container-org80af7ed" class="outline-4">
-<h4 id="org80af7ed"><span class="section-number-4">3.2.1</span> One electron per primitive cell</h4>
-<div class="outline-text-4" id="text-3-2-1">
+<div id="outline-container-org046351a" class="outline-4">
+<h4 id="org046351a"><span class="section-number-4">4.2.1</span> One electron per primitive cell</h4>
+<div class="outline-text-4" id="text-4-2-1">
 <p>
 Monovalent atoms means only half the states will be filled, so <b>metal</b>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org52cca68" class="outline-4">
-<h4 id="org52cca68"><span class="section-number-4">3.2.2</span> Two electrons per primitive cell</h4>
-<div class="outline-text-4" id="text-3-2-2">
+<div id="outline-container-orgc9698de" class="outline-4">
+<h4 id="orgc9698de"><span class="section-number-4">4.2.2</span> Two electrons per primitive cell</h4>
+<div class="outline-text-4" id="text-4-2-2">
 <p>
 Two monovalent atoms or divalent atom, fully filled so <b>insulator</b>
 </p>
@@ -572,17 +664,17 @@ Two monovalent atoms or divalent atom, fully filled so <b>insulator</b>
 </div>
 </div>
 
-<div id="outline-container-org046b5f8" class="outline-3">
-<h3 id="org046b5f8"><span class="section-number-3">3.3</span> 2D</h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-orge99680f" class="outline-3">
+<h3 id="orge99680f"><span class="section-number-3">4.3</span> 2D</h3>
+<div class="outline-text-3" id="text-4-3">
 <p>
 2N allowed states as before:
 </p>
 </div>
 
-<div id="outline-container-org8d2cbed" class="outline-4">
-<h4 id="org8d2cbed"><span class="section-number-4">3.3.1</span> Monovalent</h4>
-<div class="outline-text-4" id="text-3-3-1">
+<div id="outline-container-org7a95a12" class="outline-4">
+<h4 id="org7a95a12"><span class="section-number-4">4.3.1</span> Monovalent</h4>
+<div class="outline-text-4" id="text-4-3-1">
 <p>
 Half the states are filled, so area is \(\frac12\left(\frac{2\pi}{a}\right)^2\):
 \[ \pi k_F^2 = \frac12\left(\frac{2\pi}{a}\right)^2\]
@@ -591,9 +683,9 @@ Fermi sphere lies within BZB so metal.
 </div>
 </div>
 
-<div id="outline-container-org9953db3" class="outline-4">
-<h4 id="org9953db3"><span class="section-number-4">3.3.2</span> Divalent</h4>
-<div class="outline-text-4" id="text-3-3-2">
+<div id="outline-container-org32de2b1" class="outline-4">
+<h4 id="org32de2b1"><span class="section-number-4">4.3.2</span> Divalent</h4>
+<div class="outline-text-4" id="text-4-3-2">
 <p>
 Double of the above states are filled, so \(\pi k_F^2 = (2\pi/a)^2\)
 </p>
@@ -601,9 +693,9 @@ Double of the above states are filled, so \(\pi k_F^2 = (2\pi/a)^2\)
 </div>
 </div>
 
-<div id="outline-container-orgfdb32e5" class="outline-3">
-<h3 id="orgfdb32e5"><span class="section-number-3">3.4</span> Effective Mass</h3>
-<div class="outline-text-3" id="text-3-4">
+<div id="outline-container-org662a664" class="outline-3">
+<h3 id="org662a664"><span class="section-number-3">4.4</span> Effective Mass</h3>
+<div class="outline-text-3" id="text-4-4">
 <p>
 \[ m^* = \frac{\hbar^2}{\frac{d^2\epsilon}{dk^2}}\]
 </p>
@@ -611,13 +703,13 @@ Double of the above states are filled, so \(\pi k_F^2 = (2\pi/a)^2\)
 </div>
 </div>
 
-<div id="outline-container-org3d3a6f4" class="outline-2">
-<h2 id="org3d3a6f4"><span class="section-number-2">4</span> Semiconductor</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org638d0fd" class="outline-2">
+<h2 id="org638d0fd"><span class="section-number-2">5</span> Semiconductor</h2>
+<div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org5cba819" class="outline-3">
-<h3 id="org5cba819"><span class="section-number-3">4.1</span> CB and VB</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-org367616e" class="outline-3">
+<h3 id="org367616e"><span class="section-number-3">5.1</span> CB and VB</h3>
+<div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li>Conduction Band (CB) on top</li>
 <li>Valence Band (VB) on bottom</li>
@@ -626,9 +718,9 @@ Double of the above states are filled, so \(\pi k_F^2 = (2\pi/a)^2\)
 </div>
 </div>
 
-<div id="outline-container-orgc139f53" class="outline-3">
-<h3 id="orgc139f53"><span class="section-number-3">4.2</span> Carriers</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-org3797221" class="outline-3">
+<h3 id="org3797221"><span class="section-number-3">5.2</span> Carriers</h3>
+<div class="outline-text-3" id="text-5-2">
 <p>
 Carriers carry electrons, and the number per unit volume:
 \[ n = \frac1V\int_{\epsilon_g}^\infty f(\epsilon)g(\epsilon)d\epsilon\]
@@ -650,9 +742,9 @@ which is the effective density of states per unit volume.
 </div>
 </div>
 
-<div id="outline-container-orga4009aa" class="outline-3">
-<h3 id="orga4009aa"><span class="section-number-3">4.3</span> Holes</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-org6f29307" class="outline-3">
+<h3 id="org6f29307"><span class="section-number-3">5.3</span> Holes</h3>
+<div class="outline-text-3" id="text-5-3">
 <p>
 Similarly:
 \[ n = \frac1V\int_{\epsilon_g}^\infty f(\epsilon)g(\epsilon)d\epsilon\]
@@ -666,18 +758,18 @@ N_V &= 2\left(\frac{m^*_h k_BT}{2\pi\hbar^2}\right)^\frac32\\
 </div>
 
 
-<div id="outline-container-orgbd86d34" class="outline-3">
-<h3 id="orgbd86d34"><span class="section-number-3">4.4</span> Law of Mass Action</h3>
-<div class="outline-text-3" id="text-4-4">
+<div id="outline-container-org0599d64" class="outline-3">
+<h3 id="org0599d64"><span class="section-number-3">5.4</span> Law of Mass Action</h3>
+<div class="outline-text-3" id="text-5-4">
 <p>
 \[ np = N_CN_Ve^{-\epsilon_g/k_BT}\]
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf9f2336" class="outline-3">
-<h3 id="orgf9f2336"><span class="section-number-3">4.5</span> Doping</h3>
-<div class="outline-text-3" id="text-4-5">
+<div id="outline-container-org2c9ead9" class="outline-3">
+<h3 id="org2c9ead9"><span class="section-number-3">5.5</span> Doping</h3>
+<div class="outline-text-3" id="text-5-5">
 <p>
 At low temperature donor (\(N_D\)) ionisation dominates:
 </p>
@@ -693,9 +785,9 @@ At high temperatures, all donors are ionised, temperature independent (extrinsic
 </div>
 
 
-<div id="outline-container-orgdb2e078" class="outline-4">
-<h4 id="orgdb2e078"><span class="section-number-4">4.5.1</span> Intrinsic</h4>
-<div class="outline-text-4" id="text-4-5-1">
+<div id="outline-container-org471e1b2" class="outline-4">
+<h4 id="org471e1b2"><span class="section-number-4">5.5.1</span> Intrinsic</h4>
+<div class="outline-text-4" id="text-5-5-1">
 <p>
 \begin{align*}
 n<sub>i</sub> &amp;= p<sub>i</sub> = (N<sub>CN</sub><sub>V</sub>)<sup>1/2</sup> e<sup>-E<sub>g</sub>/2k<sub>BT</sub></sup><br />
@@ -704,42 +796,42 @@ n<sub>i</sub> &amp;= p<sub>i</sub> = (N<sub>CN</sub><sub>V</sub>)<sup>1/2</sup> 
 </div>
 </div>
 
-<div id="outline-container-orgb15ebe0" class="outline-4">
-<h4 id="orgb15ebe0"><span class="section-number-4">4.5.2</span> Extrinsic</h4>
-<div class="outline-text-4" id="text-4-5-2">
+<div id="outline-container-org3eae5ec" class="outline-4">
+<h4 id="org3eae5ec"><span class="section-number-4">5.5.2</span> Extrinsic</h4>
+<div class="outline-text-4" id="text-5-5-2">
 <p>
 \[ n \approx N_D\]
 </p>
 </div>
 </div>
 
-<div id="outline-container-orged8ce54" class="outline-4">
-<h4 id="orged8ce54"><span class="section-number-4">4.5.3</span> Freeze-out</h4>
-<div class="outline-text-4" id="text-4-5-3">
+<div id="outline-container-orgfeaa81a" class="outline-4">
+<h4 id="orgfeaa81a"><span class="section-number-4">5.5.3</span> Freeze-out</h4>
+<div class="outline-text-4" id="text-5-5-3">
 \begin{align*}
 n &= (N_CN_D)^{1/2{e^{-E_D/2k_BT}}}\\
-\mu &= \approx E_g - \frac12E_D-\frac12k_BTln(N_C/N_D)
+\mu &\approx E_g - \frac12E_D-\frac12k_BTln(N_C/N_D)
 \end{align*}
 </div>
 </div>
 </div>
 
-<div id="outline-container-org4cb135f" class="outline-3">
-<h3 id="org4cb135f"><span class="section-number-3">4.6</span> Transport Properties</h3>
-<div class="outline-text-3" id="text-4-6">
+<div id="outline-container-orgbcf73a7" class="outline-3">
+<h3 id="orgbcf73a7"><span class="section-number-3">5.6</span> Transport Properties</h3>
+<div class="outline-text-3" id="text-5-6">
 </div>
-<div id="outline-container-orgf8b5bfc" class="outline-4">
-<h4 id="orgf8b5bfc"><span class="section-number-4">4.6.1</span> Velocity per unit field (cm<sup>2</sup>/Vs)</h4>
-<div class="outline-text-4" id="text-4-6-1">
+<div id="outline-container-org2a60108" class="outline-4">
+<h4 id="org2a60108"><span class="section-number-4">5.6.1</span> Velocity per unit field (cm<sup>2</sup>/Vs)</h4>
+<div class="outline-text-4" id="text-5-6-1">
 <p>
 \[ \mu_e = \frac{e\tau_e}{m^*_e} \qquad \mu_h = \frac{e\tau_h}{m^*_h}\]
 </p>
 </div>
 </div>
 
-<div id="outline-container-org10c8a2d" class="outline-4">
-<h4 id="org10c8a2d"><span class="section-number-4">4.6.2</span> Conductivity</h4>
-<div class="outline-text-4" id="text-4-6-2">
+<div id="outline-container-orga3367a9" class="outline-4">
+<h4 id="orga3367a9"><span class="section-number-4">5.6.2</span> Conductivity</h4>
+<div class="outline-text-4" id="text-5-6-2">
 \begin{align*}
 \mathbf{j} &=-ne\mathbf{v_e} + pe\mathbf{v_h} = \sigma\mathbf{E}\\
 \sigma &= \left(\frac{ne^2}{\tau_e{m^*_h}}+\frac{pe^2\tau_h}{m^*_h}\right) = ne\mu_e+pe\mu_h
@@ -748,9 +840,9 @@ n &= (N_CN_D)^{1/2{e^{-E_D/2k_BT}}}\\
 </div>
 </div>
 
-<div id="outline-container-org7ec5deb" class="outline-3">
-<h3 id="org7ec5deb"><span class="section-number-3">4.7</span> Hall Effect</h3>
-<div class="outline-text-3" id="text-4-7">
+<div id="outline-container-orgb47932a" class="outline-3">
+<h3 id="orgb47932a"><span class="section-number-3">5.7</span> Hall Effect</h3>
+<div class="outline-text-3" id="text-5-7">
 \begin{align*}
 \sigma &= ne\mu_e\\
 \mu_e &= |R_H|\sigma
@@ -758,18 +850,18 @@ n &= (N_CN_D)^{1/2{e^{-E_D/2k_BT}}}\\
 </div>
 </div>
 
-<div id="outline-container-org921f229" class="outline-3">
-<h3 id="org921f229"><span class="section-number-3">4.8</span> p-n Junction</h3>
-<div class="outline-text-3" id="text-4-8">
+<div id="outline-container-org832ff59" class="outline-3">
+<h3 id="org832ff59"><span class="section-number-3">5.8</span> p-n Junction</h3>
+<div class="outline-text-3" id="text-5-8">
 <p>
 \[ e\Delta\phi_0 = \mu_n - \mu_p\]
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3f0d350" class="outline-3">
-<h3 id="org3f0d350"><span class="section-number-3">4.9</span> Currents</h3>
-<div class="outline-text-3" id="text-4-9">
+<div id="outline-container-org1d34999" class="outline-3">
+<h3 id="org1d34999"><span class="section-number-3">5.9</span> Currents</h3>
+<div class="outline-text-3" id="text-5-9">
 <p>
 From p to n:
 </p>
@@ -804,11 +896,178 @@ Total current:
 </p>
 </div>
 </div>
+
+<div id="outline-container-org238f17c" class="outline-3">
+<h3 id="org238f17c"><span class="section-number-3">5.10</span> Problem Solving</h3>
+<div class="outline-text-3" id="text-5-10">
+<ul class="org-ul">
+<li>Saturation/reverse-bias is equal to \(I_0\)</li>
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbd5bd8a" class="outline-2">
+<h2 id="orgbd5bd8a"><span class="section-number-2">6</span> Magnetism</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgd11ee7c" class="outline-3">
+<h3 id="orgd11ee7c"><span class="section-number-3">6.1</span> Hund's Rule</h3>
+<div class="outline-text-3" id="text-6-1">
+<ol class="org-ol">
+<li>S takes max value (as many parallel spin as possible)</li>
+<li>L takes max value w.r.t. S (orbital momental as aligned as possible)</li>
+<li>\( J = |L-S|\) if less than half full, \(J=L+S\) otherwise</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge1b141c" class="outline-3">
+<h3 id="orge1b141c"><span class="section-number-3">6.2</span> Zeeman energy</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+For \[ \hat{H}_z = -\mathbf{\hat{\mu}}\cdot\mathbf{B} \], Zeeman energy corresponds to eigenvalues of \(-\hat{\mu}_zB = \mu_B (\hat{L}_Z+2\hat{S}_Z)B\).
+</p>
+
+<p>
+\[ g = \frac32 - \frac{L(L+1) - S(S+1)}{2J(J+1)}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0519ea4" class="outline-3">
+<h3 id="org0519ea4"><span class="section-number-3">6.3</span> Quenching</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+In the presence of the crystal field, the orbital angular momentum is 'quenched', which \(L=0\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5dc2bb5" class="outline-3">
+<h3 id="org5dc2bb5"><span class="section-number-3">6.4</span> Paramagnetism</h3>
+<div class="outline-text-3" id="text-6-4">
+<p>
+The paramagnetic susceptibility is:
+\[ \chi = \frac{M}{H} = \frac{\mu_0}{M}B = \frac{g^2J(J+1)}{3}\frac{n\mu_o\mu_B^2}{k_BT} B = \frac{C}{T}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc2b86e" class="outline-3">
+<h3 id="orgbc2b86e"><span class="section-number-3">6.5</span> Conduction Electrons</h3>
+<div class="outline-text-3" id="text-6-5">
+<p>
+Pauli paramagnetic susceptibility:
+\[ \chi_P - \frac{3n\mu_0\mu_B^2}{2\epsilon_F}\]
+Landau diamagnetic susceptibility:
+\[ \chi_L = -\frac13 \chi_P\]
+Net susceptibility for a free electron gas is \(\frac23\chi+P\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge552f97" class="outline-3">
+<h3 id="orge552f97"><span class="section-number-3">6.6</span> Curie Weiss Rule</h3>
+<div class="outline-text-3" id="text-6-6">
+<p>
+In mean-field theory:
+\[ \chi = \frac{C}{T-T_C}\]
+where:
+\[ C = \frac{n\mu_0\mu_B^2}{k_B}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org681ab5e" class="outline-3">
+<h3 id="org681ab5e"><span class="section-number-3">6.7</span> Equilibrium Magnetisation</h3>
+<div class="outline-text-3" id="text-6-7">
+<p>
+\[ M = n\mu_B \tanh\left(\frac{\mu_0\mu_B\lambda M}{k_B T}\right)\]
+Let \( y = M/n\mu_B\) and \(x = \frac{\mu_0\mu_B\lambda M}{k_B T}\)
+The equilibrium magnetisation can be solved graphically by the intersection between:
+\[ y = \tanh{x} \quad \text{and} y = \frac{T}{T_C}x\]
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb055909" class="outline-2">
+<h2 id="orgb055909"><span class="section-number-2">7</span> Superconductivity</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org255487a" class="outline-3">
+<h3 id="org255487a"><span class="section-number-3">7.1</span> Type 1</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+Meissner effect - complete expulsion of flux from interior. This can be explained as perfect diamagnetism: \(&chi; = \frac{M}{H_0} = \frac{M}{H<sub>\text{in}</sub>} = -1\]
+</p>
+
+<p>
+To good approximation:
+\[ B_C(T) = B_C(0)\left[1-\left(\frac{T}{T_C}\right)^2\right]\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org772bc33" class="outline-3">
+<h3 id="org772bc33"><span class="section-number-3">7.2</span> Critical Current</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+Slisbee hypothesis - a current produces the critical field:
+\[ I_C = 2\pi r H_C = 2\pi r \frac{B_C}{\mu_0}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f8b6bf" class="outline-3">
+<h3 id="org5f8b6bf"><span class="section-number-3">7.3</span> Gibb's Free Energy</h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+First law: \( dU = T dS + B_0 dM \)
+Gibb's Free energy: \( G = U-TS - MB_0\) 
+Differential: \( dG = -MdB_0 - SdT\)
+</p>
+
+<p>
+Integrating obtains:
+\[ G_S(0,T) - G_N(0,T) = -\frac{B_C^2}{2\mu_0}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org137d4c4" class="outline-3">
+<h3 id="org137d4c4"><span class="section-number-3">7.4</span> Type 2</h3>
+<div class="outline-text-3" id="text-7-4">
+<ul class="org-ul">
+<li>Alloying</li>
+<li>Flux partially penetrates above field \(B_{c1}\) but current continues to flow without dissipation (mixed states)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd03faad" class="outline-3">
+<h3 id="orgd03faad"><span class="section-number-3">7.5</span> London Equations</h3>
+<div class="outline-text-3" id="text-7-5">
+<p>
+Electron density divided into normal and superconducting fraction: \( n = n_s + n_n\)
+London parameter:
+\[ \Lambda = \frac{m}{n_s e^2}\]
+</p>
+
+<p>
+London penetration depth:
+\[ \lambda = \sqrt{\frac{m}{\mu_0 n_s e^2}}\]
+ By Maxwell:
+\[ \nabla^2 B = \frac{1}{\lambda^2}B\]
+</p>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kelvin</p>
-<p class="date">Created: 2022-04-19 Tue 18:32</p>
+<p class="date">Created: 2022-04-27 Wed 18:57</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

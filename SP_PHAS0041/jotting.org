@@ -18,3 +18,38 @@
 *** Reciprocal lattice of bcc is fcc with side \(\frac{4\pi}{a}\)
 
 *** Section 5.3 on thermal conductivity and Fermi energies
+
+* Past Papers
+
+** 2018 
+
+*** Part A
+
+**** Magnetic moment stuff for particle, shielding for Cr ions
+
+**** Graph to distinguish different types of magnetism
+
+**** Superconductivity
+* Revision Lecture
+2020 Revision Paper
+** Q1 
+*** Calculate sine square ratio
+*** SC: 100, 110, 111
+*** bcc: 110, 200, 211
+*** 100 is equal to 001 in cubic but not in tetragonal
+** Q2
+*** Do not take into account of quenching when Hund's Rules
+*** Intrinsic: holes come from excitation of electron to another band
+*** Exponential dependence on energy/temperature
+*** Always good to have units
+*** Temp i is at which 
+*** When the intrinsic carrier exceed dopants, doped = pure, intrinsic regime
+*** Hund's Rules
+*** 3D metals always have quenching (if there is the question will usually ask)
+** Q3
+*** HOW TO CALCULATE THE AREA OF A HEXAGON
+**** "There are six triangles in a triangle composed of the b vectors, and there are 12 triangles in the hexagon, so the total area is just twice of the area of the big triangles, that is how I would do it." --Prof. Pavlo Zubko, 2022
+*** Band gap where there are no states at all
+*** Bottom of the lower one is higher than the top of the base 
+*** Always look at the furthest and the shortest point at the BZB
+*** (Otherwise there is always going to be an overlap)

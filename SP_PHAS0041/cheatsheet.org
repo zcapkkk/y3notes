@@ -1,6 +1,34 @@
 #+TITLE: Formula
 #+AUTHOR: Kelvin 
 
+* Lattice Diffraction
+
+** Bragg's Rule
+\[ 2d\sin\theta = n\lambda\]
+
+** Reciprocal lattice
+\[ \mathbf{b}_i = \frac{2\pi}{V}\mathbf{a}_j\times\mathbf{a}_k\]
+and other cyclical permutations
+\[ e^{i \mathbf{G\cdot R}} = 1\]
+where R are lattice vectors.
+
+Lattice space:
+\[ d_{hkl} = \frac{2\pi}{|\mathbf{G_{hkl}}|}\]
+For cubic crystals:
+\[ d = \frac{a}{\sqrt{h^2+k^2+l^2}}\]
+
+** Laue Condition
+\[ \mathbf{Q} = \mathbf{G}\]
+
+** Scattered Intensities
+\[ S_\mathbf{G} = \sum_j f_j e^{-i\mathbf{G\cdot r_j}}\]
+
+** Restrictions on hkl
+
+- Simple Cubic: No restrictions
+- FCC: hkl all even or all odd
+- BCC: 2f is h+k+l is even, and 0 if odd
+
 * Thermal Properties
 
 
@@ -223,3 +251,78 @@ Total current:
 
 - Saturation/reverse-bias is equal to \(I_0\)
 - 
+* Magnetism
+** Hund's Rule
+
+1. S takes max value (as many parallel spin as possible)
+2. L takes max value w.r.t. S (orbital momental as aligned as possible)
+3. \( J = |L-S|\) if less than half full, \(J=L+S\) when the shell is more than half full and \(L=0\) if the shell is half full so \(J=S\)
+
+** Zeeman energy 
+For \[ \hat{H}_z = -\mathbf{\hat{\mu}}\cdot\mathbf{B} \] Zeeman energy corresponds to eigenvalues of \(-\hat{\mu}_zB = \mu_B (\hat{L}_Z+2\hat{S}_Z)B\)
+\[ g = \frac32 - \frac{L(L+1) - S(S+1)}{2J(J+1)}\]
+
+\[ \mu_Z = -g\mu_B M_J \]
+** Quenching
+In the presence of the crystal field, the orbital angular momentum is 'quenched', which \(L=0\).
+
+** Paramagnetism
+The paramagnetic susceptibility is:
+\[ \chi = \frac{M}{H} = \frac{\mu_0}{M}B = \frac{g^2J(J+1)}{3}\frac{n\mu_o\mu_B^2}{k_BT} B = \frac{C}{T}\]
+
+** Conduction Electrons 
+Pauli paramagnetic susceptibility:
+\[ \chi_P - \frac{3n\mu_0\mu_B^2}{2\epsilon_F}\]
+Landau diamagnetic susceptibility:
+\[ \chi_L = -\frac13 \chi_P\]
+Net susceptibility for a free electron gas is \(\frac23\chi+P\).
+
+** Curie Weiss Rule
+In mean-field theory:
+\[ \chi = \frac{C}{T-T_C}\]
+where:
+\[ C = \frac{n\mu_0\mu_B^2}{k_B}\]
+
+** Equilibrium Magnetisation
+\[ M = n\mu_B \tanh\left(\frac{\mu_0\mu_B\lambda M}{k_B T}\right)\]
+Let \( y = M/n\mu_B\) and \(x = \frac{\mu_0\mu_B\lambda M}{k_B T}\)
+The equilibrium magnetisation can be solved graphically by the intersection between:
+\[ y = \tanh{x} \quad \text{and} y = \frac{T}{T_C}x\]
+
+* Superconductivity
+
+** Type 1
+
+Meissner effect - complete expulsion of flux from interior. This can be explained as perfect diamagnetism: \(\chi = \frac{M}{H_0} = \frac{M}{H_{\text{in}}} = -1\]
+
+To good approximation:
+\[ B_C(T) = B_C(0)\left[1-\left(\frac{T}{T_C}\right)^2\right]\]
+
+** Critical Current
+Slisbee hypothesis - a current produces the critical field:
+\[ I_C = 2\pi r H_C = 2\pi r \frac{B_C}{\mu_0}\]
+
+** Gibb's Free Energy
+First law: \( dU = T dS + B_0 dM \)
+Gibb's Free energy: \( G = U-TS - MB_0\) 
+Differential: \( dG = -MdB_0 - SdT\)
+
+Integrating obtains:
+\[ G_S(0,T) - G_N(0,T) = -\frac{B_C^2}{2\mu_0}\]
+
+** Type 2 
+
+- Alloying
+- Flux partially penetrates above field \(B_{c1}\) but current continues to flow without dissipation (mixed states)
+
+** London Equations 
+Electron density divided into normal and superconducting fraction: \( n = n_s + n_n\)
+London parameter:
+\[ \Lambda = \frac{m}{n_s e^2}\]
+
+London penetration depth:
+\[ \lambda = \sqrt{\frac{m}{\mu_0 n_s e^2}}\]
+ By Maxwell:
+\[ \nabla^2 B = \frac{1}{\lambda^2}B\]
+
+

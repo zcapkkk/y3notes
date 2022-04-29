@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-21 Thu 00:12 -->
+<!-- 2022-04-29 Fri 00:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Important formulas</title>
@@ -256,34 +256,42 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc6afa1c">1. Identities</a>
+<li><a href="#org6dc585b">1. Identities</a>
 <ul>
-<li><a href="#org855d9d9">1.1. Kinetic energy calculations (seen in Approximation Methods)</a></li>
-<li><a href="#org830734a">1.2. Gaussian Standard Integrals</a></li>
+<li><a href="#orga9255f6">1.1. Kinetic energy calculations (seen in Approximation Methods)</a></li>
+<li><a href="#orgb5f552d">1.2. Gaussian Standard Integrals</a></li>
+<li><a href="#org9b03083">1.3. Commutator Identities</a></li>
 </ul>
 </li>
-<li><a href="#org893e8ce">2. Harmonic Oscillator</a>
+<li><a href="#orged04d73">2. Dirac Notation</a>
 <ul>
-<li><a href="#orge9b2955">2.1. Raising and Lowering Operators</a></li>
-<li><a href="#orgeaf8eb8">2.2. Other operators in terms of the Raising and Loweing Operators</a></li>
+<li><a href="#org228c252">2.1. Operators with Resolution of Identity</a></li>
+<li><a href="#org8d2b2d3">2.2. Hermitian Operators</a></li>
 </ul>
 </li>
-<li><a href="#org5a5354f">3. Angular Momentum Operators</a></li>
-<li><a href="#orgb354802">4. Spin</a>
+<li><a href="#org6928ba0">3. Harmonic Oscillator</a>
 <ul>
-<li><a href="#org45889f1">4.1. Pauli Matrices:</a></li>
+<li><a href="#org56195f8">3.1. Raising and Lowering Operators</a></li>
+<li><a href="#org5a2e477">3.2. Other operators in terms of the Raising and Lowering Operators</a></li>
+</ul>
+</li>
+<li><a href="#orgab0807a">4. Angular Momentum Operators</a></li>
+<li><a href="#org8ae17a4">5. Spin</a>
+<ul>
+<li><a href="#orgb438fb6">5.1. Spin Operators</a></li>
+<li><a href="#orgf509576">5.2. Pauli Matrices:</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgc6afa1c" class="outline-2">
-<h2 id="orgc6afa1c"><span class="section-number-2">1</span> Identities</h2>
+<div id="outline-container-org6dc585b" class="outline-2">
+<h2 id="org6dc585b"><span class="section-number-2">1</span> Identities</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org855d9d9" class="outline-3">
-<h3 id="org855d9d9"><span class="section-number-3">1.1</span> Kinetic energy calculations (seen in Approximation Methods)</h3>
+<div id="outline-container-orga9255f6" class="outline-3">
+<h3 id="orga9255f6"><span class="section-number-3">1.1</span> Kinetic energy calculations (seen in Approximation Methods)</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 \[ \int \psi^*(\nabla^2\psi)d\tau = -\int|(\nabla\psi)^2|d\tau\]
@@ -291,8 +299,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org830734a" class="outline-3">
-<h3 id="org830734a"><span class="section-number-3">1.2</span> Gaussian Standard Integrals</h3>
+<div id="outline-container-orgb5f552d" class="outline-3">
+<h3 id="orgb5f552d"><span class="section-number-3">1.2</span> Gaussian Standard Integrals</h3>
 <div class="outline-text-3" id="text-1-2">
 \begin{align*}
 \int_{-\infty}^{\infty}e^{-ax^2} &= \sqrt{\frac{\pi}{a}}\\
@@ -305,15 +313,65 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
+
+<div id="outline-container-org9b03083" class="outline-3">
+<h3 id="org9b03083"><span class="section-number-3">1.3</span> Commutator Identities</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Triple operators:
+\[ [A\circ B, C] = A\circ [B,C] + [A,C]\circ B\]
+or:
+\[ [A,B\circ C] = [A,B]\circ C + B\circ[A,C]\]
+</p>
+</div>
+</div>
 </div>
 
-<div id="outline-container-org893e8ce" class="outline-2">
-<h2 id="org893e8ce"><span class="section-number-2">2</span> Harmonic Oscillator</h2>
+<div id="outline-container-orged04d73" class="outline-2">
+<h2 id="orged04d73"><span class="section-number-2">2</span> Dirac Notation</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orge9b2955" class="outline-3">
-<h3 id="orge9b2955"><span class="section-number-3">2.1</span> Raising and Lowering Operators</h3>
+<div id="outline-container-org228c252" class="outline-3">
+<h3 id="org228c252"><span class="section-number-3">2.1</span> Operators with Resolution of Identity</h3>
 <div class="outline-text-3" id="text-2-1">
+<p>
+An operator can be expressed in a basis as:
+\[ \hat{A}_\chi = \langle \chi_m|\hat{A} | \chi_n \rangle\]
+Can stick the resolution of identity anywhere, such as between the operator and the \(\chi\) basis. 
+</p>
+
+<p>
+\[ \hat{A} = \hat{I}\hat{A}\hat{I} = \sum_{j,k}|\psi_j\rangle\langle\psi_j|\hat{A}|\psi_k\rangle\langle\psi_k| = \sum_{j,k} \langle \psi_j|\hat{A}|\psi_k\rangle |\psi_j\rangle \langle \psi_k|\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d2b2d3" class="outline-3">
+<h3 id="org8d2b2d3"><span class="section-number-3">2.2</span> Hermitian Operators</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+\[ \langle \hat{A} f|g\rangle = \langle f|\hat{A}g\rangle\]
+</p>
+
+<p>
+OR:
+</p>
+
+<p>
+\[ \langle f| \hat{A} |g \rangle = \left( \langle f|\hat{A}^\dagger |g\rangle\right)*\]
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org6928ba0" class="outline-2">
+<h2 id="org6928ba0"><span class="section-number-2">3</span> Harmonic Oscillator</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org56195f8" class="outline-3">
+<h3 id="org56195f8"><span class="section-number-3">3.1</span> Raising and Lowering Operators</h3>
+<div class="outline-text-3" id="text-3-1">
 \begin{align*}
 \hat{a}_\pm &= \frac{1}{\sqrt{2}}\left(\alpha \hat{x} \mp\frac{i}{\hbar \alpha}\hat{p}\right)\\	
 \alpha &= \sqrt{\frac{m\omega}{\hbar}}
@@ -321,34 +379,49 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgeaf8eb8" class="outline-3">
-<h3 id="orgeaf8eb8"><span class="section-number-3">2.2</span> Other operators in terms of the Raising and Loweing Operators</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-org5a2e477" class="outline-3">
+<h3 id="org5a2e477"><span class="section-number-3">3.2</span> Other operators in terms of the Raising and Lowering Operators</h3>
+<div class="outline-text-3" id="text-3-2">
 \begin{align*}
 \hat{x} &= \frac{1}{\alpha \sqrt{2}}(\hat{a} + \hat{a}^\dagger)\\
 \hat{p} &= \frac{i\hbar\alpha}{\sqrt{2}}(\hat{a}-\hat{a}^\dagger)\\
 \hat{H} &= \left(\hat{a}\hat{a}^\dagger+\frac12\right)\hbar\omega\\
 \end{align*}
-</div>
-</div>
-</div>
 
-<div id="outline-container-org5a5354f" class="outline-2">
-<h2 id="org5a5354f"><span class="section-number-2">3</span> Angular Momentum Operators</h2>
-<div class="outline-text-2" id="text-3">
 \begin{align*}
-\hat{J}^2
-
+\hat{p}^2 &= \frac{\hbar^2\alpha^2}{2}(\hat{a}^2_+ + \hat{a}^2_- -\hat{a}_-\hat{a}+ - \hat{a}_+\hat{a}-)\\
+\hat{x}^2 &= \frac{1}{2\alpha^2}(\hat{a}_+^2+\hat{a}_-^2+\hat{a}_-\hat{a}_+ + \hat{a}_+\hat{a}_-)
 \end{align*}
 </div>
 </div>
-<div id="outline-container-orgb354802" class="outline-2">
-<h2 id="orgb354802"><span class="section-number-2">4</span> Spin</h2>
-<div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org45889f1" class="outline-3">
-<h3 id="org45889f1"><span class="section-number-3">4.1</span> Pauli Matrices:</h3>
-<div class="outline-text-3" id="text-4-1">
+
+<div id="outline-container-orgab0807a" class="outline-2">
+<h2 id="orgab0807a"><span class="section-number-2">4</span> Angular Momentum Operators</h2>
+<div class="outline-text-2" id="text-4">
+\begin{align*}
+\hat{J}^2|j, m\rangle &= \hbar j(j+1) |j, m\rangle\\
+\hat{J}_z|j, m\rangle &= \hbar m|j, m\rangle\\
+\hat{J}_\pm|j,m\rangle &= \hbar\sqrt{j(j+1)-m(m\pm1)}|s,m\pm1\rangle\\
+\end{align*}
+</div>
+</div>
+<div id="outline-container-org8ae17a4" class="outline-2">
+<h2 id="org8ae17a4"><span class="section-number-2">5</span> Spin</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgb438fb6" class="outline-3">
+<h3 id="orgb438fb6"><span class="section-number-3">5.1</span> Spin Operators</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+For addition and annihilation operators, they have the coefficient of \(\hbar\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf509576" class="outline-3">
+<h3 id="orgf509576"><span class="section-number-3">5.2</span> Pauli Matrices:</h3>
+<div class="outline-text-3" id="text-5-2">
 <p>
 The Pauli Matrices all have eigenvalues of \(\lambda = \pm1\).
 </p>
@@ -369,13 +442,17 @@ i & 0 \\
 0 & -1 \\
 \end{pmatrix}\\
 \end{align*}
+
+<p>
+These all have eigenvalues of \(\pm 1\), with eigenvalues of \(\{(1,1),(1,-1)\},\{(1,i),(1,-i)\},\{(1,0),(0,1)\}\) (please append normalising factor of \(\frac{1}{\sqrt{2}}\) accordingly).
+</p>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kelvin</p>
-<p class="date">Created: 2022-04-21 Thu 00:12</p>
+<p class="date">Created: 2022-04-29 Fri 00:38</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

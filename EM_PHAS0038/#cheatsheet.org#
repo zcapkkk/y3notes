@@ -7,7 +7,12 @@
 ** Potential in terms of Dipole Moment
 The vector can be rewritten as:
 \[ V = \frac{\mathbf{\hat{p}}\cdot\mathbf{\hat{r}}}{4\pi\epsilon_0 r^2}\]
-where 
+
+** Dipole Moment
+D.M. of a collection of point charges is given by:
+\[mathbf{p} = \sum_{i=1}^n q_i \mathbf{r}'_i\]
+where \(r')\ is the distance from the origin.
+
 * Magnetostatics
 
 ** Current

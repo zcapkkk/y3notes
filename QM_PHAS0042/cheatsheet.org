@@ -15,9 +15,19 @@
 - The integral of odd functions are zero
 - Wavefunction at infinities are zero (useful in by parts)
 
+** Commutator Identities
+
+Triple operators:
+\[ [A\circ B, C] = A\circ [B,C] + [A,C]\circ B\]
+or:
+\[ [A,B\circ C] = [A,B]\circ C + B\circ[A,C]\]
+  
 * Dirac Notation
 
 ** Operators with Resolution of Identity
+An operator can be expressed in a basis as:
+\[ \hat{A}_\chi = \langle \chi_m|\hat{A} | \chi_n \rangle\]
+Can stick the resolution of identity anywhere, such as between the operator and the \(\chi\) basis. 
 
 \[ \hat{A} = \hat{I}\hat{A}\hat{I} = \sum_{j,k}|\psi_j\rangle\langle\psi_j|\hat{A}|\psi_k\rangle\langle\psi_k| = \sum_{j,k} \langle \psi_j|\hat{A}|\psi_k\rangle |\psi_j\rangle \langle \psi_k|\]
 
@@ -39,12 +49,17 @@ OR:
 \alpha &= \sqrt{\frac{m\omega}{\hbar}}
 \end{align*}
 
-** Other operators in terms of the Raising and Loweing Operators
+** Other operators in terms of the Raising and Lowering Operators
 
 \begin{align*}
 \hat{x} &= \frac{1}{\alpha \sqrt{2}}(\hat{a} + \hat{a}^\dagger)\\
 \hat{p} &= \frac{i\hbar\alpha}{\sqrt{2}}(\hat{a}-\hat{a}^\dagger)\\
 \hat{H} &= \left(\hat{a}\hat{a}^\dagger+\frac12\right)\hbar\omega\\
+\end{align*}
+
+\begin{align*}
+\hat{p}^2 &= \frac{\hbar^2\alpha^2}{2}(\hat{a}^2_+ + \hat{a}^2_- -\hat{a}_-\hat{a}+ - \hat{a}_+\hat{a}-)\\
+\hat{x}^2 &= \frac{1}{2\alpha^2}(\hat{a}_+^2+\hat{a}_-^2+\hat{a}_-\hat{a}_+ + \hat{a}_+\hat{a}_-)
 \end{align*}
 
 * Angular Momentum Operators
@@ -55,6 +70,8 @@ OR:
 \hat{J}_\pm|j,m\rangle &= \hbar\sqrt{j(j+1)-m(m\pm1)}|s,m\pm1\rangle\\
 \end{align*}
 * Spin
+** Spin Operators
+For addition and annihilation operators, they have the coefficient of \(\hbar\).
 
 ** Pauli Matrices:
    The Pauli Matrices all have eigenvalues of \(\lambda = \pm1\).
@@ -75,3 +92,5 @@ i & 0 \\
 0 & -1 \\
 \end{pmatrix}\\
 \end{align*}
+
+These all have eigenvalues of \(\pm 1\), with eigenvalues of \(\{(1,1),(1,-1)\},\{(1,i),(1,-i)\},\{(1,0),(0,1)\}\) (please append normalising factor of \(\frac{1}{\sqrt{2}}\) accordingly).
